@@ -994,7 +994,7 @@
                                 <div class="icon xl-slategray"><i class="zmdi zmdi-balance"></i> </div>
                                 <div class="content">
                                     <div class="text">Income</div>
-                                    <h5 class="m-b-0">$<span class="number count-to" data-from="0" data-to="5478" data-speed="2500" data-fresh-interval="700">5478</span></h5>
+                                    <h5 class="m-b-0">₹ <span class="number count-to" data-from="0" data-to="5478" data-speed="2500" data-fresh-interval="700">5478</span></h5>
                                 </div>
                             </div>
                         </div>
