@@ -984,7 +984,7 @@
                                     <option value="20">Female</option>
                                 </select>
                             </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12">                                
+                            <div class="col-lg-4 col-md-6 col-sm-12">
                                 <select class="form-control show-tick">
                                     <option value="">-- Department --</option>
                                     <option value="10">BCA</option>
@@ -1000,6 +1000,56 @@
                             </div>
                         </div>
                         <div class="row clearfix">
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Father's Name">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Mother's Name">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Father's  Contact Number">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <select class="form-control show-tick">
+                                    <option value="">-- Nationality --</option>
+                                    <option value="10">Indian</option>
+                                    <option value="20">Other</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <select class="form-control show-tick">
+                                    <option value="">-- Category --</option>
+                                    <option value="10">GN</option>
+                                    <option value="20">OBC</option>
+                                    <option value="20">ST</option>
+                                    <option value="20">SC</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="City">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <select class="form-control show-tick">
+                                    <option value="">-- State --</option>
+                                    <option value="10">mp</option>
+                                    <option value="20">mh</option>
+                                    <option value="20">up</option>
+                                    <option value="20">cg</option>
+                                </select>
+                            </div>
+                            
+
+                        </div>
+                        <br>
+                        <div class="row clearfix">
                             <div class="col-lg-12 col-md-12 col-sm-12">
                                 <form action="../../../../index.html" id="frmFileUpload" class="dropzone" method="post" enctype="multipart/form-data">
                                     <div class="dz-message">
@@ -1012,10 +1062,11 @@
                                 </form>
                             </div>
                         </div>
+                        <br>
                         <div class="row clearfix">                            
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <textarea rows="4" class="form-control no-resize" placeholder="Description"></textarea>
+                                    <textarea rows="4" class="form-control no-resize" placeholder="Adress"></textarea>
                                 </div>
                             </div>
                             <div class="col-sm-12">
@@ -1072,6 +1123,75 @@
                                 <button type="submit" class="btn btn-raised btn-round">Cancel</button>
                             </div>
                         </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row clearfix">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h2><strong>Coureses and Batch</strong> Details <small>Description text here...</small> </h2>
+                        <ul class="header-dropdown">
+                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
+                                <ul class="dropdown-menu dropdown-menu-right slideUp">
+                                    <li><a href="javascript:void(0);" class="waves-effect waves-block">Action</a></li>
+                                    <li><a href="javascript:void(0);" class="waves-effect waves-block">Another action</a></li>
+                                    <li><a href="javascript:void(0);" class="waves-effect waves-block">Something else</a></li>
+                                </ul>
+                            </li>
+                            <li class="remove">
+                                <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="body">
+                        <div class="row clearfix">
+                            <div class="col-lg-6 col-md-12">
+
+                                <select class="form-control show-tick">
+                                    <option value="">-- class --</option>
+                                    <option value="10">10th</option>
+                                    <option value="20">11th</option>
+                                    <option value="20">12th</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Section">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Roll no">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12">
+                                <select class="form-control show-tick">
+                                    <option value="">-- Academic Year --</option>
+                                    <option value="10">2016-2107</option>
+                                    <option value="20">2017-2018</option>
+                                </select>
+                            </div>
+
+
+                            <div class="col-lg-6 col-md-12">
+                                <select class="form-control show-tick">
+                                    <option value="">-- Stream --</option>
+                                    <option value="10">Maths</option>
+                                    <option value="20">Science</option>
+                                </select>
+                            </div>
+
+
+                            <div class="col-sm-12">
+                                <button type="submit" class="btn btn-raised btn-round btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-raised btn-round">Cancel</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
