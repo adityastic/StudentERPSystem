@@ -12,5 +12,9 @@ class Courses extends MY_Controller {
 	{
 		$this->load->view('add-courses');
 	}
+	public function courses_info()
+	{
+		$this->load->view('courses-info');
+	}
 
 }
