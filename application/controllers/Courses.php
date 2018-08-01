@@ -8,4 +8,9 @@ class Courses extends MY_Controller {
 		$this->load->view('courses');
 	}
 
+	public function add_courses()
+	{
+		$this->load->view('add-courses');
+	}
+
 }

@@ -6,10 +6,19 @@
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
 
-<title><?php echo $title;?></title>
+<title>:: Oreo University Admin ::</title>
 <!-- Favicon-->
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css">
+<!-- Dropzone Css -->
+<link href="../assets/plugins/dropzone/dropzone.css" rel="stylesheet">
+<!-- Bootstrap Material Datetime Picker Css -->
+<link href="../assets/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet" />
+<!-- Wait Me Css -->
+<link href="../assets/plugins/waitme/waitMe.css" rel="stylesheet" />
+<!-- Bootstrap Select Css -->
+<link href="../assets/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+
 <!-- Custom Css -->
 <link rel="stylesheet" href="../assets/css/main.css">
 <link rel="stylesheet" href="../assets/css/color_skins.css">
@@ -30,14 +39,14 @@
         <li>
             <div class="navbar-header">
                 <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="index.html"><img src="../assets/images/logo.svg" width="30" alt="Oreo"><span class="m-l-10"><?php echo $company_name;?></span></a>
+                <a class="navbar-brand" href="index.html"><img src="../assets/images/logo.svg" width="30" alt="Oreo"><span class="m-l-10">Oreo</span></a>
             </div>
         </li>
         <li><a href="javascript:void(0);" class="ls-toggle-btn" data-close="true"><i class="zmdi zmdi-swap"></i></a></li>
-        <!-- <li class="hidden-md-down"><a href="events.html" title="Events"><i class="zmdi zmdi-calendar"></i></a></li>
-        <li class="hidden-md-down"><a href="mail-inbox.html" title="Inbox"><i class="zmdi zmdi-email"></i></a></li> -->
+        <li class="hidden-md-down"><a href="events.html" title="Events"><i class="zmdi zmdi-calendar"></i></a></li>
+        <li class="hidden-md-down"><a href="mail-inbox.html" title="Inbox"><i class="zmdi zmdi-email"></i></a></li>
         <li><a href="contact.html" title="Contact List"><i class="zmdi zmdi-account-box-phone"></i></a></li>
-        <!-- <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-notifications"></i>
+        <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-notifications"></i>
             <div class="notify"><span class="heartbit"></span><span class="point"></span></div>
             </a>
             <ul class="dropdown-menu pullDown">
@@ -46,7 +55,7 @@
                         <li>
                             <a href="javascript:void(0);">
                                 <div class="media">
-                                    <img class="media-object" src="assets/images/xs/avatar2.jpg" alt="">
+                                    <img class="media-object" src="../assets/images/xs/avatar2.jpg" alt="">
                                     <div class="media-body">
                                         <span class="name">Sophia <span class="time">30min ago</span></span>
                                         <span class="message">There are many variations of passages</span>                                        
@@ -57,7 +66,7 @@
                         <li>
                             <a href="javascript:void(0);">
                                 <div class="media">
-                                    <img class="media-object" src="assets/images/xs/avatar3.jpg" alt="">
+                                    <img class="media-object" src="../assets/images/xs/avatar3.jpg" alt="">
                                     <div class="media-body">
                                         <span class="name">Sophia <span class="time">31min ago</span></span>
                                         <span class="message">There are many variations of passages of Lorem Ipsum</span>                                        
@@ -68,7 +77,7 @@
                         <li>
                             <a href="javascript:void(0);">
                                 <div class="media">
-                                    <img class="media-object" src="assets/images/xs/avatar4.jpg" alt="">
+                                    <img class="media-object" src="../assets/images/xs/avatar4.jpg" alt="">
                                     <div class="media-body">
                                         <span class="name">Isabella <span class="time">35min ago</span></span>
                                         <span class="message">There are many variations of passages</span>                                        
@@ -79,7 +88,7 @@
                         <li>
                             <a href="javascript:void(0);">
                                 <div class="media">
-                                    <img class="media-object" src="assets/images/xs/avatar5.jpg" alt="">
+                                    <img class="media-object" src="../assets/images/xs/avatar5.jpg" alt="">
                                     <div class="media-body">
                                         <span class="name">Alexander <span class="time">35min ago</span></span>
                                         <span class="message">Contrary to popular belief, Lorem Ipsum random</span>                                        
@@ -90,7 +99,7 @@
                         <li>
                             <a href="javascript:void(0);">
                                 <div class="media">
-                                    <img class="media-object" src="assets/images/xs/avatar6.jpg" alt="">
+                                    <img class="media-object" src="../assets/images/xs/avatar6.jpg" alt="">
                                     <div class="media-body">
                                         <span class="name">Grayson <span class="time">1hr ago</span></span>
                                         <span class="message">There are many variations of passages</span>                                        
@@ -203,11 +212,11 @@
                     <i class="zmdi zmdi-search"></i>
                 </span>
             </div>
-        </li>         -->
+        </li>        
         <li class="float-right">
             <a href="javascript:void(0);" class="fullscreen hidden-sm-down" data-provide="fullscreen" data-close="true"><i class="zmdi zmdi-fullscreen"></i></a>
-           <!--  <a href="sign-in.html" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i></a>
-            <a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="zmdi zmdi-settings zmdi-hc-spin"></i></a> -->
+            <a href="sign-in.html" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i></a>
+            <a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="zmdi zmdi-settings zmdi-hc-spin"></i></a>
         </li>
     </ul>
 </nav>
@@ -215,7 +224,7 @@
 <aside id="leftsidebar" class="sidebar">
     <ul class="nav nav-tabs">
         <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#dashboard"><i class="zmdi zmdi-home"></i></a></li>
-        <!-- <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#user">Professors</a></li> -->
+        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#user">Professors</a></li>
     </ul>
     <div class="tab-content">
         <div class="tab-pane stretchRight active" id="dashboard">
@@ -247,7 +256,7 @@
                             <li><a href="profile.html">Profile</a></li>
                         </ul>
                     </li>
-                    <!-- <li><a href="parents.html"><i class="zmdi zmdi-account"></i><span>Parents</span> </a></li>                    
+                    <li><a href="parents.html"><i class="zmdi zmdi-account"></i><span>Parents</span> </a></li>                    
                     <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-lock"></i><span>Authentication</span> </a>
                         <ul class="ml-menu">
                             <li><a href="sign-in.html">Sign In</a> </li>
@@ -258,7 +267,7 @@
                             <li><a href="page-offline.html">Page Offline</a> </li>
                             <li><a href="locked.html">Locked Screen</a> </li>
                         </ul>
-                    </li> -->
+                    </li>
                     <li class="header">UNIVERSITY</li>
                     <li><a href="events.html"><i class="zmdi zmdi-calendar-check"></i><span>Events</span> </a></li>
                     <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-city-alt"></i><span>Departments</span> </a>
@@ -269,15 +278,15 @@
                     </li>
                     <li class="active open"><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-graduation-cap"></i><span>Courses</span> </a>
                         <ul class="ml-menu">
-                            <li class="active"><a href="courses.html">All Courses</a></li>
-                            <li><a href="add-courses.html">Add Courses</a></li>                       
+                            <li><a href="courses.html">All Courses</a></li>
+                            <li class="active"><a href="add-courses.html">Add Courses</a></li>                       
                             <li><a href="courses-info.html">Courses Info</a></li>
                         </ul>
                     </li>
                     <li><a href="library.html"><i class="zmdi zmdi-book"></i><span>Library</span> </a></li>
                     <li><a href="classroom.html"><i class="zmdi zmdi-device-hub"></i><span>Class</span> </a></li>
                     <li><a href="noticeboard.html"><i class="zmdi zmdi-alert-circle"></i><span>Noticeboard</span> </a></li>
-                    <!-- <li><a href="centres.html"><i class="zmdi zmdi-pin"></i><span>University Centres</span></a></li>                    
+                    <li><a href="centres.html"><i class="zmdi zmdi-pin"></i><span>University Centres</span></a></li>                    
                     <li class="header">EXTRA COMPONENTS</li>
                     <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-blogger"></i><span>Blog</span></a>
                         <ul class="ml-menu">
@@ -358,7 +367,7 @@
                                 </div>
                             </div>
                         </div>
-                    </li> -->
+                    </li>
                 </ul>
             </div>
         </div>
@@ -442,7 +451,7 @@
     </div>    
 </aside>
 <!-- Right Sidebar -->
-<!-- <aside id="rightsidebar" class="right-sidebar">
+<aside id="rightsidebar" class="right-sidebar">
     <ul class="nav nav-tabs">
         <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#setting"><i class="zmdi zmdi-settings zmdi-hc-spin"></i></a></li>
         <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#chat"><i class="zmdi zmdi-comments"></i></a></li>
@@ -840,9 +849,9 @@
             </div>
         </div>
     </div>
-</aside> -->
+</aside>
 <!-- Chat-launcher -->
-<!-- <div class="chat-launcher"></div>
+<div class="chat-launcher"></div>
 <div class="chat-wrapper">
     <div class="card">
         <div class="header">
@@ -901,15 +910,15 @@
             </div>
         </div>
     </div>
-</div> -->
+</div>
 
 <!-- Main Content -->
 <section class="content">
     <div class="block-header">
         <div class="row">
             <div class="col-lg-7 col-md-6 col-sm-12">
-                <h2>All Courses
-                <small><?php echo $welcome_string;?></small>
+                <h2>Add Courses
+                <small>Welcome to Oreo</small>
                 </h2>
             </div>
             <div class="col-lg-5 col-md-6 col-sm-12">                
@@ -919,201 +928,154 @@
                 <ul class="breadcrumb float-md-right">
                     <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Oreo</a></li>
                     <li class="breadcrumb-item"><a href="javascript:void(0);">Courses</a></li>
-                    <li class="breadcrumb-item active">All</li>
+                    <li class="breadcrumb-item active">Add</li>
                 </ul>                
             </div>
         </div>
     </div>
     <div class="container-fluid">
         <div class="row clearfix">
-            <div class="col-md-6 col-lg-4">
+            <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="card">
+                    <div class="header">
+                        <h2><strong>Course Basic</strong> Information <small>Description text here...</small> </h2>
+                        <ul class="header-dropdown">
+                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
+                                <ul class="dropdown-menu dropdown-menu-right slideUp">
+                                    <li><a href="javascript:void(0);">Action</a></li>
+                                    <li><a href="javascript:void(0);">Another action</a></li>
+                                    <li><a href="javascript:void(0);">Something else</a></li>
+                                </ul>
+                            </li>
+                            <li class="remove">
+                                <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="body">
-                        <img src="assets/images/image1.jpg" alt=""  class="img-fluid rounded m-b-20">
-                        <h6>Magento Programmer Course</h6>
-                        <div class="table-responsive">
-                            <table class="table table-hover m-t-20">
-                                <tbody>
-                                    <tr>
-                                        <td>Year</td>
-                                        <td>MCA Sem2</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Fees</td>
-                                        <td><strong class="col-blush">$315.60</strong></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Prof NAME</td>
-                                        <td><strong>Will Smith</strong></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Students</td>
-                                        <td><strong class="col-green">115</strong></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="row clearfix">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Courses Name">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <input type="text" class="datetimepicker form-control" placeholder="Starts From">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Course Duration">
+                                </div>
+                            </div>                            
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <input type="number" class="form-control" placeholder="Course Fee">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Course Incharge">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <form action="../../../../index.html" id="frmFileUpload" class="dropzone m-b-20" method="post" enctype="multipart/form-data">
+                                    <div class="dz-message">
+                                        <div class="drag-icon-cph"> <i class="material-icons">touch_app</i> </div>
+                                        <h3>Drop files here or click to upload.</h3>
+                                        <em>(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</em> </div>
+                                    <div class="fallback">
+                                        <input name="file" type="file" multiple />
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-lg-4 col-md-12">                                
+                                <select class="form-control show-tick">
+                                    <option value="">Department</option>
+                                    <option value="1">Computer</option>
+                                    <option value="2">Medical</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <input type="number" class="form-control" placeholder="Year">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Website URL">
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <textarea rows="4" class="form-control no-resize" placeholder="Course Description"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <button type="submit" class="btn btn-raised waves-effect btn-round btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-raised waves-effect btn-round">Cancel</button>
+                            </div>
                         </div>
-                        <a href="courses-info.html" class="btn btn-block btn-raised btn-default btn-simple btn-round waves-effect" role="button">Read more</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-12">
                 <div class="card">
+                    <div class="header">
+                        <h2><strong>Online</strong> Bookstore <small>Description text here...</small> </h2>
+                        <ul class="header-dropdown">
+                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
+                                <ul class="dropdown-menu dropdown-menu-right slideUp">
+                                    <li><a href="javascript:void(0);">Action</a></li>
+                                    <li><a href="javascript:void(0);">Another action</a></li>
+                                    <li><a href="javascript:void(0);">Something else</a></li>
+                                </ul>
+                            </li>
+                            <li class="remove">
+                                <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="body">
-                        <img src="assets/images/image2.jpg" alt=""  class="img-fluid rounded m-b-20">
-                        <h6>Angular Programmer Course</h6>
-                        <div class="table-responsive">
-                            <table class="table table-hover m-t-20">
-                                <tbody>
-                                    <tr>
-                                        <td>Year</td>
-                                        <td>MCA Sem5</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Fees</td>
-                                        <td><strong class="col-blush">$458.60</strong></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Prof NAME</td>
-                                        <td><strong>Gary Camara</strong></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Students</td>
-                                        <td><strong class="col-green">49</strong></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="row clearfix">
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="w3schools">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Website 1">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Website 2">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Website 3">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Website 4">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Website 5">
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <button type="submit" class="btn btn-raised waves-effect btn-round btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-raised waves-effect btn-round">Cancel</button>
+                            </div>
                         </div>
-                        <a href="courses-info.html" class="btn btn-block btn-raised btn-default btn-simple btn-round waves-effect" role="button">Read more</a>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card">
-                    <div class="body">
-                        <img src="assets/images/image3.jpg" alt=""  class="img-fluid rounded m-b-20">
-                        <h6>Account Management Course</h6>
-                        <div class="table-responsive">
-                            <table class="table table-hover m-t-20">
-                                <tbody>
-                                    <tr>
-                                        <td>Year</td>
-                                        <td>MBA Sem2</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Fees</td>
-                                        <td><strong class="col-blush">$278.60</strong></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Prof NAME</td>
-                                        <td><strong>Frank Camly</strong></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Students</td>
-                                        <td><strong class="col-green">80</strong></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <a href="courses-info.html" class="btn btn-block btn-raised btn-default btn-simple btn-round waves-effect" role="button">Read more</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card">
-                    <div class="body">
-                        <img src="assets/images/image4.jpg" alt=""  class="img-fluid rounded m-b-20">
-                        <h6>UI UX Design Course</h6>
-                        <div class="table-responsive">
-                            <table class="table table-hover m-t-20">
-                                <tbody>
-                                    <tr>
-                                        <td>Year</td>
-                                        <td>BCA Sem2</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Fees</td>
-                                        <td><strong class="col-blush">$105.60</strong></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Prof NAME</td>
-                                        <td><strong>Hossein Shams</strong></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Students</td>
-                                        <td><strong class="col-green">60</strong></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <a href="courses-info.html" class="btn btn-block btn-raised btn-default btn-simple btn-round waves-effect" role="button">Read more</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card">
-                    <div class="body">
-                        <img src="assets/images/image5.jpg" alt=""  class="img-fluid rounded m-b-20">
-                        <h6>Angular Programmer Course</h6>
-                        <div class="table-responsive">
-                            <table class="table table-hover m-t-20">
-                                <tbody>
-                                    <tr>
-                                        <td>Year</td>
-                                        <td>MCA Sem5</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Fees</td>
-                                        <td><strong class="col-blush">$458.60</strong></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Prof NAME</td>
-                                        <td><strong>Maryam Amiri</strong></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Students</td>
-                                        <td><strong class="col-green">71</strong></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <a href="courses-info.html" class="btn btn-block btn-raised btn-default btn-simple btn-round waves-effect" role="button">Read more</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card">
-                    <div class="body">
-                        <img src="assets/images/image6.jpg" alt=""  class="img-fluid rounded m-b-20">
-                        <h6>Account Management Course</h6>
-                        <div class="table-responsive">
-                            <table class="table table-hover m-t-20">
-                                <tbody>
-                                    <tr>
-                                        <td>Year</td>
-                                        <td>MBA Sem2</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Fees</td>
-                                        <td><strong class="col-blush">$278.60</strong></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Prof NAME</td>
-                                        <td><strong>Fidel Tonn</strong></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Students</td>
-                                        <td><strong class="col-green">80</strong></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <a href="courses-info.html" class="btn btn-block btn-raised btn-default btn-simple btn-round waves-effect" role="button">Read more</a>
-                    </div>
-                </div>
-            </div>            
-            <div class="col-sm-12 text-center">
-                <a href="javascript:void(0);" class="btn btn-raised waves-effect btn-round btn-primary" role="button">Load more</a>
             </div>
         </div>
     </div>
@@ -1122,6 +1084,14 @@
 <script src="../assets/bundles/libscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js -->
 <script src="../assets/bundles/vendorscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js -->
 
+<script src="../assets/plugins/autosize/autosize.js"></script> <!-- Autosize Plugin Js -->
+<script src="../assets/plugins/momentjs/moment.js"></script> <!-- Moment Plugin Js -->
+<script src="../assets/plugins/dropzone/dropzone.js"></script> <!-- Dropzone Plugin Js -->
+<!-- Bootstrap Material Datetime Picker Plugin Js --> 
+<script src="../assets/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+
 <script src="../assets/bundles/mainscripts.bundle.js"></script>
+<script src="../assets/js/pages/forms/basic-form-elements.js"></script>
+
 </body>
 </html>

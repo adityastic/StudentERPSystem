@@ -268,7 +268,7 @@
                     <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-graduation-cap"></i><span>Courses</span> </a>
                         <ul class="ml-menu">
                             <li><a href="<?php echo site_url('courses') ?>">All Courses</a></li>
-                            <li><a href="add-courses.html">Add Courses</a></li>                       
+                            <li><a href="<?php echo site_url('courses/add_courses');?>">Add Courses</a></li>
                             <li><a href="courses-info.html">Courses Info</a></li>
                         </ul>
                     </li>
