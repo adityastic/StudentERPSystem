@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js " lang="en">
 <head>
-<meta charset="utf-8">a
+<meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
@@ -11,8 +11,6 @@
 <!-- Favicon-->
 <link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css">
 <!-- Custom Css -->
-<link href="../assets/plugins/dropzone/dropzone.css" rel="stylesheet">
-
 <link rel="stylesheet" href="../assets/css/main.css">
 <link rel="stylesheet" href="../assets/css/color_skins.css">
 </head>
@@ -20,9 +18,7 @@
 <!-- Page Loader -->
 <div class="page-loader-wrapper">
     <div class="loader">
-        <div class="m-t-30">
-            <img class="zmdi-hc-spin" src="../assets/images/logo.svg" width="48" height="48" alt="Oreo">
-        </div>
+        <div class="m-t-30"><img class="zmdi-hc-spin" src="../assets/images/logo.svg" width="48" height="48" alt="Oreo"></div>
         <p>Please wait...</p>
     </div>
 </div>
@@ -34,14 +30,14 @@
         <li>
             <div class="navbar-header">
                 <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="<?php echo site_url('dashboard');?>"><img src="../assets/images/logo.svg" width="30" alt="Oreo"><span class="m-l-10"><?php echo $company_name;?></span></a>
+                <a class="navbar-brand" href="index.html"><img src="../assets/images/logo.svg" width="30" alt="Oreo"><span class="m-l-10"><?php echo $company_name;?></span></a>
             </div>
         </li>
         <li><a href="javascript:void(0);" class="ls-toggle-btn" data-close="true"><i class="zmdi zmdi-swap"></i></a></li>
-        <li class="hidden-md-down"><a href="events.html" title="Events"><i class="zmdi zmdi-calendar"></i></a></li>
-        <li class="hidden-md-down"><a href="mail-inbox.html" title="Inbox"><i class="zmdi zmdi-email"></i></a></li>
+        <!-- <li class="hidden-md-down"><a href="events.html" title="Events"><i class="zmdi zmdi-calendar"></i></a></li>
+        <li class="hidden-md-down"><a href="mail-inbox.html" title="Inbox"><i class="zmdi zmdi-email"></i></a></li> -->
         <li><a href="contact.html" title="Contact List"><i class="zmdi zmdi-account-box-phone"></i></a></li>
-        <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-notifications"></i>
+        <!-- <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-notifications"></i>
             <div class="notify"><span class="heartbit"></span><span class="point"></span></div>
             </a>
             <ul class="dropdown-menu pullDown">
@@ -207,11 +203,11 @@
                     <i class="zmdi zmdi-search"></i>
                 </span>
             </div>
-        </li>        
+        </li>     -->    
         <li class="float-right">
             <a href="javascript:void(0);" class="fullscreen hidden-sm-down" data-provide="fullscreen" data-close="true"><i class="zmdi zmdi-fullscreen"></i></a>
-            <a href="sign-in.html" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i></a>
-            <a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="zmdi zmdi-settings zmdi-hc-spin"></i></a>
+            <!-- <a href="sign-in.html" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i></a>
+            <a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="zmdi zmdi-settings zmdi-hc-spin"></i></a> -->
         </li>
     </ul>
 </nav>
@@ -219,7 +215,7 @@
 <aside id="leftsidebar" class="sidebar">
     <ul class="nav nav-tabs">
         <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#dashboard"><i class="zmdi zmdi-home"></i></a></li>
-        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#user">Professors</a></li>
+       <!--  <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#user">Professors</a></li> -->
     </ul>
     <div class="tab-content">
         <div class="tab-pane stretchRight active" id="dashboard">
@@ -229,29 +225,29 @@
                         <div class="user-info">
                             <div class="image"><a href="profile.html"><img src="../assets/images/profile_av.jpg" alt="User"></a></div>
                             <div class="detail">
-                                <h4>Pro. Charlotte</h4>
-                                <small>UI UX Designer</small>
+                                <h4><?php echo $schoolname;?></h4>
+                                <small><?php echo $schoollocation;?></small>
                             </div>
                         </div>
                     </li>
                     <li class="header">MAIN</li>
-                    <li><a href="index.html"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
+                    <li><a href="<?php echo site_url('dashboard');?>"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
                     <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-accounts-outline"></i><span>Students</span> </a>
                         <ul class="ml-menu">
                             <li><a href="students.html">All Students</a></li>
-                            <li><a href="add-students.html">Add Students</a></li>
+                            <li><a href="<?php echo site_url('students/add_students');?>">Add Students</a></li>
                             <li><a href="students-profile.html">Students Profile</a></li>
                             <li><a href="students-invoice.html">Students Invoice</a></li>
                         </ul>
                     </li>
                     <li class="active open"><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-accounts-alt"></i><span>Professors</span> </a>
                         <ul class="ml-menu">
-                            <li class="active"><a href="professors.html">All Professors</a></li>
+                            <li class="active"><a href="<?php echo site_url('professors/all_professor');?>">All Professors</a></li>
                             <li><a href="add-professors.html">Add Professors</a></li>
                             <li><a href="profile.html">Profile</a></li>
                         </ul>
                     </li>
-                    <li><a href="parents.html"><i class="zmdi zmdi-account"></i><span>Parents</span> </a></li>                    
+                    <!-- <li><a href="parents.html"><i class="zmdi zmdi-account"></i><span>Parents</span> </a></li>                    
                     <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-lock"></i><span>Authentication</span> </a>
                         <ul class="ml-menu">
                             <li><a href="sign-in.html">Sign In</a> </li>
@@ -262,7 +258,7 @@
                             <li><a href="page-offline.html">Page Offline</a> </li>
                             <li><a href="locked.html">Locked Screen</a> </li>
                         </ul>
-                    </li>
+                    </li> -->
                     <li class="header">UNIVERSITY</li>
                     <li><a href="events.html"><i class="zmdi zmdi-calendar-check"></i><span>Events</span> </a></li>
                     <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-city-alt"></i><span>Departments</span> </a>
@@ -281,7 +277,7 @@
                     <li><a href="library.html"><i class="zmdi zmdi-book"></i><span>Library</span> </a></li>
                     <li><a href="classroom.html"><i class="zmdi zmdi-device-hub"></i><span>Class</span> </a></li>
                     <li><a href="noticeboard.html"><i class="zmdi zmdi-alert-circle"></i><span>Noticeboard</span> </a></li>
-                    <li><a href="centres.html"><i class="zmdi zmdi-pin"></i><span>University Centres</span></a></li>                    
+                    <!-- <li><a href="centres.html"><i class="zmdi zmdi-pin"></i><span>University Centres</span></a></li>                    
                     <li class="header">EXTRA COMPONENTS</li>
                     <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-blogger"></i><span>Blog</span></a>
                         <ul class="ml-menu">
@@ -362,7 +358,7 @@
                                 </div>
                             </div>
                         </div>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -446,7 +442,7 @@
     </div>    
 </aside>
 <!-- Right Sidebar -->
-<aside id="rightsidebar" class="right-sidebar">
+<!-- <aside id="rightsidebar" class="right-sidebar">
     <ul class="nav nav-tabs">
         <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#setting"><i class="zmdi zmdi-settings zmdi-hc-spin"></i></a></li>
         <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#chat"><i class="zmdi zmdi-comments"></i></a></li>
@@ -844,9 +840,9 @@
             </div>
         </div>
     </div>
-</aside>
+</aside> -->
 <!-- Chat-launcher -->
-<div class="chat-launcher"></div>
+<!-- <div class="chat-launcher"></div>
 <div class="chat-wrapper">
     <div class="card">
         <div class="header">
@@ -905,17 +901,17 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <section class="content">
     <div class="block-header">
         <div class="row">
             <div class="col-lg-5 col-md-5 col-sm-12">
                 <h2>All Professors
-                <small>Welcome to Oreo</small>
+                <small><?php echo $welcome_string;?></small>
                 </h2>
             </div>            
-            <div class="col-lg-7 col-md-7 col-sm-12 text-right">
+            <!-- <div class="col-lg-7 col-md-7 col-sm-12 text-right">
                 <button class="btn btn-white btn-icon btn-round hidden-sm-down float-right m-l-10" type="button">
                     <i class="zmdi zmdi-plus"></i>
                 </button>
@@ -924,20 +920,20 @@
                     <li class="breadcrumb-item"><a href="javascript:void(0);">Professors</a></li>
                     <li class="breadcrumb-item active">All</li>
                 </ul>
-            </div>
+            </div> -->
         </div>
     </div>
     <div class="container-fluid">
         <div class="row clearfix">
             <div class="col-lg-12">
-                <div class="card">
+                <!-- <div class="card">
                     <div class="body">
                         <ul class="nav nav-tabs padding-0">
                             <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#Permanent">Permanent</a></li>
                             <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Consultant">Consultant</a></li>
                         </ul>
                     </div>
-                </div>
+                </div> -->
                 <div class="tab-content m-t-10">
                     <div class="tab-pane active" id="Permanent">
                         <div class="row clearfix">

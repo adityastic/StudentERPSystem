@@ -917,7 +917,7 @@
                 <small class="text-muted"><?php echo $welcome_string;?></small>
                 </h2>
             </div>
-            <div class="col-lg-5 col-md-6 col-sm-12">
+            <!-- <div class="col-lg-5 col-md-6 col-sm-12">
                 <button class="btn btn-white btn-icon btn-round hidden-sm-down float-right m-l-10" type="button">
                     <i class="zmdi zmdi-plus"></i>
                 </button>
@@ -926,7 +926,7 @@
                     <li class="breadcrumb-item"><a href="javascript:void(0);">Student</a></li>
                     <li class="breadcrumb-item active">Add</li>
                 </ul>
-            </div>
+            </div> -->
         </div>
     </div>
     <div class="container-fluid">

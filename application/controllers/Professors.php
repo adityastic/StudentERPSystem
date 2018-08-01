@@ -5,6 +5,6 @@ class professors extends MY_Controller {
 
 	public function all_professor()
 	{
-		$this->load->view('all_professor');
+		$this->load->view('all-professor');
 	}
 }
