@@ -5,6 +5,11 @@ class Students extends MY_Controller {
 
 	public function add_students()
 	{
+		if($this->input->server('REQUEST_METHOD') == 'POST')
+		{
+		}else
+		{
+		}
 		$this->load->view('add-students');
 	}
 }

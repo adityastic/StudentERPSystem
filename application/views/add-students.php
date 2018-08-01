@@ -484,7 +484,7 @@
 <!--                    <h6>Left Menu</h6>-->
 <!--                    <button class="t-light btn btn-default btn-simple btn-round">Light Menu</button>-->
 <!--                    <button class="t-dark btn btn-default btn-round">Dark Menu</button>-->
-<!--					<button class="m_img_btn btn btn-primary btn-round btn-block">Sidebar Image</button>-->
+<!--                    <button class="m_img_btn btn btn-primary btn-round btn-block">Sidebar Image</button>-->
 <!--                </div>-->
 <!--                <div class="card">-->
 <!--                    <h6>General Settings</h6>-->
@@ -910,6 +910,7 @@
 <!--</div>-->
 
 <section class="content profile-page">
+    <form class="dropzone" method="post" action="<?php echo site_url('students/add_students');?>" enctype="multipart/form-data">
     <div class="block-header">
         <div class="row">
             <div class="col-lg-7 col-md-6 col-sm-12">
@@ -931,22 +932,37 @@
     </div>
     <div class="container-fluid">
         <div class="row clearfix">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h2><strong>Admission</strong> ID <small>Information Regarding database (Do not touch)</small> </h2>
+                    </div>
+                    <div class="body">
+                        <div class="row clearfix">
+                            <div class="col-lg-6 col-md-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Admission Number" value="123" disabled>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php
+            if (true) {
+                echo '<div class="alert alert-danger">
+                            <strong>Oh snap!</strong> Change a few things up and try submitting again.<br>
+                            1. Hello<br>
+                            2. Hello<br>
+                        </div>';
+            }
+        ?>
+        <div class="row clearfix">
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="card">
                     <div class="header">
-                        <h2><strong>Basic</strong> Information <small>Description text here...</small> </h2>
-                        <ul class="header-dropdown">
-                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
-                                <ul class="dropdown-menu dropdown-menu-right slideUp">
-                                    <li><a href="javascript:void(0);" class="waves-effect waves-block">Action</a></li>
-                                    <li><a href="javascript:void(0);" class="waves-effect waves-block">Another action</a></li>
-                                    <li><a href="javascript:void(0);" class="waves-effect waves-block">Something else</a></li>
-                                </ul>
-                            </li>
-                            <li class="remove">
-                                <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
-                            </li>
-                        </ul>
+                        <h2><strong>Basic</strong> Information <small>Enter Student Basic</small> </h2>
                     </div>
                     <div class="body">
                         <div class="row clearfix">
@@ -974,7 +990,7 @@
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Age">
+                                    <input type="number" min="0" max="40" class="form-control" placeholder="Age">
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">                                
@@ -984,15 +1000,6 @@
                                     <option value="20">Female</option>
                                 </select>
                             </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12">
-                                <select class="form-control show-tick">
-                                    <option value="">-- Department --</option>
-                                    <option value="10">BCA</option>
-                                    <option value="20">MCA</option>
-                                    <option value="20">BCom</option>
-                                    <option value="20">MCom</option>
-                                </select>
-                            </div> 
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
                                     <input type="text" class="form-control" placeholder="Enter Your Email">
@@ -1051,15 +1058,12 @@
                         <br>
                         <div class="row clearfix">
                             <div class="col-lg-12 col-md-12 col-sm-12">
-                                <form action="../../../../index.html" id="frmFileUpload" class="dropzone" method="post" enctype="multipart/form-data">
                                     <div class="dz-message">
                                         <div class="drag-icon-cph"> <i class="material-icons">touch_app</i> </div>
-                                        <h3>Drop Student Photo here or click to upload.</h3>
-                                        <em>(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</em> </div>
+                                        <h3>Drop Student Photo here or click to upload.</h3></div>
                                     <div class="fallback">
                                         <input name="file" type="file" multiple />
                                     </div>
-                                </form>
                             </div>
                         </div>
                         <br>
@@ -1068,10 +1072,6 @@
                                 <div class="form-group">
                                     <textarea rows="4" class="form-control no-resize" placeholder="Adress"></textarea>
                                 </div>
-                            </div>
-                            <div class="col-sm-12">
-                                <button type="submit" class="btn btn-raised btn-round btn-primary">Submit</button>
-                                <button type="submit" class="btn btn-raised btn-round">Cancel</button>
                             </div>
                         </div>
                     </div>
@@ -1083,18 +1083,6 @@
                 <div class="card">
                     <div class="header">
                         <h2><strong>Account</strong> Information <small>Description text here...</small> </h2>
-                        <ul class="header-dropdown">
-                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
-                                <ul class="dropdown-menu dropdown-menu-right slideUp">
-                                    <li><a href="javascript:void(0);" class="waves-effect waves-block">Action</a></li>
-                                    <li><a href="javascript:void(0);" class="waves-effect waves-block">Another action</a></li>
-                                    <li><a href="javascript:void(0);" class="waves-effect waves-block">Something else</a></li>
-                                </ul>
-                            </li>
-                            <li class="remove">
-                                <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
-                            </li>
-                        </ul>
                     </div>
                     <div class="body">
                         <div class="row clearfix">
@@ -1113,15 +1101,6 @@
                                     <input type="text" class="form-control" placeholder="Password">
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-12">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Confirm Password">
-                                </div>
-                            </div>
-                            <div class="col-sm-12">
-                                <button type="submit" class="btn btn-raised btn-round btn-primary">Submit</button>
-                                <button type="submit" class="btn btn-raised btn-round">Cancel</button>
-                            </div>
                         </div>                        
                     </div>
                 </div>
@@ -1133,28 +1112,19 @@
                 <div class="card">
                     <div class="header">
                         <h2><strong>Coureses and Batch</strong> Details <small>Description text here...</small> </h2>
-                        <ul class="header-dropdown">
-                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
-                                <ul class="dropdown-menu dropdown-menu-right slideUp">
-                                    <li><a href="javascript:void(0);" class="waves-effect waves-block">Action</a></li>
-                                    <li><a href="javascript:void(0);" class="waves-effect waves-block">Another action</a></li>
-                                    <li><a href="javascript:void(0);" class="waves-effect waves-block">Something else</a></li>
-                                </ul>
-                            </li>
-                            <li class="remove">
-                                <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
-                            </li>
-                        </ul>
                     </div>
                     <div class="body">
                         <div class="row clearfix">
                             <div class="col-lg-6 col-md-12">
 
                                 <select class="form-control show-tick">
-                                    <option value="">-- class --</option>
-                                    <option value="10">10th</option>
-                                    <option value="20">11th</option>
-                                    <option value="20">12th</option>
+                                    <option value="">-- Class --</option>
+                                    <?php
+                                        for($i=0; $i<=2; $i++)
+                                        {
+                                            echo '<option value="' . $i . '">1' . $i . 'th</option>';
+                                        }
+                                    ?>
                                 </select>
                             </div>
                             <div class="col-lg-6 col-md-12">
@@ -1162,13 +1132,6 @@
                                     <input type="text" class="form-control" placeholder="Section">
                                 </div>
                             </div>
-
-                            <div class="col-lg-6 col-md-12">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Roll no">
-                                </div>
-                            </div>
-
                             <div class="col-lg-6 col-md-12">
                                 <select class="form-control show-tick">
                                     <option value="">-- Academic Year --</option>
@@ -1185,18 +1148,16 @@
                                     <option value="20">Science</option>
                                 </select>
                             </div>
-
-
-                            <div class="col-sm-12">
-                                <button type="submit" class="btn btn-raised btn-round btn-primary">Submit</button>
-                                <button type="submit" class="btn btn-raised btn-round">Cancel</button>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="col-sm-12">
+            <button type="submit" class="btn btn-raised btn-round btn-primary">Submit</button>
+        </div>
     </div>
+</form>
 </section>
 <!-- Jquery Core Js --> 
 <script src="../assets/bundles/libscripts.bundle.js"></script> <!-- Bootstrap JS and jQuery v3.2.1 -->
