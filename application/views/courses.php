@@ -9,16 +9,16 @@
 <title><?php echo $title;?></title>
 <!-- Favicon-->
 <link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
 <!-- Custom Css -->
-<link rel="stylesheet" href="../assets/css/main.css">
-<link rel="stylesheet" href="../assets/css/color_skins.css">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/color_skins.css">
 </head>
 <body class="<?php echo $theme;?>">
 <!-- Page Loader -->
 <div class="page-loader-wrapper">
     <div class="loader">
-        <div class="m-t-30"><img class="zmdi-hc-spin" src="../assets/images/logo.svg" width="48" height="48" alt="Oreo"></div>
+        <div class="m-t-30"><img class="zmdi-hc-spin" src="assets/images/logo.svg" width="48" height="48" alt="Oreo"></div>
         <p>Please wait...</p>        
     </div>
 </div>
@@ -30,7 +30,7 @@
         <li>
             <div class="navbar-header">
                 <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="index.html"><img src="../assets/images/logo.svg" width="30" alt="Oreo"><span class="m-l-10"><?php echo $company_name;?></span></a>
+                <a class="navbar-brand" href="index.html"><img src="assets/images/logo.svg" width="30" alt="Oreo"><span class="m-l-10"><?php echo $company_name;?></span></a>
             </div>
         </li>
         <li><a href="javascript:void(0);" class="ls-toggle-btn" data-close="true"><i class="zmdi zmdi-swap"></i></a></li>
@@ -1119,9 +1119,9 @@
     </div>
 </section>
 <!-- Jquery Core Js --> 
-<script src="../assets/bundles/libscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js -->
-<script src="../assets/bundles/vendorscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js -->
+<script src="assets/bundles/libscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js -->
+<script src="assets/bundles/vendorscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js -->
 
-<script src="../assets/bundles/mainscripts.bundle.js"></script>
+<script src="assets/bundles/mainscripts.bundle.js"></script>
 </body>
 </html>
