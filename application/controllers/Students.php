@@ -7,4 +7,8 @@ class Students extends MY_Controller {
 	{
 		$this->load->view('add-students');
 	}
+	public function index()
+	{
+		$this->load->view('students');
+	}
 }

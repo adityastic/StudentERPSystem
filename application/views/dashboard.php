@@ -233,7 +233,7 @@ Fdoctype html>
                     <li class="active open"><a href="<?php echo site_url('dashboard') ?>"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
                     <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-accounts-outline"></i><span>Students</span> </a>
                         <ul class="ml-menu">
-                            <li><a href="students.html">All Students</a></li>
+                            <li><a href="<?php echo site_url('students');?>">All Students</a></li>
                             <li><a href="<?php echo site_url('students/add_students');?>">Add Students</a></li>
                             <li><a href="students-profile.html">Students Profile</a></li>
                             <li><a href="students-invoice.html">Students Invoice</a></li>
