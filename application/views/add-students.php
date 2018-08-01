@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css">
 <!-- Dropzone Css -->
 <link href="../assets/plugins/dropzone/dropzone.css" rel="stylesheet">
+    <link href="../assets/plugins/valid/valid.css" rel="stylesheet">
 <!-- Bootstrap Material Datetime Picker Css -->
 <link href="../assets/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet" />
 <!-- Bootstrap Select Css -->
@@ -950,7 +951,7 @@
             </div>
         </div>
         <?php
-            if (true) {
+            if (false) {
                 echo '<div class="alert alert-danger">
                             <strong>Oh snap!</strong> Change a few things up and try submitting again.<br>
                             1. Hello<br>
@@ -968,44 +969,44 @@
                         <div class="row clearfix">
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="First Name">
+                                    <input type="text" class="form-control" placeholder="First Name *" required>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Last Name">
+                                    <input type="text" class="form-control" placeholder="Last Name *" required>
                                 </div>
                             </div>
                         </div>
                         <div class="row clearfix">
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Phone No.">
+                                    <input type="number *" min="1111111111" max="9999999999" class="form-control" placeholder="Phone No." required>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" class="datetimepicker form-control" placeholder="Date of Birth">
+                                    <input type="text" class="datetimepicker form-control" placeholder="Date of Birth" required>
                                 </div>
                             </div>
                         </div>
                         <div class="row clearfix">
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Email">
+                                    <input type="email" class="form-control" placeholder="Email" required>
                                 </div>
                             </div>
                         </div>
                         <div class="row clearfix">
                             <div class="col-lg-4 col-md-6 col-sm-12">
-                                <select class="form-control show-tick">
+                                <select class="form-control show-tick" required>
                                     <option value="">-- Gender --</option>
                                     <option value="male">Male</option>
                                     <option value="female">Female</option>
                                 </select>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
-                                <select class="form-control show-tick">
+                                <select class="form-control show-tick" required>
                                     <option value="">-- Category --</option>
                                     <option value="gn">GN</option>
                                     <option value="obc">OBC</option>
@@ -1017,18 +1018,18 @@
                         <br>
                         <div class="row clearfix">
                             <div class="col-lg-4 col-md-6 col-sm-12">
-                                <select class="form-control show-tick">
+                                <select class="form-control show-tick" required>
                                     <option value="">-- State --</option>
                                     <option value="mp">Madhya Pradesh</option>
                                 </select>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="City">
+                                    <input type="text" class="form-control" placeholder="City" required>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
-                                <select class="form-control show-tick">
+                                <select class="form-control show-tick" required>
                                     <option value="">-- Blood Group --</option>
                                     <option value="opos">O+</option>
                                     <option value="oneg">O-</option>
@@ -1043,10 +1044,10 @@
                         </div>
                         <br>
                         <div class="row clearfix">                            
-                            <div class="col-sm-12">
+                            <div class="col-sm-12" >
                                 Enter Current Address :
                                 <div class="form-group">
-                                    <textarea rows="4" class="form-control no-resize" placeholder="Address"></textarea>
+                                    <textarea rows="4" class="form-control no-resize" placeholder="Address" required></textarea>
                                 </div>
                             </div>
                         </div>
@@ -1055,7 +1056,7 @@
                             <div class="col-sm-12">
                                 Enter Permanent Address :
                                 <div class="form-group">
-                                    <textarea rows="4" class="form-control no-resize" placeholder="Address"></textarea>
+                                    <textarea rows="4" class="form-control no-resize" placeholder="Address" required></textarea>
                                 </div>
                             </div>
                         </div>
@@ -1085,32 +1086,32 @@
                         <div class="row clearfix">
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Father's Name">
+                                    <input type="text" class="form-control" placeholder="Father's Name" required>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Mother's Name">
+                                    <input type="text" class="form-control" placeholder="Mother's Name" required>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="number" class="form-control" placeholder="Father's Contact Number">
+                                    <input type="number" class="form-control" placeholder="Father's Contact Number" required>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Mother's Contact Number">
+                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Mother's Contact Number" required>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Father's Office Number">
+                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Father's Office Number" required>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Mother's Office Number">
+                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Mother's Office Number" required>
                                 </div>
                             </div>
                         </div>
@@ -1128,10 +1129,19 @@
                         <div class="row clearfix">
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Password">
+                                    <input type="password" class="form-control" id="psw" placeholder="Password"  name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
                                 </div>
                             </div>
-                        </div>                        
+                        </div>
+                        <div id="message">
+
+                            <small>Password must contain the following:</small>
+                            <P> </P>
+                            <p id="letter" class="invalid"> <small>A <b>lowercase</b> letter</small></p>
+                            <p id="capital" class="invalid"><small> A <b>capital (uppercase)</b> letter </small></p>
+                            <p id="number" class="invalid"><small> A <b>number</b> </small></p>
+                            <p id="length" class="invalid"><small> Minimum <b>8 characters</b></small></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1146,7 +1156,7 @@
                     <div class="body">
                         <div class="row clearfix">
                             <div class="col-lg-6 col-md-12">
-                                <select class="form-control show-tick">
+                                <select class="form-control show-tick" required>
                                     <option value="">-- Class --</option>
                                     <?php
                                         for ($i=0; $i<=2; $i++) {
@@ -1156,7 +1166,7 @@
                                 </select>
                             </div>
                             <div class="col-lg-6 col-md-12">
-                                <select class="form-control show-tick">
+                                <select class="form-control show-tick" required>
                                     <option value="">-- Academic Year --</option>
                                     <option value="10">2017</option>
                                     <option value="20">2018</option>
@@ -1180,6 +1190,7 @@
 <script src="../assets/plugins/autosize/autosize.js"></script> <!-- Autosize Plugin Js --> 
 <script src="../assets/plugins/momentjs/moment.js"></script> <!-- Moment Plugin Js --> 
 <script src="../assets/plugins/dropzone/dropzone.js"></script> <!-- Dropzone Plugin Js -->
+<script src="../assets/plugins/valid/valid.js"></script> <!-- valid Plugin Js -->
 <!-- Bootstrap Material Datetime Picker Plugin Js --> 
 <script src="../assets/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
 
@@ -1188,5 +1199,6 @@
 <script type="text/javascript">
     $(".page-loader-wrapper").fadeOut()
 </script>
+
 </body>
 </html>
