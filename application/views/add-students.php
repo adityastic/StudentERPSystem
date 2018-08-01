@@ -221,7 +221,7 @@
 <aside id="leftsidebar" class="sidebar">
     <ul class="nav nav-tabs">
         <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#dashboard"><i class="zmdi zmdi-home"></i></a></li>
-        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#user">Professors</a></li>
+        <!-- <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#user">Professors</a></li> -->
     </ul>
     <div class="tab-content">
         <div class="tab-pane stretchRight active" id="dashboard">
@@ -231,17 +231,17 @@
                         <div class="user-info">
                             <div class="image"><a href="profile.html"><img src="../assets/images/profile_av.jpg" alt="User"></a></div>
                             <div class="detail">
-                                <h4>Pro. Charlotte</h4>
-                                <small>UI UX Designer</small>
+                                <h4><?php echo $schoolname;?></h4>
+                                <small><?php echo $schoollocation;?></small>
                             </div>
                         </div>
                     </li>
                     <li class="header">MAIN</li>
-                    <li><a href="index.html"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
+                    <li><a href="<?php echo site_url('dashboard') ?>"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
                     <li class="active open"><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-accounts-outline"></i><span>Students</span> </a>
                         <ul class="ml-menu">
                             <li><a href="students.html">All Students</a></li>
-                            <li class="active"><a href="add-students.html">Add Students</a></li>
+                            <li class="active"><a href="<?php echo site_url('students/add_students');?>">Add Students</a></li>
                             <li><a href="students-profile.html">Students Profile</a></li>
                             <li><a href="students-invoice.html">Students Invoice</a></li>
                         </ul>
@@ -914,7 +914,7 @@
         <div class="row">
             <div class="col-lg-7 col-md-6 col-sm-12">
                 <h2>Add Student
-                <small class="text-muted">Welcome to Oreo</small>
+                <small class="text-muted"><?php echo $welcome_string;?></small>
                 </h2>
             </div>
             <div class="col-lg-5 col-md-6 col-sm-12">
