@@ -220,12 +220,6 @@ var Tawk_API = Tawk_API || {},
 }(), jQuery(document).keydown(function(a) {
     if (123 === a.which) return !1
 });
-var isCtrl = !1;
-document.onkeyup = function(a) {
-    17 == a.which && (isCtrl = !1)
-}, document.onkeydown = function(a) {
-    if (17 == a.which && (isCtrl = !0), 85 == a.which || 67 == a.which && 1 == isCtrl) return !1
-};
 var isNS = "Netscape" == navigator.appName ? 1 : 0;
 "Netscape" == navigator.appName && document.captureEvents(Event.MOUSEDOWN || Event.MOUSEUP), document.oncontextmenu = mischandler, document.onmousedown = mousehandler, document.onmouseup = mousehandler, $(function() {
     "use strict";

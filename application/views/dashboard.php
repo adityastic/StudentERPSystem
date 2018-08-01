@@ -223,8 +223,8 @@
                         <div class="user-info">
                             <div class="image"><a href="profile.html"><img src="http://via.placeholder.com/80x80" alt="User"></a></div>
                             <div class="detail">
-                                <h4>Laurels School International</h4>
-                                <small>Indore, India</small>
+                                <h4><?php echo $schoolname;?></h4>
+                                <small><?php echo $schoollocation;?></small>
                             </div>
                         </div>
                     </li>
