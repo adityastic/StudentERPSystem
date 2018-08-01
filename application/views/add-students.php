@@ -966,12 +966,12 @@
                     </div>
                     <div class="body">
                         <div class="row clearfix">
-                            <div class="col-lg-6 col-md-12">
+                            <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
                                     <input type="text" class="form-control" placeholder="First Name">
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-12">
+                            <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
                                     <input type="text" class="form-control" placeholder="Last Name">
                                 </div>
@@ -980,7 +980,7 @@
                         <div class="row clearfix">
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Phone No.">
+                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Phone No.">
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
@@ -988,24 +988,100 @@
                                     <input type="text" class="datetimepicker form-control" placeholder="Date of Birth">
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12">
+                        </div>
+                        <div class="row clearfix">
+                            <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="number" min="0" max="40" class="form-control" placeholder="Age">
+                                    <input type="email" class="form-control" placeholder="Email">
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12">                                
+                        </div>
+                        <div class="row clearfix">
+                            <div class="col-lg-4 col-md-6 col-sm-12">
                                 <select class="form-control show-tick">
                                     <option value="">-- Gender --</option>
-                                    <option value="10">Male</option>
-                                    <option value="20">Female</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <select class="form-control show-tick">
+                                    <option value="">-- Category --</option>
+                                    <option value="gn">GN</option>
+                                    <option value="obc">OBC</option>
+                                    <option value="st">ST</option>
+                                    <option value="sc">SC</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row clearfix">
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <select class="form-control show-tick">
+                                    <option value="">-- State --</option>
+                                    <option value="mp">Madhya Pradesh</option>
                                 </select>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Enter Your Email">
+                                    <input type="text" class="form-control" placeholder="City">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <select class="form-control show-tick">
+                                    <option value="">-- Blood Group --</option>
+                                    <option value="opos">O+</option>
+                                    <option value="oneg">O-</option>
+                                    <option value="apos">A+</option>
+                                    <option value="aneg">A-</option>
+                                    <option value="bpos">B+</option>
+                                    <option value="bneg">B-</option>
+                                    <option value="abpos">AB+</option>
+                                    <option value="abneg">AB-</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row clearfix">                            
+                            <div class="col-sm-12">
+                                Enter Current Address :
+                                <div class="form-group">
+                                    <textarea rows="4" class="form-control no-resize" placeholder="Address"></textarea>
                                 </div>
                             </div>
                         </div>
+                        <br>
+                        <div class="row clearfix">                            
+                            <div class="col-sm-12">
+                                Enter Permanent Address :
+                                <div class="form-group">
+                                    <textarea rows="4" class="form-control no-resize" placeholder="Address"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row clearfix">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                Upload Photo :
+                                    <div class="dz-message">
+                                        <div class="drag-icon-cph"> <i class="material-icons">touch_app</i> </div>
+                                        <h3>Drop Student Photo here or click to upload.</h3></div>
+                                    <div class="fallback">
+                                        <input name="file" type="file" multiple />
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="card">
+                    <div class="header">
+                        <h2><strong>Parent's</strong> Information <small>Enter Parents Information</small> </h2>
+                    </div>
+                    <div class="body">
                         <div class="row clearfix">
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
@@ -1019,58 +1095,22 @@
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Father's  Contact Number">
+                                    <input type="number" class="form-control" placeholder="Father's Contact Number">
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
-                                <select class="form-control show-tick">
-                                    <option value="">-- Nationality --</option>
-                                    <option value="10">Indian</option>
-                                    <option value="20">Other</option>
-                                </select>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12">
-                                <select class="form-control show-tick">
-                                    <option value="">-- Category --</option>
-                                    <option value="10">GN</option>
-                                    <option value="20">OBC</option>
-                                    <option value="20">ST</option>
-                                    <option value="20">SC</option>
-                                </select>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="City">
+                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Mother's Contact Number">
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
-                                <select class="form-control show-tick">
-                                    <option value="">-- State --</option>
-                                    <option value="10">mp</option>
-                                    <option value="20">mh</option>
-                                    <option value="20">up</option>
-                                    <option value="20">cg</option>
-                                </select>
-                            </div>
-
-
-                        </div>
-                        <br>
-                        <div class="row clearfix">
-                            <div class="col-lg-12 col-md-12 col-sm-12">
-                                    <div class="dz-message">
-                                        <div class="drag-icon-cph"> <i class="material-icons">touch_app</i> </div>
-                                        <h3>Drop Student Photo here or click to upload.</h3></div>
-                                    <div class="fallback">
-                                        <input name="file" type="file" multiple />
-                                    </div>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row clearfix">                            
-                            <div class="col-sm-12">
                                 <div class="form-group">
-                                    <textarea rows="4" class="form-control no-resize" placeholder="Adress"></textarea>
+                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Father's Office Number">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Mother's Office Number">
                                 </div>
                             </div>
                         </div>
@@ -1082,20 +1122,10 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="header">
-                        <h2><strong>Account</strong> Information <small>Description text here...</small> </h2>
+                        <h2><strong>Account</strong> Information <small>Login Account Details</small> </h2>
                     </div>
                     <div class="body">
                         <div class="row clearfix">
-                            <div class="col-lg-6 col-md-12">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Email">
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-12">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Phone">
-                                </div>
-                            </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
                                     <input type="text" class="form-control" placeholder="Password">
@@ -1111,41 +1141,25 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="header">
-                        <h2><strong>Coureses and Batch</strong> Details <small>Description text here...</small> </h2>
+                        <h2><strong>Courses and Batch</strong> Details <small>Joining Batch Information</small> </h2>
                     </div>
                     <div class="body">
                         <div class="row clearfix">
                             <div class="col-lg-6 col-md-12">
-
                                 <select class="form-control show-tick">
                                     <option value="">-- Class --</option>
                                     <?php
-                                        for($i=0; $i<=2; $i++)
-                                        {
+                                        for ($i=0; $i<=2; $i++) {
                                             echo '<option value="' . $i . '">1' . $i . 'th</option>';
                                         }
                                     ?>
                                 </select>
                             </div>
                             <div class="col-lg-6 col-md-12">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Section">
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-12">
                                 <select class="form-control show-tick">
                                     <option value="">-- Academic Year --</option>
-                                    <option value="10">2016-2107</option>
-                                    <option value="20">2017-2018</option>
-                                </select>
-                            </div>
-
-
-                            <div class="col-lg-6 col-md-12">
-                                <select class="form-control show-tick">
-                                    <option value="">-- Stream --</option>
-                                    <option value="10">Maths</option>
-                                    <option value="20">Science</option>
+                                    <option value="10">2017</option>
+                                    <option value="20">2018</option>
                                 </select>
                             </div>
                         </div>
