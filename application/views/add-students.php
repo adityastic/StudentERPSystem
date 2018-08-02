@@ -969,12 +969,12 @@
                         <div class="row clearfix">
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="First Name *" required>
+                                    <input type="text" class="form-control" placeholder="First Name" required>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Last Name *" required>
+                                    <input type="text" class="form-control" placeholder="Last Name" required>
                                 </div>
                             </div>
                         </div>
@@ -1050,6 +1050,11 @@
                                     <textarea rows="4" class="form-control no-resize" placeholder="Address" required></textarea>
                                 </div>
                             </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <input type="number" min="111111" max="999999" class="form-control" placeholder="PinCode" required>
+                                </div>
+                            </div>
                         </div>
                         <br>
                         <div class="row clearfix">                            
@@ -1057,6 +1062,11 @@
                                 Enter Permanent Address :
                                 <div class="form-group">
                                     <textarea rows="4" class="form-control no-resize" placeholder="Address" required></textarea>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <input type="number" min="111111" max="999999" class="form-control" placeholder="PinCode" required>
                                 </div>
                             </div>
                         </div>
@@ -1084,34 +1094,39 @@
                     </div>
                     <div class="body">
                         <div class="row clearfix">
-                            <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
                                     <input type="text" class="form-control" placeholder="Father's Name" required>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
                                     <input type="text" class="form-control" placeholder="Mother's Name" required>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
                                     <input type="number" class="form-control" placeholder="Father's Contact Number" required>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
                                     <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Mother's Contact Number" required>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
                                     <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Father's Office Number" required>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
                                     <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Mother's Office Number" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Fathers's Email" required>
                                 </div>
                             </div>
                         </div>
@@ -1134,11 +1149,10 @@
                             </div>
                         </div>
                         <div id="message">
-
                             <small>Password must contain the following:</small>
                             <P> </P>
                             <p id="letter" class="invalid"> <small>A <b>lowercase</b> letter</small></p>
-                            <p id="capital" class="invalid"><small> A <b>capital (uppercase)</b> letter </small></p>
+                            <p id="capital" class="invalid"><small>A <b>capital (uppercase)</b> letter </small></p>
                             <p id="number" class="invalid"><small> A <b>number</b> </small></p>
                             <p id="length" class="invalid"><small> Minimum <b>8 characters</b></small></p>
                         </div>
