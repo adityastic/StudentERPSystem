@@ -196,14 +196,6 @@ class Students extends MY_Controller
             $field_mother_onumber = $this->input->post('field_mother_onumber');
             $field_father_email = $this->input->post('field_father_email');
             $password = $this->input->post('psw');
-            if($password ==''){
-                $errors = new stdClass();
-                $errors->has = true;
-                $this->setErrorMessage($errors,"Password");
-                if (isset($errors->has)) {
-                    array_push($data['error_list'], $errors->msg);
-                }
-            }
             $field_class_id = $this->input->post('field_class_id');
             if($field_class_id ==''){
                 $errors = new stdClass();
