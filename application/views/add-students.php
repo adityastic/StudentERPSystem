@@ -950,13 +950,27 @@
                 </div>
             </div>
         </div>
-        <?php
-            if (isset($errorstring)) {
+         <?php
+        // if (isset($errorstring)) {
+
+        //         echo '<div class="alert alert-danger">
+        //                     <strong>Oh snap!</strong> Change a few things up and try submitting again.<br>
+        //                     ' . $errorstring . '
+        //                 </div>';
+        //     }if (isset($errorstrin)) {
+
+        //         echo '<div class="alert alert-danger">
+        //                     <strong>Oh snap!</strong> Change a few things up and try submitting again.<br>
+        //                     ' . $errorstrin. '
+        //                 </div>';
+        //     }
+                foreach ($error_list as $item):
+                    
                 echo '<div class="alert alert-danger">
                             <strong>Oh snap!</strong> Change a few things up and try submitting again.<br>
-                            ' . $errorstring . '
+                            ' . $item. '
                         </div>';
-            }
+                endforeach;
         ?>
         <div class="row clearfix">
             <div class="col-lg-12 col-md-12 col-sm-12">
@@ -968,31 +982,31 @@
                         <div class="row clearfix">
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="First Name" name="field_stud_fname" required>
+                                    <input type="text" class="form-control" placeholder="First Name" name="field_stud_fname" >
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Last Name" name="field_stud_lname" required>
+                                    <input type="text" class="form-control" placeholder="Last Name" name="field_stud_lname" >
                                 </div>
                             </div>
                         </div>
                         <div class="row clearfix">
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="number *" min="1111111111" max="9999999999" class="form-control" placeholder="Phone No." name="field_stud_ph" required>
+                                    <input type="number *" min="1111111111" max="9999999999" class="form-control" placeholder="Phone No." name="field_stud_ph" >
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" class="datetimepicker form-control" placeholder="Date of Birth" name="field_stud_dob" required>
+                                    <input type="text" class="datetimepicker form-control" placeholder="Date of Birth" name="field_stud_dob" >
                                 </div>
                             </div>
                         </div>
                         <div class="row clearfix">
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Email" name="field_stud_email" required>
+                                    <input type="email" class="form-control" placeholder="Email" name="field_stud_email" >
                                 </div>
                             </div>
                         </div>
@@ -1024,11 +1038,11 @@
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="City" name="field_city" required>
+                                    <input type="text" class="form-control" placeholder="City" name="field_city" >
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
-                                <select class="form-control show-tick" required>
+                                <select class="form-control show-tick" >
                                     <option name="field_bgroup">-- Blood Group --</option>
                                     <option value="opos">O+</option>
                                     <option value="oneg">O-</option>
@@ -1046,12 +1060,12 @@
                             <div class="col-sm-12" >
                                 Enter Current Address :
                                 <div class="form-group">
-                                    <textarea rows="4" class="form-control no-resize" placeholder="Address" name="field_curradd" required></textarea>
+                                    <textarea rows="4" class="form-control no-resize" placeholder="Address" name="field_curradd" ></textarea>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="number" min="111111" max="999999" class="form-control" placeholder="PinCode" name="field_currpin" required>
+                                    <input type="number" min="111111" max="999999" class="form-control" placeholder="PinCode" name="field_currpin" >
                                 </div>
                             </div>
                         </div>
@@ -1060,12 +1074,12 @@
                             <div class="col-sm-12">
                                 Enter Permanent Address :
                                 <div class="form-group">
-                                    <textarea rows="4" class="form-control no-resize" placeholder="Address" name="field_permadd" required></textarea>
+                                    <textarea rows="4" class="form-control no-resize" placeholder="Address" name="field_permadd" ></textarea>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="number" min="111111" max="999999" class="form-control" placeholder="PinCode" name="field_permpin" required>
+                                    <input type="number" min="111111" max="999999" class="form-control" placeholder="PinCode" name="field_permpin" >
                                 </div>
                             </div>
                         </div>
@@ -1073,7 +1087,7 @@
                         <div class="row clearfix">
                             <div class="col-lg-12 col-md-12 col-sm-12">
                                 Upload Student Photo :
-                <input type="file" name="field_photo" accept="image/*" required><br><br>
+                <input type="file" name="field_photo" accept="image/*" ><br><br>
                 <img id="image" />
                             </div>
                         </div>
@@ -1091,37 +1105,37 @@
                         <div class="row clearfix">
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Father's Name" name="field_father_name" required>
+                                    <input type="text" class="form-control" placeholder="Father's Name" name="field_father_name" >
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Mother's Name" name="field_mother_name" required>
+                                    <input type="text" class="form-control" placeholder="Mother's Name" name="field_mother_name" >
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="number" class="form-control" placeholder="Father's Contact Number" name="field_father_phone" required>
+                                    <input type="number" class="form-control" placeholder="Father's Contact Number" name="field_father_phone" >
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Mother's Contact Number" name="field_mother_number" required>
+                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Mother's Contact Number" name="field_mother_number" >
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Father's Office Number" name="field_father_onumber" required>
+                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Father's Office Number" name="field_father_onumber" >
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Mother's Office Number" name="field_mother_onumber" required>
+                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Mother's Office Number" name="field_mother_onumber" >
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Fathers's Email" name="field_father_email" required>
+                                    <input type="email" class="form-control" placeholder="Fathers's Email" name="field_father_email" >
                                 </div>
                             </div>
                         </div>
@@ -1139,7 +1153,7 @@
                         <div class="row clearfix">
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="password" class="form-control" id="psw" placeholder="Password"  name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" >
+                                    <input type="password" class="form-control" id="psw" placeholder="Password"  name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
                                 </div>
                             </div>
                         </div>
