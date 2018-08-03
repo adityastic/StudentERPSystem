@@ -782,9 +782,6 @@
         };
         Dropzone.prototype.disable = function() {
             var file, _i, _len, _ref, _results;
-            this.clickableElements.forEach(function(element) {
-                return element.classList.remove("dz-clickable");
-            });
             this.removeEventListeners();
             _ref = this.files;
             _results = [];
