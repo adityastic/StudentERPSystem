@@ -11,7 +11,7 @@
 <!-- Favicon-->
 <link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css">
 <!-- Dropzone Css -->
-<link href="../assets/plugins/dropzone/dropzone.css" rel="stylesheet">
+<!-- <link href="../assets/plugins/dropzone/dropzone.css" rel="stylesheet"> -->
     <link href="../assets/plugins/valid/valid.css" rel="stylesheet">
 <!-- Bootstrap Material Datetime Picker Css -->
 <link href="../assets/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet" />
@@ -911,7 +911,7 @@
 <!--</div>-->
 
 <section class="content profile-page">
-    <form class="dropzone" method="post" action="<?php echo site_url('students/add_students');?>" enctype="multipart/form-data">
+    <form method="post" action="<?php echo site_url('students/add_students');?>" enctype="multipart/form-data">
     <div class="block-header">
         <div class="row">
             <div class="col-lg-7 col-md-6 col-sm-12">
@@ -942,7 +942,7 @@
                         <div class="row clearfix">
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Admission Number" value="123" disabled>
+                                    <input type="text" class="form-control" placeholder="Admission Number" value="<?php echo $admissionnumber;?>" name="field_adm_number" disabled>
                                 </div>
                             </div>
                         </div>                        
@@ -951,11 +951,10 @@
             </div>
         </div>
         <?php
-            if (false) {
+            if (isset($errorstring)) {
                 echo '<div class="alert alert-danger">
                             <strong>Oh snap!</strong> Change a few things up and try submitting again.<br>
-                            1. Hello<br>
-                            2. Hello<br>
+                            ' . $errorstring . '
                         </div>';
             }
         ?>
@@ -969,44 +968,44 @@
                         <div class="row clearfix">
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="First Name" required>
+                                    <input type="text" class="form-control" placeholder="First Name" name="field_stud_fname" required>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Last Name" required>
+                                    <input type="text" class="form-control" placeholder="Last Name" name="field_stud_lname" required>
                                 </div>
                             </div>
                         </div>
                         <div class="row clearfix">
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="number *" min="1111111111" max="9999999999" class="form-control" placeholder="Phone No." required>
+                                    <input type="number *" min="1111111111" max="9999999999" class="form-control" placeholder="Phone No." name="field_stud_ph" required>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" class="datetimepicker form-control" placeholder="Date of Birth" required>
+                                    <input type="text" class="datetimepicker form-control" placeholder="Date of Birth" name="field_stud_dob" required>
                                 </div>
                             </div>
                         </div>
                         <div class="row clearfix">
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Email" required>
+                                    <input type="email" class="form-control" placeholder="Email" name="field_stud_email" required>
                                 </div>
                             </div>
                         </div>
                         <div class="row clearfix">
                             <div class="col-lg-4 col-md-6 col-sm-12">
-                                <select class="form-control show-tick" required>
-                                    <option value="">-- Gender --</option>
+                                <select class="form-control show-tick" name="field_gender">
+                                    <option name="field_stud_gender" >-- Gender --</option>
                                     <option value="male">Male</option>
                                     <option value="female">Female</option>
                                 </select>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
-                                <select class="form-control show-tick" required>
+                                <select class="form-control show-tick" name="field_stud_caste">
                                     <option value="">-- Category --</option>
                                     <option value="gn">GN</option>
                                     <option value="obc">OBC</option>
@@ -1018,19 +1017,19 @@
                         <br>
                         <div class="row clearfix">
                             <div class="col-lg-4 col-md-6 col-sm-12">
-                                <select class="form-control show-tick" required>
+                                <select class="form-control show-tick" name="field_state">
                                     <option value="">-- State --</option>
                                     <option value="mp">Madhya Pradesh</option>
                                 </select>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="City" required>
+                                    <input type="text" class="form-control" placeholder="City" name="field_city" required>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <select class="form-control show-tick" required>
-                                    <option value="">-- Blood Group --</option>
+                                    <option name="field_bgroup">-- Blood Group --</option>
                                     <option value="opos">O+</option>
                                     <option value="oneg">O-</option>
                                     <option value="apos">A+</option>
@@ -1047,12 +1046,12 @@
                             <div class="col-sm-12" >
                                 Enter Current Address :
                                 <div class="form-group">
-                                    <textarea rows="4" class="form-control no-resize" placeholder="Address" required></textarea>
+                                    <textarea rows="4" class="form-control no-resize" placeholder="Address" name="field_curradd" required></textarea>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="number" min="111111" max="999999" class="form-control" placeholder="PinCode" required>
+                                    <input type="number" min="111111" max="999999" class="form-control" placeholder="PinCode" name="field_currpin" required>
                                 </div>
                             </div>
                         </div>
@@ -1061,25 +1060,21 @@
                             <div class="col-sm-12">
                                 Enter Permanent Address :
                                 <div class="form-group">
-                                    <textarea rows="4" class="form-control no-resize" placeholder="Address" required></textarea>
+                                    <textarea rows="4" class="form-control no-resize" placeholder="Address" name="field_permadd" required></textarea>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="number" min="111111" max="999999" class="form-control" placeholder="PinCode" required>
+                                    <input type="number" min="111111" max="999999" class="form-control" placeholder="PinCode" name="field_permpin" required>
                                 </div>
                             </div>
                         </div>
                         <br>
                         <div class="row clearfix">
                             <div class="col-lg-12 col-md-12 col-sm-12">
-                                Upload Photo :
-                                    <div class="dz-message">
-                                        <div class="drag-icon-cph"> <i class="material-icons">touch_app</i> </div>
-                                        <h3>Drop Student Photo here or click to upload.</h3></div>
-                                    <div class="fallback">
-                                        <input name="file" type="file" multiple />
-                                    </div>
+                                Upload Student Photo :
+                <input type="file" name="field_photo" accept="image/*" required><br><br>
+                <img id="image" />
                             </div>
                         </div>
                     </div>
@@ -1096,37 +1091,37 @@
                         <div class="row clearfix">
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Father's Name" required>
+                                    <input type="text" class="form-control" placeholder="Father's Name" name="field_father_name" required>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Mother's Name" required>
+                                    <input type="text" class="form-control" placeholder="Mother's Name" name="field_mother_name" required>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="number" class="form-control" placeholder="Father's Contact Number" required>
+                                    <input type="number" class="form-control" placeholder="Father's Contact Number" name="field_father_phone" required>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Mother's Contact Number" required>
+                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Mother's Contact Number" name="field_mother_number" required>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Father's Office Number" required>
+                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Father's Office Number" name="field_father_onumber" required>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Mother's Office Number" required>
+                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Mother's Office Number" name="field_mother_onumber" required>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Fathers's Email" required>
+                                    <input type="email" class="form-control" placeholder="Fathers's Email" name="field_father_email" required>
                                 </div>
                             </div>
                         </div>
@@ -1144,7 +1139,7 @@
                         <div class="row clearfix">
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="password" class="form-control" id="psw" placeholder="Password"  name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                                    <input type="password" class="form-control" id="psw" placeholder="Password"  name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" >
                                 </div>
                             </div>
                         </div>
@@ -1170,8 +1165,8 @@
                     <div class="body">
                         <div class="row clearfix">
                             <div class="col-lg-6 col-md-12">
-                                <select class="form-control show-tick" required>
-                                    <option value="">-- Class --</option>
+                                <select class="form-control show-tick" name="field_class_id">
+                                    <option name="">-- Class --</option>
                                     <?php
                                         for ($i=0; $i<=2; $i++) {
                                             echo '<option value="' . $i . '">1' . $i . 'th</option>';
@@ -1180,7 +1175,7 @@
                                 </select>
                             </div>
                             <div class="col-lg-6 col-md-12">
-                                <select class="form-control show-tick" required>
+                                <select class="form-control show-tick" name="field_year_id">
                                     <option value="">-- Academic Year --</option>
                                     <option value="10">2017</option>
                                     <option value="20">2018</option>
@@ -1203,7 +1198,7 @@
 
 <script src="../assets/plugins/autosize/autosize.js"></script> <!-- Autosize Plugin Js --> 
 <script src="../assets/plugins/momentjs/moment.js"></script> <!-- Moment Plugin Js --> 
-<script src="../assets/plugins/dropzone/dropzone.js"></script> <!-- Dropzone Plugin Js -->
+<!-- <script src="../assets/plugins/dropzone/dropzone.js"></script> Dropzone Plugin Js -->
 <script src="../assets/plugins/valid/valid.js"></script> <!-- valid Plugin Js -->
 <!-- Bootstrap Material Datetime Picker Plugin Js --> 
 <script src="../assets/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
@@ -1211,8 +1206,17 @@
 <script src="../assets/bundles/mainscripts.bundle.js"></script><!-- Custom Js -->
 <script src="../assets/js/pages/forms/basic-form-elements.js"></script>
 <script type="text/javascript">
-    $(".page-loader-wrapper").fadeOut()
-</script>
+    document.getElementById("files").onchange = function () {
+    var reader = new FileReader();
 
+    reader.onload = function (e) {
+        // get loaded data and render thumbnail.
+        document.getElementById("image").src = e.target.result;
+    };
+
+    // read the image file as a data URL.
+    reader.readAsDataURL(this.files[0]);
+};
+</script>
 </body>
 </html>
