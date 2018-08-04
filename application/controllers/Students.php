@@ -27,10 +27,10 @@ class Students extends MY_Controller
             //VALIDATION CODE
             $field_adm_number = $this->input->post('field_adm_number');
             $field_stud_ph = $this->input->post('field_stud_ph');
-         //   $field_stud_dob = DateTime::createFromFormat('Y/m/d', $this->input->post('field_stud_dob'));
-            //$date = $this->input->post('field_stud_dob');
-           // $date = "10.06.2015 09:25:52";
-           // $field_stud_dob  = DateTime::createFromFormat('d.m.Y H:i:s', $this->input->post('field_stud_dob'))->format('Y-m-d h:i:s');
+           
+            $date1 = $this->input->post('field_stud_dob');
+
+            $field_stud_dob  = DateTime::createFromFormat('d/m/Y', $date1)->format('Y-m-d');
             $field_city = $this->input->post('field_city');
             $field_curradd = $this->input->post('field_curradd');
             $field_currpin = $this->input->post('field_currpin');
@@ -136,7 +136,7 @@ class Students extends MY_Controller
                         'current_address'=>$field_curradd,
                         'perma_address'=>$field_permadd,
                         'father_email'=>$field_father_email,
-                        //'stud_dob'=>$field_stud_dob,
+                        'stud_dob'=>$field_stud_dob,
                         'stud_gender'=>$field_stud_gender,
                         'stud_blood_group'=>$field_bgroup,
                         'stud_caste'=>$field_stud_caste,
