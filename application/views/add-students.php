@@ -952,12 +952,27 @@
         </div>
          <?php
         if (isset($errorstring)) {
-
-                echo '<div class="alert alert-danger">
+            echo '<div class="alert alert-danger">
                             <strong>Oh snap!</strong> Change a few things up and try submitting again.<br>
                             ' . $errorstring . '
                         </div>';
-            }
+        }
+        if(isset($done))
+        {
+            echo '<div class="alert alert-success" role="alert">
+                            <div class="container">
+                                <div class="alert-icon">
+                                    <i class="zmdi zmdi-thumb-up"></i>
+                                </div>
+                                <strong>Success!</strong>Student Info Uploaded Successfully.
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">
+                                        <i class="zmdi zmdi-close"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>';
+        }
         ?>
         <div class="row clearfix">
             <div class="col-lg-12 col-md-12 col-sm-12">
@@ -1102,7 +1117,7 @@
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="number" class="form-control" placeholder="Father's Contact Number" name="field_father_phone" >
+                                    <input type="number" class="form-control" placeholder="Father's Contact Number" name="field_father_number" >
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
@@ -1140,7 +1155,7 @@
                         <div class="row clearfix">
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="password" class="form-control" id="psw" placeholder="Password"  name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                                    <input type="password" class="form-control" id="psw" placeholder="Password"  name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" >
                                 </div>
                             </div>
                         </div>

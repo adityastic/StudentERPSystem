@@ -13,4 +13,9 @@ class StudentModel extends CI_Model
         $query = $this->db->get('student_admission')->row();
     	return $query->max ?$query->max:1;
     }
+
+    public function insertintoadmission($arr)
+    {
+        $this->db->insert('student_admission',$data);
+    }
 }
