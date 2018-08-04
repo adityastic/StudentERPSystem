@@ -16,6 +16,7 @@ class StudentModel extends CI_Model
 
     public function insertintoadmission($arr)
     {
-        $this->db->insert('student_admission',$data);
+       // $data['data'] = $this->db->get('posts');
+        $this->db->insert('student_admission',$arr);
     }
 }

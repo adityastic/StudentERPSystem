@@ -5,8 +5,8 @@ class Students extends MY_Controller
 {
     public function add_students()
     {
+        $field_photo = '';
         $this->load->model('studentmodel', '_student');
-        $stack = array();
         $data['error_list'] = array();
         if ($this->input->server('REQUEST_METHOD') == 'POST') {
             $config['upload_path'] = './uploads/';
@@ -27,7 +27,8 @@ class Students extends MY_Controller
             //VALIDATION CODE
             $field_adm_number = $this->input->post('field_adm_number');
             $field_stud_ph = $this->input->post('field_stud_ph');
-            $field_stud_dob = $obj_date = DateTime::createFromFormat('d/m/Y', $this->input->post('field_stud_dob'));
+           // $field_stud_dob = DateTime::createFromFormat('d/m/Y', $this->input->post('field_stud_dob'));
+//            $field_stud_dob = $field_stud_dob->format('d/m/Y');
             $field_city = $this->input->post('field_city');
             $field_curradd = $this->input->post('field_curradd');
             $field_currpin = $this->input->post('field_currpin');
@@ -132,18 +133,18 @@ class Students extends MY_Controller
                         'current_address'=>$field_curradd,
                         'perma_address'=>$field_permadd,
                         'father_email'=>$field_father_email,
-                        'stud_dob'=>$field_stud_dob,
+                       // 'stud_dob'=>$field_stud_dob,
                         'stud_gender'=>$field_stud_gender,
-                        'stud_blood_group'=>$stud_blood_group,
+                        'stud_blood_group'=>$field_bgroup,
                         'stud_caste'=>$field_stud_caste,
                         'city'=>$field_city,
                         'state'=>$field_state,
                         'perma_address_pin'=>$field_permpin,
-                        'current_address_pin'=>$field_currpin,
+                       // 'current_address_pin'=>$field_currpin,
                         'stud_email'=>$field_stud_email,
                         'stud_phone'=>$field_stud_ph,
                         'photo'=>$field_photo,
-                        'faher_o_number'=>$field_father_onumber,
+                       // 'faher_o_number'=>$field_father_onumber,
                         'mother_o_number'=>$field_mother_onumber,
                         'password'=>$password,
                         'class_id'=>$field_class_id,
