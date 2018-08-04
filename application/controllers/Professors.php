@@ -7,4 +7,9 @@ class professors extends MY_Controller {
 	{
 		$this->load->view('all-professor');
 	}
+
+	public function add_professor()
+	{
+		$this->load->view('add-professors');
+	}
 }

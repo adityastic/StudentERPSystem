@@ -243,7 +243,7 @@
                     <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-accounts-alt"></i><span>Professors</span> </a>
                         <ul class="ml-menu">
                             <li><a href="<?php echo site_url('professors/all_professor');?>">All Professors</a></li>
-                            <li><a href="add-professors.html">Add Professors</a></li>
+                            <li><a href="<?php echo site_url('professors/add_professor');?>">Add Professors</a></li>
                             <li><a href="profile.html">Profile</a></li>
                         </ul>
                     </li>
