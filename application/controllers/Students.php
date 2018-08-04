@@ -27,8 +27,10 @@ class Students extends MY_Controller
             //VALIDATION CODE
             $field_adm_number = $this->input->post('field_adm_number');
             $field_stud_ph = $this->input->post('field_stud_ph');
-           // $field_stud_dob = DateTime::createFromFormat('d/m/Y', $this->input->post('field_stud_dob'));
-//            $field_stud_dob = $field_stud_dob->format('d/m/Y');
+         //   $field_stud_dob = DateTime::createFromFormat('Y/m/d', $this->input->post('field_stud_dob'));
+            //$date = $this->input->post('field_stud_dob');
+           // $date = "10.06.2015 09:25:52";
+           // $field_stud_dob  = DateTime::createFromFormat('d.m.Y H:i:s', $this->input->post('field_stud_dob'))->format('Y-m-d h:i:s');
             $field_city = $this->input->post('field_city');
             $field_curradd = $this->input->post('field_curradd');
             $field_currpin = $this->input->post('field_currpin');
@@ -121,7 +123,8 @@ class Students extends MY_Controller
                 $data['done'] = true;
 
                 date_default_timezone_set('Asia/Kolkata');
-                $current_date = date('m/d/Y h:i:s a', time());
+                $date = date('d.m.Y H:i:s', time());
+                $current_date  = DateTime::createFromFormat('d.m.Y H:i:s', $date)->format('Y-m-d h:i:s');
 
                 $insertArray = array(
                         'adm_date'=>$current_date,
@@ -133,7 +136,7 @@ class Students extends MY_Controller
                         'current_address'=>$field_curradd,
                         'perma_address'=>$field_permadd,
                         'father_email'=>$field_father_email,
-                       // 'stud_dob'=>$field_stud_dob,
+                        //'stud_dob'=>$field_stud_dob,
                         'stud_gender'=>$field_stud_gender,
                         'stud_blood_group'=>$field_bgroup,
                         'stud_caste'=>$field_stud_caste,
