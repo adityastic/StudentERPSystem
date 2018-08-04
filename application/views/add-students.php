@@ -951,26 +951,13 @@
             </div>
         </div>
          <?php
-        // if (isset($errorstring)) {
+        if (isset($errorstring)) {
 
-        //         echo '<div class="alert alert-danger">
-        //                     <strong>Oh snap!</strong> Change a few things up and try submitting again.<br>
-        //                     ' . $errorstring . '
-        //                 </div>';
-        //     }if (isset($errorstrin)) {
-
-        //         echo '<div class="alert alert-danger">
-        //                     <strong>Oh snap!</strong> Change a few things up and try submitting again.<br>
-        //                     ' . $errorstrin. '
-        //                 </div>';
-        //     }
-                foreach ($error_list as $item):
-                    
                 echo '<div class="alert alert-danger">
                             <strong>Oh snap!</strong> Change a few things up and try submitting again.<br>
-                            ' . $item. '
+                            ' . $errorstring . '
                         </div>';
-                endforeach;
+            }
         ?>
         <div class="row clearfix">
             <div class="col-lg-12 col-md-12 col-sm-12">
@@ -1012,15 +999,15 @@
                         </div>
                         <div class="row clearfix">
                             <div class="col-lg-4 col-md-6 col-sm-12">
-                                <select class="form-control show-tick" name="field_gender">
-                                    <option name="field_stud_gender" >-- Gender --</option>
+                                <select class="form-control show-tick" name="field_stud_gender">
+                                    <option value="none">-- Gender --</option>
                                     <option value="male">Male</option>
                                     <option value="female">Female</option>
                                 </select>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <select class="form-control show-tick" name="field_stud_caste">
-                                    <option value="">-- Category --</option>
+                                    <option value="none">-- Category --</option>
                                     <option value="gn">GN</option>
                                     <option value="obc">OBC</option>
                                     <option value="st">ST</option>
@@ -1032,7 +1019,7 @@
                         <div class="row clearfix">
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <select class="form-control show-tick" name="field_state">
-                                    <option value="">-- State --</option>
+                                    <option value="none">-- State --</option>
                                     <option value="mp">Madhya Pradesh</option>
                                 </select>
                             </div>
@@ -1042,8 +1029,8 @@
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
-                                <select class="form-control show-tick" >
-                                    <option name="field_bgroup">-- Blood Group --</option>
+                                <select class="form-control show-tick" name="field_bgroup">
+                                    <option value="none">-- Blood Group --</option>
                                     <option value="opos">O+</option>
                                     <option value="oneg">O-</option>
                                     <option value="apos">A+</option>
@@ -1180,7 +1167,7 @@
                         <div class="row clearfix">
                             <div class="col-lg-6 col-md-12">
                                 <select class="form-control show-tick" name="field_class_id">
-                                    <option name="">-- Class --</option>
+                                    <option value="none">-- Class --</option>
                                     <?php
                                         for ($i=0; $i<=2; $i++) {
                                             echo '<option value="' . $i . '">1' . $i . 'th</option>';
@@ -1190,7 +1177,7 @@
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <select class="form-control show-tick" name="field_year_id">
-                                    <option value="">-- Academic Year --</option>
+                                    <option value="none">-- Academic Year --</option>
                                     <option value="10">2017</option>
                                     <option value="20">2018</option>
                                 </select>
