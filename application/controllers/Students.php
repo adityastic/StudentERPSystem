@@ -28,8 +28,6 @@ class Students extends MY_Controller
             $field_adm_number = $this->input->post('field_adm_number');
             $field_stud_ph = $this->input->post('field_stud_ph');
             $field_stud_dob = $obj_date = DateTime::createFromFormat('d/m/Y', $this->input->post('field_stud_dob'));
-            $this->logAlert($this->input->post('field_stud_dob'));
-            $this->logAlert($field_stud_dob->format('m/d/Y'));
             $field_city = $this->input->post('field_city');
             $field_curradd = $this->input->post('field_curradd');
             $field_currpin = $this->input->post('field_currpin');
@@ -151,8 +149,8 @@ class Students extends MY_Controller
                         'class_id'=>$field_class_id,
                         'year_id'=>$field_year_id
                     );
+            	$this->_student->insertintoadmission($insertArray);
             }
-            $this->_student->get_adm_number($insertArray);
         }
         $data['admissionnumber'] = $this->_student->get_adm_number();
 
