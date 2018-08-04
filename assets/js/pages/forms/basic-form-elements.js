@@ -1,7 +1,7 @@
 $(function() {
     //Datetimepicker plugin
     $('.datetimepicker').bootstrapMaterialDatePicker({
-        format: 'DD/MMMM/YYYY',
+        format: 'DD/MM/YYYY',
         clearButton: true,
         weekStart: 0,
         time: false
