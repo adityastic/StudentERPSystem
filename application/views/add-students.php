@@ -1014,7 +1014,7 @@
                         </div>
                         <div class="row clearfix">
                             <div class="col-lg-4 col-md-6 col-sm-12">
-                                <select class="form-control show-tick" name="field_stud_gender" required>
+                                <select class="form-control show-tick" name="field_stud_gender" >
                                     <option value="none">-- Gender --</option>
                                     <option value="male">Male</option>
                                     <option value="female">Female</option>
@@ -1022,7 +1022,7 @@
                                 </select>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
-                                <select class="form-control show-tick" name="field_stud_caste" required>
+                                <select class="form-control show-tick" name="field_stud_caste" >
                                     <option value="none">-- Category --</option>
                                     <option value="gn">GN</option>
                                     <option value="obc">OBC</option>
@@ -1034,7 +1034,7 @@
                         <br>
                         <div class="row clearfix">
                             <div class="col-lg-4 col-md-6 col-sm-12">
-                                <select class="form-control show-tick" name="field_state" required>
+                                <select class="form-control show-tick" name="field_state" >
                                     <option value="none">-- State --</option>
                                     <option value="mp">Madhya Pradesh</option>
                                 </select>
@@ -1045,7 +1045,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
-                                <select class="form-control show-tick" name="field_bgroup" required>
+                                <select class="form-control show-tick" name="field_bgroup" >
                                     <option value="none">-- Blood Group --</option>
                                     <option value="opos">O+</option>
                                     <option value="oneg">O-</option>
@@ -1156,7 +1156,7 @@
                         <div class="row clearfix">
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="password" class="form-control" id="psw" placeholder="Password"  name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required="">
+                                    <input type="password" class="form-control" id="psw" placeholder="Password"  name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
                                 </div>
                             </div>
                         </div>
