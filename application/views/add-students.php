@@ -984,44 +984,45 @@
                         <div class="row clearfix">
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="First Name" name="field_stud_fname" >
+                                    <input type="text" class="form-control" placeholder="First Name" name="field_stud_fname" required >
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Last Name" name="field_stud_lname" >
+                                    <input type="text" class="form-control" placeholder="Last Name" name="field_stud_lname" required>
                                 </div>
                             </div>
                         </div>
                         <div class="row clearfix">
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="number *" min="1111111111" max="9999999999" class="form-control" placeholder="Phone No." name="field_stud_ph" >
+                                    <input type="number *" min="1111111111" max="9999999999" class="form-control" placeholder="Phone No." name="field_stud_ph" required>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" class="datetimepicker form-control" placeholder="Date of Birth" name="field_stud_dob" >
+                                    <input type="text" class="datetimepicker form-control" placeholder="Date of Birth" name="field_stud_dob" required>
                                 </div>
                             </div>
                         </div>
                         <div class="row clearfix">
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Email" name="field_stud_email" >
+                                    <input type="email" class="form-control" placeholder="Email" name="field_stud_email"required >
                                 </div>
                             </div>
                         </div>
                         <div class="row clearfix">
                             <div class="col-lg-4 col-md-6 col-sm-12">
-                                <select class="form-control show-tick" name="field_stud_gender">
+                                <select class="form-control show-tick" name="field_stud_gender" required>
                                     <option value="none">-- Gender --</option>
                                     <option value="male">Male</option>
                                     <option value="female">Female</option>
+                                    <option value="Other">Other</option>
                                 </select>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
-                                <select class="form-control show-tick" name="field_stud_caste">
+                                <select class="form-control show-tick" name="field_stud_caste" required>
                                     <option value="none">-- Category --</option>
                                     <option value="gn">GN</option>
                                     <option value="obc">OBC</option>
@@ -1033,18 +1034,18 @@
                         <br>
                         <div class="row clearfix">
                             <div class="col-lg-4 col-md-6 col-sm-12">
-                                <select class="form-control show-tick" name="field_state">
+                                <select class="form-control show-tick" name="field_state" required>
                                     <option value="none">-- State --</option>
                                     <option value="mp">Madhya Pradesh</option>
                                 </select>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="City" name="field_city" >
+                                    <input type="text" class="form-control" placeholder="City" name="field_city" required>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
-                                <select class="form-control show-tick" name="field_bgroup">
+                                <select class="form-control show-tick" name="field_bgroup" required>
                                     <option value="none">-- Blood Group --</option>
                                     <option value="opos">O+</option>
                                     <option value="oneg">O-</option>
@@ -1062,12 +1063,12 @@
                             <div class="col-sm-12" >
                                 Enter Current Address :
                                 <div class="form-group">
-                                    <textarea rows="4" class="form-control no-resize" placeholder="Address" name="field_curradd" ></textarea>
+                                    <textarea rows="4" class="form-control no-resize" placeholder="Address" name="field_curradd" required ></textarea>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="number" min="111111" max="999999" class="form-control" placeholder="PinCode" name="field_currpin" >
+                                    <input type="number" min="111111" max="999999" class="form-control" placeholder="PinCode" name="field_currpin" required>
                                 </div>
                             </div>
                         </div>
@@ -1076,12 +1077,12 @@
                             <div class="col-sm-12">
                                 Enter Permanent Address :
                                 <div class="form-group">
-                                    <textarea rows="4" class="form-control no-resize" placeholder="Address" name="field_permadd" ></textarea>
+                                    <textarea rows="4" class="form-control no-resize" placeholder="Address" name="field_permadd" required></textarea>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="number" min="111111" max="999999" class="form-control" placeholder="PinCode" name="field_permpin" >
+                                    <input type="number" min="111111" max="999999" class="form-control" placeholder="PinCode" name="field_permpin" required>
                                 </div>
                             </div>
                         </div>
@@ -1089,7 +1090,7 @@
                         <div class="row clearfix">
                             <div class="col-lg-12 col-md-12 col-sm-12">
                                 Upload Student Photo :
-                <input type="file" name="field_photo" accept="image/*" ><br><br>
+                <input type="file" name="field_photo" accept="image/*" required><br><br>
                 <img id="image" />
                             </div>
                         </div>
@@ -1107,7 +1108,7 @@
                         <div class="row clearfix">
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Father's Name" name="field_father_name" >
+                                    <input type="text" class="form-control" placeholder="Father's Name" name="field_father_name" required>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
@@ -1117,27 +1118,27 @@
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="number" class="form-control" placeholder="Father's Contact Number" name="field_father_number" >
+                                    <input type="number" class="form-control" placeholder="Father's Contact Number" name="field_father_number" required>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Mother's Contact Number" name="field_mother_number" >
+                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Mother's Contact Number" name="field_mother_number" required>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Father's Office Number" name="field_father_onumber" >
+                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Father's Office Number" name="field_father_onumber" required>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Mother's Office Number" name="field_mother_onumber" >
+                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Mother's Office Number" name="field_mother_onumber" required>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Fathers's Email" name="field_father_email" >
+                                    <input type="email" class="form-control" placeholder="Fathers's Email" name="field_father_email" required>
                                 </div>
                             </div>
                         </div>
@@ -1155,7 +1156,7 @@
                         <div class="row clearfix">
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="password" class="form-control" id="psw" placeholder="Password"  name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" >
+                                    <input type="password" class="form-control" id="psw" placeholder="Password"  name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required="">
                                 </div>
                             </div>
                         </div>
