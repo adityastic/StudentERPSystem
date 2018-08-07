@@ -957,14 +957,13 @@
                             ' . $errorstring . '
                         </div>';
         }
-        if(isset($done))
-        {
+        if (isset($done)) {
             echo '<div class="alert alert-success" role="alert">
                             <div class="container">
                                 <div class="alert-icon">
                                     <i class="zmdi zmdi-thumb-up"></i>
                                 </div>
-                                <strong>Success!</strong>Student Info Uploaded Successfully.
+                                <strong>Success!</strong> Student Info Uploaded Successfully.
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">
                                         <i class="zmdi zmdi-close"></i>
@@ -984,50 +983,99 @@
                         <div class="row clearfix">
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="First Name" name="field_stud_fname" required >
+                                    <input type="text" class="form-control" placeholder="First Name" value="<?php 
+                                        if (isset($_reEntry)) {
+                                            echo $_reEntry['field_stud_fname'];
+                                        }
+                                    ?>" name="field_stud_fname" required >
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Last Name" name="field_stud_lname" required>
+                                    <input type="text" class="form-control" placeholder="Last Name" name="field_stud_lname" 
+                                    value="<?php 
+                                        if (isset($_reEntry)) {
+                                            echo $_reEntry['field_stud_lname'];
+                                        }
+                                    ?>" 
+                                    required>
                                 </div>
                             </div>
                         </div>
                         <div class="row clearfix">
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="number *" min="1111111111" max="9999999999" class="form-control" placeholder="Phone No." name="field_stud_ph" required>
+                                    <input type="number *" min="1111111111" max="9999999999" class="form-control" placeholder="Phone No." name="field_stud_ph" value="<?php 
+                                        if (isset($_reEntry)) {
+                                            echo $_reEntry['field_stud_ph'];
+                                        }
+                                    ?>" required>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" class="datetimepicker form-control" placeholder="Date of Birth" name="field_stud_dob" required>
+                                    <input type="text" class="datetimepicker form-control" placeholder="Date of Birth" name="field_stud_dob" value="<?php 
+                                        if (isset($_reEntry)) {
+                                            echo $_reEntry['field_stud_dob'];
+                                        }
+                                    ?>" required>
                                 </div>
                             </div>
                         </div>
                         <div class="row clearfix">
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Email" name="field_stud_email"required >
+                                    <input type="email" class="form-control" placeholder="Email" name="field_stud_email"value="<?php 
+                                        if (isset($_reEntry)) {
+                                            echo $_reEntry['field_stud_email'];
+                                        }
+                                    ?>" 
+                                    required >
                                 </div>
                             </div>
                         </div>
                         <div class="row clearfix">
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <select class="form-control show-tick" name="field_stud_gender" >
-                                    <option value="none">-- Gender --</option>
-                                    <option value="male">Male</option>
-                                    <option value="female">Female</option>
-                                    <option value="Other">Other</option>
+                                    <?php 
+                                        $_genderArr = array("none"=>"-- Gender --",
+                                                            "male"=>"Male",
+                                                            "female"=>"Female",
+                                                            "other"=>"Other");
+                                        foreach ($_genderArr as $key => $value) {
+                                            if (isset($_reEntry)) {
+                                                if (strcmp($key, $_reEntry['field_stud_gender']) == 0) {
+                                                    echo '<option value="' . $key . '" selected>' . $value . '</option>';
+                                                } else {
+                                                    echo '<option value="' . $key . '">' . $value . '</option>';
+                                                }
+                                            } else {
+                                                echo '<option value="' . $key . '">' . $value . '</option>';
+                                            }
+                                        }
+                                    ?>
                                 </select>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <select class="form-control show-tick" name="field_stud_caste" >
-                                    <option value="none">-- Category --</option>
-                                    <option value="gn">GN</option>
-                                    <option value="obc">OBC</option>
-                                    <option value="st">ST</option>
-                                    <option value="sc">SC</option>
+                                    <?php 
+                                        $_genderArr = array("none"=>"-- Category --",
+                                                            "gn"=>"GN",
+                                                            "obc"=>"OBC",
+                                                            "ST"=>"ST",
+                                                            "sc"=>"SC");
+                                        foreach ($_genderArr as $key => $value) {
+                                            if (isset($_reEntry)) {
+                                                if (strcmp($key, $_reEntry['field_stud_caste']) == 0) {
+                                                    echo '<option value="' . $key . '" selected>' . $value . '</option>';
+                                                } else {
+                                                    echo '<option value="' . $key . '">' . $value . '</option>';
+                                                }
+                                            } else {
+                                                echo '<option value="' . $key . '">' . $value . '</option>';
+                                            }
+                                        }
+                                    ?>
                                 </select>
                             </div>
                         </div>
@@ -1035,26 +1083,60 @@
                         <div class="row clearfix">
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <select class="form-control show-tick" name="field_state" >
-                                    <option value="none">-- State --</option>
-                                    <option value="mp">Madhya Pradesh</option>
+                                    <?php 
+                                        $_genderArr = array("none"=>"- State --",
+                                                            "mp"=>"Madhya Pradesh",
+                                                            );
+                                        foreach ($_genderArr as $key => $value) {
+                                            if (isset($_reEntry)) {
+                                                if (strcmp($key, $_reEntry['field_state']) == 0) {
+                                                    echo '<option value="' . $key . '" selected>' . $value . '</option>';
+                                                } else {
+                                                    echo '<option value="' . $key . '">' . $value . '</option>';
+                                                }
+                                            } else {
+                                                echo '<option value="' . $key . '">' . $value . '</option>';
+                                            }
+                                        }
+                                    ?>
                                 </select>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="City" name="field_city" required>
+                                    <input type="text" class="form-control" placeholder="City" name="field_city" 
+                                    value="<?php 
+                                        if (isset($_reEntry)) {
+                                            echo $_reEntry['field_city'];
+                                        }
+                                    ?>" 
+                                    required>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <select class="form-control show-tick" name="field_bgroup" >
-                                    <option value="none">-- Blood Group --</option>
-                                    <option value="opos">O+</option>
-                                    <option value="oneg">O-</option>
-                                    <option value="apos">A+</option>
-                                    <option value="aneg">A-</option>
-                                    <option value="bpos">B+</option>
-                                    <option value="bneg">B-</option>
-                                    <option value="abpos">AB+</option>
-                                    <option value="abneg">AB-</option>
+                                    <?php 
+                                        $_genderArr = array(
+                                    "none"=>"-- Blood Group --",
+                                    "opos"=>"O+",
+                                    "oneg"=>"O-",
+                                    "apos"=>"A+",
+                                    "aneg"=>"A-",
+                                    "bpos"=>"B+",
+                                    "bneg"=>"B-",
+                                    "abpos"=>"AB+",
+                                    "abneg"=>"AB-" );
+                                        foreach ($_genderArr as $key => $value) {
+                                            if (isset($_reEntry)) {
+                                                if (strcmp($key, $_reEntry['field_bgroup']) == 0) {
+                                                    echo '<option value="' . $key . '" selected>' . $value . '</option>';
+                                                } else {
+                                                    echo '<option value="' . $key . '">' . $value . '</option>';
+                                                }
+                                            } else {
+                                                echo '<option value="' . $key . '">' . $value . '</option>';
+                                            }
+                                        }
+                                    ?>
                                 </select>
                             </div>
                         </div>
@@ -1063,12 +1145,20 @@
                             <div class="col-sm-12" >
                                 Enter Current Address :
                                 <div class="form-group">
-                                    <textarea rows="4" class="form-control no-resize" placeholder="Address" name="field_curradd" required ></textarea>
+                                    <textarea rows="4" class="form-control no-resize" placeholder="Address" name="field_curradd" value="<?php 
+                                        if (isset($_reEntry)) {
+                                            echo $_reEntry['field_curradd'];
+                                        }
+                                    ?>" required ></textarea>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="number" min="111111" max="999999" class="form-control" placeholder="PinCode" name="field_currpin" required>
+                                    <input type="number" min="111111" max="999999" class="form-control" placeholder="PinCode" name="field_currpin" value="<?php 
+                                        if (isset($_reEntry)) {
+                                            echo $_reEntry['field_currpin'];
+                                        }
+                                    ?>" required>
                                 </div>
                             </div>
                         </div>
@@ -1077,12 +1167,20 @@
                             <div class="col-sm-12">
                                 Enter Permanent Address :
                                 <div class="form-group">
-                                    <textarea rows="4" class="form-control no-resize" placeholder="Address" name="field_permadd" required></textarea>
+                                    <textarea rows="4" class="form-control no-resize" placeholder="Address" name="field_permadd" value="<?php 
+                                        if (isset($_reEntry)) {
+                                            echo $_reEntry['field_permadd'];
+                                        }
+                                    ?>" required></textarea>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="number" min="111111" max="999999" class="form-control" placeholder="PinCode" name="field_permpin" required>
+                                    <input type="number" min="111111" max="999999" class="form-control" placeholder="PinCode" name="field_permpin" value="<?php 
+                                        if (isset($_reEntry)) {
+                                            echo $_reEntry['field_permpin'];
+                                        }
+                                    ?>" required>
                                 </div>
                             </div>
                         </div>
@@ -1090,7 +1188,11 @@
                         <div class="row clearfix">
                             <div class="col-lg-12 col-md-12 col-sm-12">
                                 Upload Student Photo :
-                <input type="file" name="field_photo" accept="image/*" required><br><br>
+                <input id="files" type="file" name="field_photo" accept="image/*" value="<?php 
+                                        if (isset($_reEntry)) {
+                                            echo $_reEntry['field_photo'];
+                                        }
+                                    ?>" required><br><br>
                 <img id="image" />
                             </div>
                         </div>
@@ -1108,37 +1210,66 @@
                         <div class="row clearfix">
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Father's Name" name="field_father_name" required>
+                                    <input type="text" class="form-control" placeholder="Father's Name" name="field_father_name" value="<?php 
+                                        if (isset($_reEntry)) {
+                                            echo $_reEntry['field_father_name'];
+                                        }
+                                    ?>" required>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Mother's Name" name="field_mother_name" >
+                                    <input type="text" class="form-control" placeholder="Mother's Name" name="field_mother_name" value="<?php 
+                                        if (isset($_reEntry)) {
+                                            echo $_reEntry['field_mother_name'];
+                                        }
+                                    ?>" >
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="number" class="form-control" placeholder="Father's Contact Number" name="field_father_number" required>
+                                    <input type="number" class="form-control" placeholder="Father's Contact Number" name="field_father_number" value="<?php 
+                                        if (isset($_reEntry)) {
+                                            echo $_reEntry['field_father_number'];
+                                        }
+                                    ?>" required>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Mother's Contact Number" name="field_mother_number" required>
+                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Mother's Contact Number" name="field_mother_number" value="<?php 
+                                        if (isset($_reEntry)) {
+                                            echo $_reEntry['field_mother_number'];
+                                        }
+                                    ?>" required>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Father's Office Number" name="field_father_onumber" required>
+                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Father's Office Number" name="field_father_onumber"value="<?php 
+                                        if (isset($_reEntry)) {
+                                            echo $_reEntry['field_father_onumber'];
+                                        }
+                                    ?>"  
+                                    required>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Mother's Office Number" name="field_mother_onumber" required>
+                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Mother's Office Number" name="field_mother_onumber"value="<?php 
+                                        if (isset($_reEntry)) {
+                                            echo $_reEntry['field_mother_onumber'];
+                                        }
+                                    ?>"  required>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Fathers's Email" name="field_father_email" required>
+                                    <input type="email" class="form-control" placeholder="Fathers's Email" name="field_father_email" value="<?php 
+                                        if (isset($_reEntry)) {
+                                            echo $_reEntry['field_father_email'];
+                                        }
+                                    ?>" required>
                                 </div>
                             </div>
                         </div>
@@ -1184,9 +1315,31 @@
                             <div class="col-lg-6 col-md-12">
                                 <select class="form-control show-tick" name="field_class_id">
                                     <option value="none">-- Class --</option>
-                                    <?php
-                                        for ($i=0; $i<=2; $i++) {
-                                            echo '<option value="' . $i . '">1' . $i . 'th</option>';
+                                    <?php 
+                                        $_genderArr = array(
+                                    "none"=>"-- Class --",
+                                    "1"=>"1st",
+                                    "2"=>"2nd",
+                                    "3"=>"3rd",
+                                    "4"=>"4th",
+                                    "5"=>"5th",
+                                    "6"=>"6th",
+                                    "7"=>"7th",
+                                    "8"=>"8th",
+                                    "9"=>"9th",
+                                    "10"=>"10th",
+                                    "11"=>"11th",
+                                    "12"=>"12th" );
+                                        foreach ($_genderArr as $key => $value) {
+                                            if (isset($_reEntry)) {
+                                                if (strcmp($key, $_reEntry['field_class_id']) == 0) {
+                                                    echo '<option value="' . $key . '" selected>' . $value . '</option>';
+                                                } else {
+                                                    echo '<option value="' . $key . '">' . $value . '</option>';
+                                                }
+                                            } else {
+                                                echo '<option value="' . $key . '">' . $value . '</option>';
+                                            }
                                         }
                                     ?>
                                 </select>
@@ -1194,8 +1347,8 @@
                             <div class="col-lg-6 col-md-12">
                                 <select class="form-control show-tick" name="field_year_id">
                                     <option value="none">-- Academic Year --</option>
-                                    <option value="10">2017</option>
-                                    <option value="20">2018</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2018">2018</option>
                                 </select>
                             </div>
                         </div>

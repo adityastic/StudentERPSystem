@@ -19,9 +19,9 @@ class Students extends MY_Controller
                 if (strpos($error['error'], 'filetype') !== false) {
                     $errors->has = true;
                     $this->setErrorMessage($errors, "- Upload a Supported filetype (jpg,jpeg,png)");
-                } else {
-                    $field_photo = './uploads' . $this->upload->data('file_name');
                 }
+            } else {
+                $field_photo = './uploads/' . $this->upload->data('file_name');
             }
 
             //VALIDATION CODE
@@ -46,12 +46,14 @@ class Students extends MY_Controller
             if ($this->checkNumbersinString($field_stud_fname)) {
                 $errors->has = true;
                 $this->setErrorMessage($errors, "- Enter First Name without numbers");
+                $field_stud_fname = "";
             }
 
             $field_stud_lname = $this->input->post('field_stud_lname');
             if ($this->checkNumbersinString($field_stud_lname)) {
                 $errors->has = true;
                 $this->setErrorMessage($errors, "- Enter Last Name without numbers");
+                $field_stud_lname="";
             }
 
             $student_name = $field_stud_fname . " " . $field_stud_lname;
@@ -66,59 +68,95 @@ class Students extends MY_Controller
             if (!$this->isValidEmail($field_stud_email)) {
                 $errors->has = true ;
                 $this->setErrorMessage($errors, "- Enter Email Correctly");
+                $field_stud_email = "";
             }
 
             $field_stud_caste = $this->input->post('field_stud_caste');
             if (strcmp($field_stud_caste, 'none') == 0) {
                 $errors->has = true;
                 $this->setErrorMessage($errors, "- Enter Category");
+                $field_stud_caste="";
             }
 
             $field_state = $this->input->post('field_state');
             if (strcmp($field_state, 'none') == 0) {
                 $errors->has = true;
                 $this->setErrorMessage($errors, "- Enter State");
+                $field_state="";
             }
 
             $field_bgroup = $this->input->post('field_bgroup');
             if (strcmp($field_bgroup, 'none') == 0) {
                 $errors->has = true;
                 $this->setErrorMessage($errors, "- Enter Blood Group");
+                $field_bgroup ="none";
             }
 
             $field_father_name = $this->input->post('field_father_name');
             if ($this->checkNumbersinString($field_father_name)) {
                 $errors->has = true;
                 $this->setErrorMessage($errors, "- Enter Fathers's Name without numbers");
+                $field_father_name="";
             }
 
             $field_mother_name = $this->input->post('field_mother_name');
             if ($this->checkNumbersinString($field_mother_name)) {
                 $errors->has = true;
                 $this->setErrorMessage($errors, "- Enter Mother's Name without numbers");
+                $field_mother_name="";
             }
 
             $field_father_email = $this->input->post('field_father_email');
             if (!$this->isValidEmail($field_father_email)) {
                 $errors->has = true ;
                 $this->setErrorMessage($errors, "- Enter Father's Email Correctly");
+                $field_father_email="";
             }
 
             $field_class_id = $this->input->post('field_class_id');
             if (strcmp($field_class_id, 'none') == 0) {
                 $errors->has = true;
                 $this->setErrorMessage($errors, "- Enter Class");
+                $field_class_id="";
             }
 
             $field_year_id = $this->input->post('field_year_id');
             if (strcmp($field_year_id, 'none') == 0) {
                 $errors->has = true;
                 $this->setErrorMessage($errors, "- Enter Academic Year");
+                $field_year_id="";
             }
             //END VALIDATION CODE
 
             if (isset($errors->has)) {
                 $data['errorstring'] = $errors->msg;
+                $modifiedArray = array(
+                    'field_stud_fname'=>$field_stud_fname,
+                    'field_stud_lname'=>$field_stud_lname,
+                        'field_father_name'=>$field_father_name,
+                        'field_mother_name'=>$field_mother_name,
+                        'field_father_number'=>$field_father_number,
+                        'field_mother_number'=>$field_mother_number,
+                        'field_curradd'=>$field_curradd,
+                        'field_permadd'=>$field_permadd,
+                        'field_father_email'=>$field_father_email,
+                        'field_stud_dob'=>$date1,
+                        'field_stud_gender'=>$field_stud_gender,
+                        'field_bgroup'=>$field_bgroup,
+                        'field_stud_caste'=>$field_stud_caste,
+                        'field_city'=>$field_city,
+                        'field_state'=>$field_state,
+                        'field_permpin'=>$field_permpin,
+                       'field_currpin'=>$field_currpin,
+                        'field_stud_email'=>$field_stud_email,
+                        'field_stud_ph'=>$field_stud_ph,
+                        'field_photo'=>$field_photo,
+                        'field_father_onumber'=>$field_father_onumber,
+                        'field_mother_onumber'=>$field_mother_onumber,
+                        'field_class_id'=>$field_class_id,
+                        'field_year_id'=>$field_year_id
+                    );
+                $data['_reEntry'] = $modifiedArray;
             } else {
                 $data['done'] = true;
 
@@ -153,7 +191,7 @@ class Students extends MY_Controller
                         'class_id'=>$field_class_id,
                         'year_id'=>$field_year_id
                     );
-            	$this->_student->insertintoadmission($insertArray);
+                $this->_student->insertintoadmission($insertArray);
             }
         }
         $data['admissionnumber'] = $this->_student->get_adm_number();
