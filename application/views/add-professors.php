@@ -224,7 +224,7 @@ include "leftside.php";
 ?>
 
 <section class="content profile-page">
-    <form method="post" action="<?php echo site_url('students/add_students');?>" enctype="multipart/form-data">
+    <form method="post" action="<?php echo site_url('professors/add_professor');?>" enctype="multipart/form-data">
         <div class="block-header">
             <div class="row">
                 <div class="col-lg-7 col-md-6 col-sm-12">
