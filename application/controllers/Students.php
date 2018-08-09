@@ -233,6 +233,13 @@ class Students extends MY_Controller
 //    }
     public function all_students()
     {
-        $this->load->view('all-students');
+
+        $this->load->model('studentmodel', '_student');
+        //load the method of model
+        $data['details']=$this->_student->get_all_students();
+
+        $this->load->view('all-students',$data);
+
+
     }
 }
