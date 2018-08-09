@@ -35,7 +35,7 @@ class professors extends MY_Controller {
 
             $date1 = $this->input->post('field_prof_dob');
 
-           // $field_prof_dob  = DateTime::createFromFormat('d/m/Y', $date1)->format('Y-m-d');
+            $field_prof_dob  = DateTime::createFromFormat('d/m/Y', $date1)->format('Y-m-d');
             $field_city = $this->input->post('field_city');
             $field_curradd = $this->input->post('field_curradd');
             $field_currpin = $this->input->post('field_currpin');
@@ -139,6 +139,13 @@ class professors extends MY_Controller {
                 $field_acc_num="";
             }
 
+            $field_pan_num = $this->input->post('field_pan_num');
+            if ($this->checkNumbersinString($field_pan_num)) {
+                $errors->has = true;
+                $this->setErrorMessage($errors, "- Enter Pan Nummber");
+                $field_pan_num="";
+            }
+
             $field_ifsc_code = $this->input->post('field_ifsc_code');
             if ($this->checkNumbersinString($field_ifsc_code)) {
                 $errors->has = true;
@@ -146,6 +153,17 @@ class professors extends MY_Controller {
                 $field_ifsc_code="";
             }
 
+            $field_status = $this->input->post('field_status');
+            if (strcmp($field_status, 'none') == 0) {
+                $errors->has = true ;
+                $this->setErrorMessage($errors, "- Enter status");
+            }
+
+            $field_highest_qualification = $this->input->post('field_highest_qualification');
+            if (strcmp($field_highest_qualification, 'none') == 0) {
+                $errors->has = true ;
+                $this->setErrorMessage($errors, "- Enter Qualification");
+            }
             //END VALIDATION CODE
 
             if (isset($errors->has)) {
@@ -176,9 +194,11 @@ class professors extends MY_Controller {
                     'field_branch_name'=>$field_branch_name,
                     //'field_status'=>$field_status,
                     'field_bank_name'=>$field_bank_name,
+                    'field_status'=>$field_status,
+                    'field_pan_num'=>$field_pan_num,
                     //'field_father_onumber'=>$field_father_onumber,
                     //'field_mother_onumber'=>$field_mother_onumber,
-                    'field_class_id'=>$field_class_id,
+                    'field_highest_qualification'=>$field_highest_qualification,
                     //'field_year_id'=>$field_year_id
                 );
                 $data['_reEntry'] = $modifiedArray;
@@ -199,7 +219,7 @@ class professors extends MY_Controller {
                     'current_address'=>$field_curradd,
                     'permanent_address'=>$field_permadd,
                     //'father_email'=>$field_father_email,
-                    //'prof_dob'=>$field_prof_dob,
+                    'prof_dob'=>$field_prof_dob,
                     'gender'=>$field_prof_gender,
                     'prof_bloodgroup'=>$field_bgroup,
                     'prof_category'=>$field_prof_caste,
@@ -211,12 +231,19 @@ class professors extends MY_Controller {
                     'phone'=>$field_prof_ph,
                     'photo'=>$field_photo,
                     'password'=>$password,
+                    'status'=>$field_status,
+                    'bank_name'=>$field_bank_name,
+                    'branch_name'=>$field_branch_name,
+                    'ifsc'=>$field_ifsc_code,
+                    'account_number'=>$field_acc_num,
+                    'highest_qualification'=>$field_highest_qualification,
+                    'pan_number'=>$field_pan_num,
                     //'class_id'=>$field_class_id,
                 );
                 $this->_profesor->insertintoprof($insertArray);
             }
         }
-        $data['admissionnumber'] = $this->_profesor->get_adm_number();
+        $data['profnumber'] = $this->_profesor->get_id();
 
 
         $this->load->view('add-professors', $data);

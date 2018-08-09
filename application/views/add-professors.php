@@ -255,7 +255,7 @@ include "leftside.php";
                             <div class="row clearfix">
                                 <div class="col-lg-6 col-md-12">
                                     <div class="form-group">
-                                       <input type="text" class="form-control" placeholder="Admission Number" value="1" name="field_adm_number" disabled>
+                                       <input type="text" class="form-control" placeholder="Admission Number" value="<?php echo $profnumber;?>" name="field_adm_number" disabled>
                                     </div>
                                 </div>
                             </div>
@@ -606,7 +606,7 @@ include "leftside.php";
                         <div class="body">
                             <div class="row clearfix">
                                 <div class="col-lg-6 col-md-12">
-                                    <select class="form-control show-tick" name="field_class_id">
+                                    <select class="form-control show-tick" name="field_highest_qualification">
                                         <option value="none"></option>
                                         <?php
                                         $_genderArr = array(
