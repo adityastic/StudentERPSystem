@@ -6,7 +6,7 @@ class Students extends MY_Controller
     public function add_students()
     {
         $field_photo = '';
-        $this->load->model('studentmodel', '_student');
+        $this->load->model('student_admission_model', '_student');
         $data['error_list'] = array();
         if ($this->input->server('REQUEST_METHOD') == 'POST') {
             $config['upload_path'] = './uploads/';
