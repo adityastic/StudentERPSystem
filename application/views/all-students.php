@@ -724,43 +724,13 @@
                                     <tbody>
                                         
                                         
-                      <?php               
-
-//$pass='root';
-//$db="nxtstudenterp";
-//$user='root';
-//
-//$con=new mysqli("localhost",$user,$pass,$db)or die("unable to connect");
-//$q="select * from student_admission";
-//$result=$con->query($q);
-//if(mysqli_num_rows($result)>=1)
-//{
-//
-//   while ($row = mysqli_fetch_assoc($result)) {
-//    echo '<tr>';
-//    echo '<td align="center"><span class="list-icon"><img class="rounded" src="'.$row['photo'].'" height="40" width="50" alt="laurels school"></span></td>';
-//    echo '<td onclick= myFunction("'.$row['Id'].'") > '.$row['Id'].'</td>';
-//    echo '<td>'.$row['stud_name'].'</td>';
-//    echo '<td>'.$row['stud_gender'].'</td>';
-//    echo '<td>'.$row['perma_address'].'</td>';
-//    echo '<td>'.$row['stud_phone'].'</td>';
-//    echo '<td>'.$row['class_id'].'</td>';
-//    echo '</tr>';
-//
-// }
-//}
-//else
-//{
-//  echo "Table is empty";
-//}
-
+                      <?php
 
 
                       foreach ($details->result() as $row)
                       {
                           ?><tr>
                           <td align="center"><span class="list-icon"><img class="rounded" src="<?php echo $row->photo;?>" height="40" width="50" alt="laurels school"></span></td>
-<!--                          <td>--><?php //echo $row->photo;?><!--</td>-->
                           <td><?php echo $row->Id;?></td>
 
                           <td><?php echo $row->stud_name;?></td>
