@@ -212,7 +212,7 @@
     </ul>
 </nav>
 <!-- Left Sidebar -->
-<?php include 'LeftSide.php';?>
+<?php include 'leftside.php';?>
 <!-- Right Sidebar -->
 <!-- <aside id="rightsidebar" class="right-sidebar">
     <ul class="nav nav-tabs">
