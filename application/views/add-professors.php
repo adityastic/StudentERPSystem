@@ -39,11 +39,7 @@
                 <a href="javascript:void(0);" class="bars"></a>
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
                 <a class="navbar-brand" href="index.html"><img src="../assets/images/logo.svg" width="30" alt="<?php echo $title;?>"><span class="m-l-10"><?php echo $title;?></span></a>
-=======
-                <a class="navbar-brand" href="<?php echo site_url('dashboard');?>"><img src="../assets/images/logo.svg" width="30" alt="Oreo"><span class="m-l-10"><?php echo $company_name;?></span></a>
->>>>>>> 61b4562feb0cc189e6cc0679cf38c13eaa505af8
 =======
                 <a class="navbar-brand" href="<?php echo site_url('dashboard');?>"><img src="../assets/images/logo.svg" width="30" alt="Oreo"><span class="m-l-10"><?php echo $company_name;?></span></a>
 >>>>>>> 61b4562feb0cc189e6cc0679cf38c13eaa505af8
@@ -242,11 +238,7 @@
                 <h2>Add Professors
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
                 <small>Welcome to <?php echo $title;?></small>
-=======
-                <small><?php echo $welcome_string;?></small>
->>>>>>> 61b4562feb0cc189e6cc0679cf38c13eaa505af8
 =======
                 <small><?php echo $welcome_string;?></small>
 >>>>>>> 61b4562feb0cc189e6cc0679cf38c13eaa505af8
