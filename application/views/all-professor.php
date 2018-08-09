@@ -711,253 +711,42 @@
                 <div class="tab-content m-t-10">
                     <div class="tab-pane active" id="Permanent">
                         <div class="row clearfix">
-                            <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="card member-card">
-                                    <div class="body">
-                                        <div class="member-thumb">
-                                            <img src="../assets/images/lg/avatar1.jpg" class="img-fluid rounded" alt="profile-image">                               
-                                        </div>
-                                        <div class="detail">
-                                            <h4 class="m-b-0">Pro. John</h4>
-                                            <p class="text-muted">Mathematics</p>
-                                            <ul class="social-links list-inline m-t-20">
-                                                <li><a title="facebook" href="javascript:void(0);"><i class="zmdi zmdi-facebook"></i></a></li>
-                                                <li><a title="twitter" href="javascript:void(0);" ><i class="zmdi zmdi-twitter"></i></a></li>
-                                                <li><a title="instagram" href="javascript:void(0);" ><i class="zmdi zmdi-instagram"></i></a></li>
-                                            </ul>
-                                            <p class="text-muted">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>                           
-                                            <a href="profile.html"  class="btn btn-default btn-round btn-simple">View Profile</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="card member-card">
-                                    <div class="body">
-                                        <div class="member-thumb">
-                                            <img src="../assets/images/lg/avatar2.jpg" class="img-fluid rounded" alt="profile-image">                               
-                                        </div>
-                                        <div class="detail">
-                                            <h4 class="m-b-0">Pro. Amelia</h4>
-                                            <p class="text-muted">Architecture</p>
-                                            <ul class="social-links list-inline m-t-20">
-                                                <li><a title="facebook" href="javascript:void(0);"><i class="zmdi zmdi-facebook"></i></a></li>
-                                                <li><a title="twitter" href="javascript:void(0);" ><i class="zmdi zmdi-twitter"></i></a></li>
-                                                <li><a title="instagram" href="javascript:void(0);" ><i class="zmdi zmdi-instagram"></i></a></li>
-                                            </ul>
-                                            <p class="text-muted">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>                           
-                                            <a href="profile.html"  class="btn btn-default btn-round btn-simple">View Profile</a>
+
+
+                            <?php
+
+
+                            foreach ($details->result() as $row)
+                            {
+                                ?>
+
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                    <div class="card member-card">
+                                        <div class="body">
+                                            <div class="member-thumb">
+                                                <img src="<?php echo $row->photo;?>" class="img-fluid rounded" alt="profile-image">
+                                            </div>
+                                            <div class="detail">
+                                                <h4 class="m-b-0"><?php echo $row->prof_name;?></h4>
+                                                <p class="text-muted"><?php echo $row->highest_qualification;?></p>
+                                                <ul class="social-links list-inline m-t-20">
+                                                    <li><a title="facebook" href="javascript:void(0);"><i class="zmdi zmdi-facebook"></i></a></li>
+                                                    <li><a title="twitter" href="javascript:void(0);" ><i class="zmdi zmdi-twitter"></i></a></li>
+                                                    <li><a title="instagram" href="javascript:void(0);" ><i class="zmdi zmdi-instagram"></i></a></li>
+                                                </ul>
+                                                <p class="text-muted"><?php echo $row->current_address;?></p>
+                                                <a href="profile.html"  class="btn btn-default btn-round btn-simple">View Profile</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="card member-card">
-                                    <div class="body">
-                                        <div class="member-thumb">
-                                            <img src="../assets/images/lg/avatar3.jpg" class="img-fluid rounded" alt="profile-image">                               
-                                        </div>
-                                        <div class="detail">
-                                            <h4 class="m-b-0">Pro. Jack </h4>
-                                            <p class="text-muted">Civil Engineering</p>
-                                            <ul class="social-links list-inline m-t-20">
-                                                <li><a title="facebook" href="javascript:void(0);"><i class="zmdi zmdi-facebook"></i></a></li>
-                                                <li><a title="twitter" href="javascript:void(0);" ><i class="zmdi zmdi-twitter"></i></a></li>
-                                                <li><a title="instagram" href="javascript:void(0);" ><i class="zmdi zmdi-instagram"></i></a></li>
-                                            </ul>
-                                            <p class="text-muted">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>                           
-                                            <a href="profile.html"  class="btn btn-default btn-round btn-simple">View Profile</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="card member-card">
-                                    <div class="body">
-                                        <div class="member-thumb">
-                                            <img src="../assets/images/lg/avatar4.jpg" class="img-fluid rounded" alt="profile-image">                               
-                                        </div>
-                                        <div class="detail">
-                                            <h4 class="m-b-0">Pro. Jessica </h4>
-                                            <p class="text-muted">Chemistry</p>
-                                            <ul class="social-links list-inline m-t-20">
-                                                <li><a title="facebook" href="javascript:void(0);"><i class="zmdi zmdi-facebook"></i></a></li>
-                                                <li><a title="twitter" href="javascript:void(0);" ><i class="zmdi zmdi-twitter"></i></a></li>
-                                                <li><a title="instagram" href="javascript:void(0);" ><i class="zmdi zmdi-instagram"></i></a></li>
-                                            </ul>
-                                            <p class="text-muted">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>                           
-                                            <a href="profile.html"  class="btn btn-default btn-round btn-simple">View Profile</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="card member-card">
-                                    <div class="body">
-                                        <div class="member-thumb">
-                                            <img src="../assets/images/lg/avatar5.jpg" class="img-fluid rounded" alt="profile-image">                               
-                                        </div>
-                                        <div class="detail">
-                                            <h4 class="m-b-0">Pro. Joseph </h4>
-                                            <p class="text-muted">Biology</p>
-                                            <ul class="social-links list-inline m-t-20">
-                                                <li><a title="facebook" href="javascript:void(0);"><i class="zmdi zmdi-facebook"></i></a></li>
-                                                <li><a title="twitter" href="javascript:void(0);" ><i class="zmdi zmdi-twitter"></i></a></li>
-                                                <li><a title="instagram" href="javascript:void(0);" ><i class="zmdi zmdi-instagram"></i></a></li>
-                                            </ul>
-                                            <p class="text-muted">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>                           
-                                            <a href="profile.html"  class="btn btn-default btn-round btn-simple">View Profile</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="card member-card">
-                                    <div class="body">
-                                        <div class="member-thumb">
-                                            <img src="../assets/images/lg/avatar6.jpg" class="img-fluid rounded" alt="profile-image">                               
-                                        </div>
-                                        <div class="detail">
-                                            <h4 class="m-b-0">Pro. Charlie </h4>
-                                            <p class="text-muted">Manegment</p>
-                                            <ul class="social-links list-inline m-t-20">
-                                                <li><a title="facebook" href="javascript:void(0);"><i class="zmdi zmdi-facebook"></i></a></li>
-                                                <li><a title="twitter" href="javascript:void(0);" ><i class="zmdi zmdi-twitter"></i></a></li>
-                                                <li><a title="instagram" href="javascript:void(0);" ><i class="zmdi zmdi-instagram"></i></a></li>
-                                            </ul>
-                                            <p class="text-muted">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>                           
-                                            <a href="profile.html"  class="btn btn-default btn-round btn-simple">View Profile</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="card member-card">
-                                    <div class="body">
-                                        <div class="member-thumb">
-                                            <img src="../assets/images/lg/avatar1.jpg" class="img-fluid rounded" alt="profile-image">                               
-                                        </div>
-                                        <div class="detail">
-                                            <h4 class="m-b-0">Pro. William </h4>
-                                            <p class="text-muted">Computer Engineering</p>
-                                            <ul class="social-links list-inline m-t-20">
-                                                <li><a title="facebook" href="javascript:void(0);"><i class="zmdi zmdi-facebook"></i></a></li>
-                                                <li><a title="twitter" href="javascript:void(0);" ><i class="zmdi zmdi-twitter"></i></a></li>
-                                                <li><a title="instagram" href="javascript:void(0);" ><i class="zmdi zmdi-instagram"></i></a></li>
-                                            </ul>
-                                            <p class="text-muted">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>                           
-                                            <a href="profile.html"  class="btn btn-default btn-round btn-simple">View Profile</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="card member-card">
-                                    <div class="body">
-                                        <div class="member-thumb">
-                                            <img src="../assets/images/lg/avatar4.jpg" class="img-fluid rounded" alt="profile-image">                               
-                                        </div>
-                                        <div class="detail">
-                                            <h4 class="m-b-0">Pro. Sophie </h4>
-                                            <p class="text-muted">Mathematics</p>
-                                            <ul class="social-links list-inline m-t-20">
-                                                <li><a title="facebook" href="javascript:void(0);"><i class="zmdi zmdi-facebook"></i></a></li>
-                                                <li><a title="twitter" href="javascript:void(0);" ><i class="zmdi zmdi-twitter"></i></a></li>
-                                                <li><a title="instagram" href="javascript:void(0);" ><i class="zmdi zmdi-instagram"></i></a></li>
-                                            </ul>
-                                            <p class="text-muted">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>                           
-                                            <a href="profile.html"  class="btn btn-default btn-round btn-simple">View Profile</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> 
-                    </div>
-                    <div class="tab-pane" id="Consultant">
-                        <div class="row clearfix">
-                            <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="card member-card">
-                                    <div class="body">
-                                        <div class="member-thumb">
-                                            <img src="../assets/images/lg/avatar2.jpg" class="img-fluid rounded" alt="profile-image">                               
-                                        </div>
-                                        <div class="detail">
-                                            <h4 class="m-b-0">Pro. Amelia</h4>
-                                            <p class="text-muted">Mathematics</p>
-                                            <ul class="social-links list-inline m-t-20">
-                                                <li><a title="facebook" href="javascript:void(0);"><i class="zmdi zmdi-facebook"></i></a></li>
-                                                <li><a title="twitter" href="javascript:void(0);" ><i class="zmdi zmdi-twitter"></i></a></li>
-                                                <li><a title="instagram" href="javascript:void(0);" ><i class="zmdi zmdi-instagram"></i></a></li>
-                                            </ul>
-                                            <p class="text-muted">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>                           
-                                            <a href="profile.html"  class="btn btn-default btn-round btn-simple">View Profile</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="card member-card">
-                                    <div class="body">
-                                        <div class="member-thumb">
-                                            <img src="../assets/images/lg/avatar4.jpg" class="img-fluid rounded" alt="profile-image">                               
-                                        </div>
-                                        <div class="detail">
-                                            <h4 class="m-b-0">Pro. Jack </h4>
-                                            <p class="text-muted">Architecture</p>
-                                            <ul class="social-links list-inline m-t-20">
-                                                <li><a title="facebook" href="javascript:void(0);"><i class="zmdi zmdi-facebook"></i></a></li>
-                                                <li><a title="twitter" href="javascript:void(0);" ><i class="zmdi zmdi-twitter"></i></a></li>
-                                                <li><a title="instagram" href="javascript:void(0);" ><i class="zmdi zmdi-instagram"></i></a></li>
-                                            </ul>
-                                            <p class="text-muted">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>                           
-                                            <a href="profile.html"  class="btn btn-default btn-round btn-simple">View Profile</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="card member-card">
-                                    <div class="body">
-                                        <div class="member-thumb">
-                                            <img src="../assets/images/lg/avatar1.jpg" class="img-fluid rounded" alt="profile-image">                               
-                                        </div>
-                                        <div class="detail">
-                                            <h4 class="m-b-0">Pro. Joseph </h4>
-                                            <p class="text-muted">Chemistry</p>
-                                            <ul class="social-links list-inline m-t-20">
-                                                <li><a title="facebook" href="javascript:void(0);"><i class="zmdi zmdi-facebook"></i></a></li>
-                                                <li><a title="twitter" href="javascript:void(0);" ><i class="zmdi zmdi-twitter"></i></a></li>
-                                                <li><a title="instagram" href="javascript:void(0);" ><i class="zmdi zmdi-instagram"></i></a></li>
-                                            </ul>
-                                            <p class="text-muted">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>                           
-                                            <a href="profile.html"  class="btn btn-default btn-round btn-simple">View Profile</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="card member-card">
-                                    <div class="body">
-                                        <div class="member-thumb">
-                                            <img src="../assets/images/lg/avatar6.jpg" class="img-fluid rounded" alt="profile-image">                               
-                                        </div>
-                                        <div class="detail">
-                                            <h4 class="m-b-0">Pro. Charlie </h4>
-                                            <p class="text-muted">Chemistry</p>
-                                            <ul class="social-links list-inline m-t-20">
-                                                <li><a title="facebook" href="javascript:void(0);"><i class="zmdi zmdi-facebook"></i></a></li>
-                                                <li><a title="twitter" href="javascript:void(0);" ><i class="zmdi zmdi-twitter"></i></a></li>
-                                                <li><a title="instagram" href="javascript:void(0);" ><i class="zmdi zmdi-instagram"></i></a></li>
-                                            </ul>
-                                            <p class="text-muted">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>                           
-                                            <a href="profile.html"  class="btn btn-default btn-round btn-simple">View Profile</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> 
-                    </div>
-                </div>
+
+                            <?php }
+
+                            ?>
+
+
+                        </div>
             </div>
         </div> 
     </div>

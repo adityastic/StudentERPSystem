@@ -5,7 +5,11 @@ class professors extends MY_Controller {
 
 	public function all_professor()
 	{
-		$this->load->view('all-professor');
+        $this->load->model('Professor_all_model', '_profesor');
+        //load the method of model
+        $data['details']=$this->_profesor->get_all_prof();
+
+        $this->load->view('all-professor',$data);
 	}
 
 	public function add_professor()
@@ -111,12 +115,12 @@ class professors extends MY_Controller {
                 $field_mother_name="";
             }
 
-            $field_class_id = $this->input->post('field_class_id');
-            if ($this->checkNumbersinString($field_class_id)) {
-                $errors->has = true;
-                $this->setErrorMessage($errors, "- Enter Graduation detail");
-                $field_class_id="";
-            }
+           // $field_class_id = $this->input->post('field_class_id');
+            //if ($this->checkNumbersinString($field_class_id)) {
+             //   $errors->has = true;
+              //  $this->setErrorMessage($errors, "- Enter Graduation detail");
+             //   $field_class_id="";
+            //}
 
             $field_bank_name = $this->input->post('field_bank_name');
             if ($this->checkNumbersinString($field_bank_name)) {
@@ -139,12 +143,12 @@ class professors extends MY_Controller {
                 $field_acc_num="";
             }
 
-            $field_pan_num = $this->input->post('field_pan_num');
-            if ($this->checkNumbersinString($field_pan_num)) {
-                $errors->has = true;
-                $this->setErrorMessage($errors, "- Enter Pan Nummber");
-                $field_pan_num="";
-            }
+           // $field_pan_num = $this->input->post('field_pan_num');
+           // if ($this->checkNumbersinString($field_pan_num)) {
+           //     $errors->has = true;
+           //     $this->setErrorMessage($errors, "- Enter Pan Nummber");
+           //     $field_pan_num="";
+           // }
 
             $field_ifsc_code = $this->input->post('field_ifsc_code');
             if ($this->checkNumbersinString($field_ifsc_code)) {
@@ -192,10 +196,9 @@ class professors extends MY_Controller {
                     'field_acc_num'=>$field_acc_num,
                     'field_ifsc_code'=>$field_ifsc_code,
                     'field_branch_name'=>$field_branch_name,
-                    //'field_status'=>$field_status,
                     'field_bank_name'=>$field_bank_name,
                     'field_status'=>$field_status,
-                    'field_pan_num'=>$field_pan_num,
+                   // 'field_pan_num'=>$field_pan_num,
                     //'field_father_onumber'=>$field_father_onumber,
                     //'field_mother_onumber'=>$field_mother_onumber,
                     'field_highest_qualification'=>$field_highest_qualification,
@@ -237,7 +240,7 @@ class professors extends MY_Controller {
                     'ifsc'=>$field_ifsc_code,
                     'account_number'=>$field_acc_num,
                     'highest_qualification'=>$field_highest_qualification,
-                    'pan_number'=>$field_pan_num,
+                    //'pan_number'=>$field_pan_num,
                     //'class_id'=>$field_class_id,
                 );
                 $this->_profesor->insertintoprof($insertArray);
@@ -276,4 +279,6 @@ class professors extends MY_Controller {
             $errors->msg = $strin;
         }
     }
+
+
 }
