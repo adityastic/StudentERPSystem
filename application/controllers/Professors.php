@@ -45,10 +45,6 @@ class professors extends MY_Controller {
             $field_currpin = $this->input->post('field_currpin');
             $field_permadd = $this->input->post('field_permadd');
             $field_permpin = $this->input->post('field_permpin');
-            //$field_father_number = $this->input->post('field_father_number');
-            //$field_mother_number = $this->input->post('field_mother_number');
-            //$field_father_onumber = $this->input->post('field_father_onumber');
-            //$field_mother_onumber = $this->input->post('field_mother_onumber');
             $password = $this->input->post('psw');
 
             $field_prof_fname = $this->input->post('field_prof_fname') ;
@@ -115,12 +111,7 @@ class professors extends MY_Controller {
                 $field_mother_name="";
             }
 
-           // $field_class_id = $this->input->post('field_class_id');
-            //if ($this->checkNumbersinString($field_class_id)) {
-             //   $errors->has = true;
-              //  $this->setErrorMessage($errors, "- Enter Graduation detail");
-             //   $field_class_id="";
-            //}
+
 
             $field_bank_name = $this->input->post('field_bank_name');
             if ($this->checkNumbersinString($field_bank_name)) {
@@ -143,7 +134,7 @@ class professors extends MY_Controller {
                 $field_acc_num="";
             }
 
-           // $field_pan_num = $this->input->post('field_pan_num');
+            $field_pan_num = $this->input->post('field_pan_num');
            // if ($this->checkNumbersinString($field_pan_num)) {
            //     $errors->has = true;
            //     $this->setErrorMessage($errors, "- Enter Pan Nummber");
@@ -177,11 +168,8 @@ class professors extends MY_Controller {
                     'field_prof_lname'=>$field_prof_lname,
                     'field_father_name'=>$field_father_name,
                     'field_mother_name'=>$field_mother_name,
-                    //'field_father_number'=>$field_father_number,
-                    //'field_mother_number'=>$field_mother_number,
                     'field_curradd'=>$field_curradd,
                     'field_permadd'=>$field_permadd,
-                    //'field_father_email'=>$field_father_email,
                     'field_prof_dob'=>$date1,
                     'field_prof_gender'=>$field_prof_gender,
                     'field_bgroup'=>$field_bgroup,
@@ -198,11 +186,8 @@ class professors extends MY_Controller {
                     'field_branch_name'=>$field_branch_name,
                     'field_bank_name'=>$field_bank_name,
                     'field_status'=>$field_status,
-                   // 'field_pan_num'=>$field_pan_num,
-                    //'field_father_onumber'=>$field_father_onumber,
-                    //'field_mother_onumber'=>$field_mother_onumber,
+                    'field_pan_num'=>$field_pan_num,
                     'field_highest_qualification'=>$field_highest_qualification,
-                    //'field_year_id'=>$field_year_id
                 );
                 $data['_reEntry'] = $modifiedArray;
             } else {
@@ -217,11 +202,8 @@ class professors extends MY_Controller {
                     'prof_name'=>$student_name,
                     'father_name'=>$field_father_name,
                     'mother_name'=>$field_mother_name,
-                    //'father_number'=>$field_father_number,
-                    //'mother_number'=>$field_mother_number,
                     'current_address'=>$field_curradd,
                     'permanent_address'=>$field_permadd,
-                    //'father_email'=>$field_father_email,
                     'prof_dob'=>$field_prof_dob,
                     'gender'=>$field_prof_gender,
                     'prof_bloodgroup'=>$field_bgroup,
@@ -240,8 +222,7 @@ class professors extends MY_Controller {
                     'ifsc'=>$field_ifsc_code,
                     'account_number'=>$field_acc_num,
                     'highest_qualification'=>$field_highest_qualification,
-                    //'pan_number'=>$field_pan_num,
-                    //'class_id'=>$field_class_id,
+                    'pan_number'=>$field_pan_num,
                 );
                 $this->_profesor->insertintoprof($insertArray);
             }
