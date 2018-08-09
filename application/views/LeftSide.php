@@ -17,20 +17,37 @@
                         </div>
                     </li>
                     <li class="header">MAIN</li>
-                    <li class="active open"><a href="<?php echo site_url('dashboard') ?>"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
-                    <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-accounts-outline"></i><span>Students</span> </a>
+                    <li <?php if( strcmp(basename($_SERVER['PHP_SELF']) ,'dashboard') ==0 )
+                            echo 'class="active open"'; ?>  >
+                        <a href="<?php echo site_url('dashboard') ?>"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a>
+                    </li>
+
+                    <li <?php if( strcmp(basename($_SERVER['PHP_SELF']) ,'all_students') ==0 || strcmp(basename($_SERVER['PHP_SELF']) ,'add_students') ==0)
+                        echo 'class="active open"'; ?> >
+                        <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-accounts-outline"></i><span>Students</span> </a>
                         <ul class="ml-menu">
-                            <li><a href="<?php echo site_url('students/all_students');?>">All Students</a></li>
-                            <li><a href="<?php echo site_url('students/add_students');?>">Add Students</a></li>
-                            <li><a href="students-profile.html">Students Profile</a></li>
-                            <li><a href="students-invoice.html">Students Invoice</a></li>
+                            <li <?php if( strcmp(basename($_SERVER['PHP_SELF']) ,'all_students') ==0 )
+                                echo 'class="active"'; ?> >
+                                <a href="<?php echo site_url('students/all_students');?>">All Students</a>
+                            </li>
+                            <li <?php if( strcmp(basename($_SERVER['PHP_SELF']) ,'add_students') ==0 )
+                                echo 'class="active"'; ?> >
+                                <a href="<?php echo site_url('students/add_students');?>">Add Students</a>
+                            </li>
                         </ul>
                     </li>
-                    <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-accounts-alt"></i><span>Professors</span> </a>
+                    <li <?php if( strcmp(basename($_SERVER['PHP_SELF']) ,'all_professor') ==0 || strcmp(basename($_SERVER['PHP_SELF']) ,'add_professor') ==0)
+                        echo 'class="active open"'; ?> >
+                        <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-accounts-alt"></i><span>Professors</span> </a>
                         <ul class="ml-menu">
-                            <li><a href="<?php echo site_url('professors/all_professor');?>">All Professors</a></li>
-                            <li><a href="<?php echo site_url('professors/add_professor');?>">Add Professors</a></li>
-                            <li><a href="profile.html">Profile</a></li>
+                            <li<?php if( strcmp(basename($_SERVER['PHP_SELF']) ,'all_professor') ==0)
+                                echo 'class="active"'; ?> >
+                                <a href="<?php echo site_url('professors/all_professor');?>">All Professors</a>
+                            </li>
+                            <li <?php if( strcmp(basename($_SERVER['PHP_SELF']) ,'add_professor') ==0)
+                                echo 'class="active"'; ?> >
+                                <a href="<?php echo site_url('professors/add_professor');?>">Add Professors</a>
+                            </li>
                         </ul>
                     </li>
                     <!-- <li><a href="parents.html"><i class="zmdi zmdi-account"></i><span>Parents</span> </a></li>   -->          <!--         
@@ -46,23 +63,54 @@
                         </ul>
                     </li> -->
                     <li class="header">UNIVERSITY</li>
-                    <li><a href="<?php echo site_url('Events/event');?>"><i class="zmdi zmdi-calendar-check"></i><span>Events</span> </a></li>
-                    <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-city-alt"></i><span>Departments</span> </a>
+                    <li <?php if( strcmp(basename($_SERVER['PHP_SELF']) ,'event') ==0)
+                        echo 'class="active"'; ?>>
+                        <a href="<?php echo site_url('Events/event');?>"><i class="zmdi zmdi-calendar-check"></i><span>Events</span> </a>
+                    </li>
+                    <li <?php if( strcmp(basename($_SERVER['PHP_SELF']) ,'Departments') ==0 || strcmp(basename($_SERVER['PHP_SELF']) ,'add_department') ==0 )
+                        echo 'class="active open"'; ?> >
+                        <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-city-alt"></i><span>Departments</span> </a>
                         <ul class="ml-menu">
-                            <li><a href="<?php echo site_url('Departments') ?>">All Departments</a></li>
-                            <li><a href="<?php echo site_url('Departments/add_department');?>">Add Departments</a></li>
+                            <li <?php if( strcmp(basename($_SERVER['PHP_SELF']) ,'Departments') ==0 )
+                                echo 'class="active"'; ?>>
+                                <a href="<?php echo site_url('Departments') ?>">All Departments</a>
+                            </li>
+                            <li <?php if( strcmp(basename($_SERVER['PHP_SELF']) ,'Departments') ==0 )
+                                echo 'class="active"'; ?>>
+                                <a href="<?php echo site_url('Departments/add_department');?>">Add Departments</a>
+                            </li>
                         </ul>
                     </li>
-                    <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-graduation-cap"></i><span>Courses</span> </a>
+                    <li <?php if( strcmp(basename($_SERVER['PHP_SELF']) ,'courses') ==0 || strcmp(basename($_SERVER['PHP_SELF']) ,'add_courses') ==0 || strcmp(basename($_SERVER['PHP_SELF']),'courses_info') ==0 )
+                        echo 'class="active open"'; ?> >
+                        <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-graduation-cap"></i><span>Courses</span> </a>
                         <ul class="ml-menu">
-                            <li><a href="<?php echo site_url('courses') ?>">All Courses</a></li>
-                            <li><a href="<?php echo site_url('courses/add_courses');?>">Add Courses</a></li>
-                            <li><a href="<?php echo site_url('courses/courses_info');?>">Courses Info</a></li>
+                            <li <?php if( strcmp(basename($_SERVER['PHP_SELF']) ,'courses') ==0 )
+                                echo 'class="active"'; ?>>
+                                <a href="<?php echo site_url('courses') ?>">All Courses</a>
+                            </li>
+                            <li <?php if( strcmp(basename($_SERVER['PHP_SELF']) ,'add_courses') ==0)
+                                echo 'class="active"'; ?>>
+                                <a href="<?php echo site_url('courses/add_courses');?>">Add Courses</a>
+                            </li>
+                            <li <?php if( strcmp(basename($_SERVER['PHP_SELF']),'courses_info') ==0 )
+                                echo 'class="active"'; ?> >
+                                <a href="<?php echo site_url('courses/courses_info');?>">Courses Info</a>
+                            </li>
                         </ul>
                     </li>
-                    <li><a href="<?php echo site_url('Library/Lib');?>"><i class="zmdi zmdi-book"></i><span>Library</span> </a></li>
-                    <li><a href="<?php echo site_url('Classroom') ?>"><i class="zmdi zmdi-device-hub"></i><span>Class</span> </a></li>
-                    <li><a href="<?php echo site_url('noticeboard') ?>"><i class="zmdi zmdi-alert-circle"></i><span>Noticeboard</span> </a></li>
+                    <li <?php if( strcmp(basename($_SERVER['PHP_SELF']),'Library') ==0 )
+                        echo 'class="active"'; ?>>
+                        <a href="<?php echo site_url('Library/Lib');?>"><i class="zmdi zmdi-book"></i><span>Library</span> </a>
+                    </li>
+                    <li <?php if( strcmp(basename($_SERVER['PHP_SELF']),'Classroom') ==0 )
+                        echo 'class="active"'; ?>>
+                        <a href="<?php echo site_url('Classroom') ?>"><i class="zmdi zmdi-device-hub"></i><span>Class</span> </a>
+                    </li>
+                    <li <?php if( strcmp(basename($_SERVER['PHP_SELF']),'noticeboard') ==0 )
+                        echo 'class="active"'; ?>>
+                        <a href="<?php echo site_url('noticeboard') ?>"><i class="zmdi zmdi-alert-circle"></i><span>Noticeboard</span> </a>
+                    </li>
                     <!-- li><a href="centres.html"><i class="zmdi zmdi-pin"></i><span>University Centres</span></a></li>  -->     
                     <!-- <li class="header">EXTRA COMPONENTS</li>
                     <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-blogger"></i><span>Blog</span></a>
