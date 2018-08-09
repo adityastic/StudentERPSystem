@@ -21,7 +21,7 @@ class Students extends MY_Controller
                     $this->setErrorMessage($errors, "- Upload a Supported filetype (jpg,jpeg,png)");
                 }
             } else {
-                $field_photo = './uploads/' . $this->upload->data('file_name');
+                $field_photo = '../uploads/' . $this->upload->data('file_name');
             }
 
             //VALIDATION CODE
@@ -227,8 +227,12 @@ class Students extends MY_Controller
             $errors->msg = $strin;
         }
     }
-    public function index()
+//    public function index()
+//    {
+//        $this->load->view('All-students');
+//    }
+    public function all_students()
     {
-        $this->load->view('students');
+        $this->load->view('all-students');
     }
 }
