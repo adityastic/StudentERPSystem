@@ -197,7 +197,7 @@ class Students extends MY_Controller
         $data['admissionnumber'] = $this->_student->get_adm_number();
 
         
-        $this->load->view('add-students', $data);
+        $this->load->view('students-add', $data);
     }
 
     private function logAlert($prin)
@@ -227,19 +227,25 @@ class Students extends MY_Controller
             $errors->msg = $strin;
         }
     }
-//    public function index()
-//    {
-//        $this->load->view('All-students');
-//    }
+
     public function all_students()
     {
-
         $this->load->model('Student_all_model', '_student');
-        //load the method of model
         $data['details']=$this->_student->get_all_students();
+        $this->load->view('students-all', $data);
+    }
 
-        $this->load->view('all-students',$data);
-
-
+    public function show_profile($id)
+    {
+        if (!empty($id)) {
+            $this->load->model('Student_profile_model', '_student');
+            $result = $this->_student->get_profile($id);
+            $data['name'] = $result->stud_name;
+            $data['current_address'] = $result->current_address;
+            $data['class'] = $result->class_id;
+            $data['stud_email'] = $result->stud_email;
+            $data['stud_phone'] = $result->stud_phone;
+            $this->load->view('students-profile',$data);
+        }
     }
 }
