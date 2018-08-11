@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 4.8.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Aug 09, 2018 at 07:10 PM
--- Server version: 5.6.38
--- PHP Version: 7.2.1
+-- Host: localhost
+-- Generation Time: Aug 11, 2018 at 09:52 AM
+-- Server version: 10.1.32-MariaDB
+-- PHP Version: 7.2.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `nxtstudenterp`
+-- Database: `NxtStudentERP`
 --
 
 -- --------------------------------------------------------
@@ -46,7 +48,6 @@ CREATE TABLE `professor_joining` (
   `father_name` text NOT NULL,
   `mother_name` text NOT NULL,
   `password` text NOT NULL,
-  `status` text NOT NULL,
   `highest_qualification` text NOT NULL,
   `bank_name` text NOT NULL,
   `pan_number` text NOT NULL,
@@ -59,9 +60,9 @@ CREATE TABLE `professor_joining` (
 -- Dumping data for table `professor_joining`
 --
 
-INSERT INTO `professor_joining` (`id`, `join_date`, `prof_name`, `phone`, `prof_dob`, `email`, `gender`, `prof_category`, `state`, `city`, `prof_bloodgroup`, `current_address`, `permanent_address`, `current_address_pin`, `permanent_address_pin`, `photo`, `father_name`, `mother_name`, `password`, `status`, `highest_qualification`, `bank_name`, `pan_number`, `branch_name`, `account_number`, `ifsc`) VALUES
-(1, '2018-08-09', 'bhbshcj sbvbad', '8446593128', '0000-00-00', 'cbh@g.c', 'female', 'obc', 'mp', 'fvdf', 'aneg', 'csbdvbhs', 'ssbdgs', 411043, 411043, '../uploads/avatar6.jpg', 'asasgf', 'scsjdhgv', 'GFG5FFFD5GDSs', '', '', '', '', '', '', ''),
-(2, '2018-08-09', 'bhbshcj sbvbad', '8446593128', '0000-00-00', 'cbh@g.c', 'female', 'obc', 'mp', 'fvdf', 'aneg', 'csbdvbhs', 'ssbdgs', 411043, 411043, '../uploads/avatar61.jpg', 'asasgf', 'scsjdhgv', 'GFG5FFFD5GDSs', '', '', '', '', '', '', '');
+INSERT INTO `professor_joining` (`id`, `join_date`, `prof_name`, `phone`, `prof_dob`, `email`, `gender`, `prof_category`, `state`, `city`, `prof_bloodgroup`, `current_address`, `permanent_address`, `current_address_pin`, `permanent_address_pin`, `photo`, `father_name`, `mother_name`, `password`, `highest_qualification`, `bank_name`, `pan_number`, `branch_name`, `account_number`, `ifsc`) VALUES
+(1, '2018-08-09', 'bhbshcj sbvbad', '8446593128', '0000-00-00', 'cbh@g.c', 'female', 'obc', 'mp', 'fvdf', 'aneg', 'csbdvbhs', 'ssbdgs', 411043, 411043, '../uploads/avatar6.jpg', 'asasgf', 'scsjdhgv', 'GFG5FFFD5GDSs', '', '', '', '', '', ''),
+(2, '2018-08-09', 'bhbshcj sbvbad', '8446593128', '0000-00-00', 'cbh@g.c', 'female', 'obc', 'mp', 'fvdf', 'aneg', 'csbdvbhs', 'ssbdgs', 411043, 411043, '../uploads/avatar61.jpg', 'asasgf', 'scsjdhgv', 'GFG5FFFD5GDSs', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -138,6 +139,7 @@ ALTER TABLE `professor_joining`
 --
 ALTER TABLE `student_admission`
   MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
