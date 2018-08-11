@@ -9,7 +9,7 @@ class professors extends MY_Controller {
         //load the method of model
         $data['details']=$this->_profesor->get_all_prof();
 
-        $this->load->view('all-professor',$data);
+        $this->load->view('professors-all',$data);
 	}
 
 	public function add_professor()
@@ -230,7 +230,7 @@ class professors extends MY_Controller {
         $data['profnumber'] = $this->_profesor->get_id();
 
 
-        $this->load->view('add-professors', $data);
+        $this->load->view('professors-add', $data);
 	}
 
     private function logAlert($prin)
