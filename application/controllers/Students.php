@@ -249,4 +249,53 @@ class Students extends MY_Controller
             $this->load->view('students-profile',$data);
         }
     }
+     public function edit_profile()
+    {
+
+        $this->load->model('Student_edit_model', '_student');
+        $data['details']=$this->_student->get_all_students();
+
+        $this->load->view('students-edit', $data);
+    }
+    public function update_profile($id)
+    {
+        if (!empty($id)) {
+
+
+            $this->load->model('Student_profile_model', '_student');
+
+
+            $result = $this->_student->get_profile($id);
+
+            $data['name'] = $result->stud_name;
+            $data['current_address'] = $result->current_address;
+            $data['class'] = $result->class_id;
+            $data['stud_email'] = $result->stud_email;
+            $data['stud_phone'] = $result->stud_phone;
+            $data['photo']=$result->photo;
+            $data['father_name']=$result->father_name;
+            $data['mother_name']=$result->mother_name;
+            $data['father_no']=$result->father_number;
+            $data['mother_no']=$result->mother_number;
+            $data['perma_address']=$result->perma_address;
+            $data['father_email']=$result->father_email;
+            $data['student_dob']=$result->stud_dob;
+            $data['student_gender']=$result->stud_gender;
+            $data['student_bg']=$result->stud_blood_group;
+            $data['student_caste']=$result->stud_caste;
+            $data['city']=$result->city;
+            $data['state']=$result->state;
+            $data['perma_address_pin']=$result->perma_address_pin;
+            $data['father_office_no']=$result->father_o_number;
+            $data['mother_office_no']=$result->mother_o_number;
+            $data['stud_password']=$result->password;
+            $data['year']=$result->year_id;
+            $data['current_address_pin']=$result->currrent_address_pin;
+            $data['admissionnumber'] = $result->Id;
+
+        
+        $this->load->view('students-update', $data);
+
+        }
+    }
 }
