@@ -559,28 +559,6 @@ include "leftside.php";
                                         <input type="password" class="form-control" id="psw" placeholder="Password"  name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-12">
-                                    <div class="form-group">
-                                        <select class="form-control show-tick" name="field_status" >
-                                            <?php
-                                            $_statusArr = array(
-                                                "aactive"=>"Active",
-                                                "Deactive"=>"DeActive");
-                                            foreach ($_statusArr as $key => $value) {
-                                                if (isset($_reEntry)) {
-                                                    if (strcmp($key, $_reEntry['field_status']) == 0) {
-                                                        echo '<option value="' . $key . '" selected>' . $value . '</option>';
-                                                    } else {
-                                                        echo '<option value="' . $key . '">' . $value . '</option>';
-                                                    }
-                                                } else {
-                                                    echo '<option value="' . $key . '">' . $value . '</option>';
-                                                }
-                                            }
-                                            ?>
-                                        </select>
-                                    </div>
-                                </div>
                             </div>
 
                             <div id="message">

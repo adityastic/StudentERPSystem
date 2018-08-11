@@ -148,12 +148,6 @@ class professors extends MY_Controller {
                 $field_ifsc_code="";
             }
 
-            $field_status = $this->input->post('field_status');
-            if (strcmp($field_status, 'none') == 0) {
-                $errors->has = true ;
-                $this->setErrorMessage($errors, "- Enter status");
-            }
-
             $field_highest_qualification = $this->input->post('field_highest_qualification');
             if (strcmp($field_highest_qualification, 'none') == 0) {
                 $errors->has = true ;
@@ -185,7 +179,6 @@ class professors extends MY_Controller {
                     'field_ifsc_code'=>$field_ifsc_code,
                     'field_branch_name'=>$field_branch_name,
                     'field_bank_name'=>$field_bank_name,
-                    'field_status'=>$field_status,
                     'field_pan_num'=>$field_pan_num,
                     'field_highest_qualification'=>$field_highest_qualification,
                 );
@@ -216,7 +209,6 @@ class professors extends MY_Controller {
                     'phone'=>$field_prof_ph,
                     'photo'=>$field_photo,
                     'password'=>$password,
-                    'status'=>$field_status,
                     'bank_name'=>$field_bank_name,
                     'branch_name'=>$field_branch_name,
                     'ifsc'=>$field_ifsc_code,
@@ -227,7 +219,7 @@ class professors extends MY_Controller {
                 $this->_profesor->insertintoprof($insertArray);
             }
         }
-        $data['profnumber'] = $this->_profesor->get_id();
+        $data['profnumber'] = $this->_profesor->get_adm_number();
 
 
         $this->load->view('professors-add', $data);

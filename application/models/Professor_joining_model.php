@@ -7,7 +7,7 @@ class Professor_joining_model extends CI_Model
         $this->load->database();
     }
 
-    public function get_id()
+    public function get_adm_number()
     {
         $this->db->select('MAX(id) as max');
         $query = $this->db->get('professor_joining')->row();
