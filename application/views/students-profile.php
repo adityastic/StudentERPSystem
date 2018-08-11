@@ -6,11 +6,10 @@
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
 
-<title><?php echo $title;?></title>
-<link rel="icon" href="favicon.ico" type="image/x-icon">
+<title><?php  echo $title;?></title>
 <!-- Favicon-->
+<link rel="icon" href="favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="../assets/plugins/morrisjs/morris.css" />
 <!-- Custom Css -->
 <link rel="stylesheet" href="../assets/css/main.css">
 <link rel="stylesheet" href="../assets/css/color_skins.css">
@@ -20,7 +19,7 @@
 <div class="page-loader-wrapper">
     <div class="loader">
         <div class="m-t-30"><img class="zmdi-hc-spin" src="../assets/images/logo.svg" width="48" height="48" alt="Oreo"></div>
-        <p>Please wait...</p>
+        <p>Please wait...</p>        
     </div>
 </div>
 <!-- Overlay For Sidebars -->
@@ -35,10 +34,10 @@
             </div>
         </li>
         <li><a href="javascript:void(0);" class="ls-toggle-btn" data-close="true"><i class="zmdi zmdi-swap"></i></a></li>
-        <!-- <li class="hidden-md-down"><a href="events.html" title="Events"><i class="zmdi zmdi-calendar"></i></a></li>
+        <li class="hidden-md-down"><a href="events.html" title="Events"><i class="zmdi zmdi-calendar"></i></a></li>
         <li class="hidden-md-down"><a href="mail-inbox.html" title="Inbox"><i class="zmdi zmdi-email"></i></a></li>
-         --><li><a href="contact.html" title="Contact List"><i class="zmdi zmdi-account-box-phone"></i></a></li>
-        <!-- <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-notifications"></i>
+        <li><a href="contact.html" title="Contact List"><i class="zmdi zmdi-account-box-phone"></i></a></li>
+        <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-notifications"></i>
             <div class="notify"><span class="heartbit"></span><span class="point"></span></div>
             </a>
             <ul class="dropdown-menu pullDown">
@@ -103,8 +102,8 @@
                 </li>
                 <li class="footer"> <a href="javascript:void(0);">View All</a> </li>
             </ul>
-        </li> -->
-      <!--   <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-flag"></i>
+        </li>
+        <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-flag"></i>
             <div class="notify">
                 <span class="heartbit"></span>
                 <span class="point"></span>
@@ -204,18 +203,21 @@
                     <i class="zmdi zmdi-search"></i>
                 </span>
             </div>
-        </li>         -->
+        </li>        
         <li class="float-right">
             <a href="javascript:void(0);" class="fullscreen hidden-sm-down" data-provide="fullscreen" data-close="true"><i class="zmdi zmdi-fullscreen"></i></a>
-           <!--  <a href="sign-in.html" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i></a>
-            <a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="zmdi zmdi-settings zmdi-hc-spin"></i></a> -->
+            <a href="sign-in.html" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i></a>
+            <a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="zmdi zmdi-settings zmdi-hc-spin"></i></a>
         </li>
     </ul>
 </nav>
 <!-- Left Sidebar -->
-<?php include 'leftside.php';?>
+
+<?php
+include "leftside.php";
+?>
 <!-- Right Sidebar -->
-<!-- <aside id="rightsidebar" class="right-sidebar">
+<aside id="rightsidebar" class="right-sidebar">
     <ul class="nav nav-tabs">
         <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#setting"><i class="zmdi zmdi-settings zmdi-hc-spin"></i></a></li>
         <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#chat"><i class="zmdi zmdi-comments"></i></a></li>
@@ -251,7 +253,7 @@
                     <h6>Left Menu</h6>
                     <button class="t-light btn btn-default btn-simple btn-round">Light Menu</button>
                     <button class="t-dark btn btn-default btn-round">Dark Menu</button>
-					<button class="m_img_btn btn btn-primary btn-round btn-block">Sidebar Image</button>                    
+                    <button class="m_img_btn btn btn-primary btn-round btn-block">Sidebar Image</button>                    
                 </div>
                 <div class="card">
                     <h6>General Settings</h6>
@@ -613,9 +615,9 @@
             </div>
         </div>
     </div>
-</aside> -->
+</aside>
 <!-- Chat-launcher -->
-<!-- <div class="chat-launcher"></div>
+<div class="chat-launcher"></div>
 <div class="chat-wrapper">
     <div class="card">
         <div class="header">
@@ -675,8 +677,9 @@
         </div>
     </div>
 </div>
- -->
-<section class="content profile-page">
+
+<!-- Main Content -->
+<section class="content">
     <div class="block-header">
         <div class="row">
             <div class="col-lg-7 col-md-6 col-sm-12">
@@ -684,177 +687,170 @@
                 <small><?php echo $welcome_string;?></small>
                 </h2>
             </div>
-            <!-- <div class="col-lg-5 col-md-6 col-sm-12">
+          <!--   <div class="col-lg-5 col-md-6 col-sm-12">                
                 <button class="btn btn-white btn-icon btn-round hidden-sm-down float-right m-l-10" type="button">
                     <i class="zmdi zmdi-plus"></i>
                 </button>
                 <ul class="breadcrumb float-md-right">
                     <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Oreo</a></li>
-                    <li class="breadcrumb-item"><a href="javascript:void(0);">Student</a></li>
-                    <li class="breadcrumb-item active">Profile</li>
-                </ul>
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">Courses</a></li>
+                    <li class="breadcrumb-item active">info</li>
+                </ul>                
             </div> -->
         </div>
     </div>
     <div class="container-fluid">
         <div class="row clearfix">
-            <div class="col-lg-4 col-md-12 col-sm-12">
-                <div class="card member-card bg-dark">
-                    <div class="header">
-                        <h4 class="m-t-10" style="color: #ffffff"><?php echo $name;?></h4>
-                    </div>
-                    <div class="member-img">
-                        <a href="javascript:void(0);">
-                        <img src="../assets/images/sm/avatar4.jpg" class="rounded-circle" alt="profile-image">
-                        </a>
-                    </div>
+            <div class="col-md-12 col-lg-4">
+                <div class="card">
                     <div class="body">
-                        <!-- <div class="col-12">
-                            <ul class="social-links list-unstyled">
-                                <li><a title="facebook" href="javascript:void(0);"><i class="zmdi zmdi-facebook"></i></a></li>
-                                <li><a title="twitter" href="javascript:void(0);"><i class="zmdi zmdi-twitter"></i></a></li>
-                                <li><a title="instagram" href="javascript:void(0);"><i class="zmdi zmdi-instagram"></i></a></li>
-                            </ul>                            
-                        </div> -->
-                        <hr>
-                        <strong class="text-muted">Class</strong>
-                        <p style="color: #ffffff"><?php echo $class;?></p>
-                        <strong style="color: #eeeeee">Email ID</strong>
-                        <p style="color: #ffffff"><?php echo $stud_email;?></p>
-                        <strong style="color: #eeeeee">Phone</strong>
-                        <p style="color: #ffffff"><?php echo $stud_phone;?></p>
-                        <hr>
-                        <strong class="text-muted">Address</strong>
-                        <address style="color: #ffffff"><?php echo $current_address;?></address>
+                        <img src="<?php echo $photo; ?>" alt=""  class="img-fluid rounded m-b-20">
+                        <h6 class="m-t-10" style="color: #111111"><?php echo $name;?></h6>
+                        <div class="table-responsive">
+                            <table class="table table-hover m-t-20">
+                                <tbody>
+                                    <tr>
+                                        <td>Class</td>
+                                        <td><?php echo $class;?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Email ID</td>
+                                        <td><strong class="col-blush"><?php echo $stud_email;?></strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Phone</td>
+                                        <td><strong><?php echo $stud_phone;?></strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Address</td>
+                                        <td><strong class="col-green"><?php echo $current_address;?></strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <a href="courses-info.html" class="btn btn-block btn-raised btn-primary btn-round waves-effect" role="button">DElETE STUDENT</a>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="header">
-                        <h2><strong>General</strong> Report</h2>                                
-                    </div>
-                    <div class="body">
-                        <ul class="list-unstyled">
-                            <li>
-                                <div>Computer</div>
-                                <div class="progress m-b-20">
-                                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%"> <span class="sr-only">40% Complete (success)</span> </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div>Sport</div>
-                                <div class="progress m-b-20">
-                                    <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"> <span class="sr-only">20% Complete</span> </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div>English</div>
-                                <div class="progress m-b-20">
-                                    <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"> <span class="sr-only">60% Complete (warning)</span> </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div>Design</div>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"> <span class="sr-only">80% Complete (danger)</span> </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>             
             </div>
-            <div class="col-lg-8 col-md-12 col-sm-12">
+            <div class="col-md-12 col-lg-8">
                 <div class="card">
-                    <div class="header">
-                        <h2><strong>Progress</strong> Report</h2>
-                        <ul class="header-dropdown">
-                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
-                                <ul class="dropdown-menu dropdown-menu-right slideUp float-right">
-                                    <li><a href="javascript:void(0);">Edit</a></li>
-                                    <li><a href="javascript:void(0);">Delete</a></li>
-                                    <li><a href="javascript:void(0);">Report</a></li>
-                                </ul>
-                            </li>
-                            <li class="remove">
-                                <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
-                            </li>
+                    <div class="body">
+                        <ul class="nav nav-tabs padding-0">
+                            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#Details">Student Details</a></li>
+                            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Structure">Student Structure</a></li>
+                            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Gallery">Student Gallery</a></li>
                         </ul>
                     </div>
-                    <div class="body">
-                        <div id="m_area_chart"></div>
-                    </div>
                 </div>
-                <div class="card">
-                    <div class="body">
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. </p>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source</p>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="Details">
+                        <div class="card">
+                            <div class="body">
+                                <h6>Student Details</h6>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable</p>                                
+                                <h6>Study Options</h6>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Qualification</th>
+                                                <th>Length</th>
+                                                <th>Code</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Bsc (Hons)</td>
+                                                <td>2 years full time</td>
+                                                <td>OUK23</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bsc</td>
+                                                <td>3 years full time</td>
+                                                <td>OUB18</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <h6>English Education Modules</h6>
+                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock</p>
+                                <hr>
+                                <h6>Projects & Research Intrests</h6>
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form</p>
+                                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum</p>                                
+                            </div>
+                        </div>
                     </div>
-                </div>                               
-                <div class="card" id="timeline">
-                    <div class="body">
-                        <div class="timeline-body">
-                            <div class="timeline m-border">
-                                <div class="timeline-item">
-                                    <div class="item-content">
-                                        <div class="text-small">Just now</div>
-                                        <p>Discharge.</p>
-                                    </div>
+                    <div class="tab-pane" id="Structure">
+                        <div class="card">
+                            <div class="body">
+                                <h6>Course Structure</h6>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable</p>                                
+                                <h6>Study Options</h6>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Qualification</th>
+                                                <th>Length</th>
+                                                <th>Code</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Bsc (Hons)</td>
+                                                <td>3 years full time</td>
+                                                <td>CDX3</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bsc </td>
+                                                <td>4 years full time</td>
+                                                <td>CDX4</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <div class="timeline-item border-info">
-                                    <div class="item-content">
-                                        <div class="text-small">11:30</div>
-                                        <p>Routine Checkup</p>
+                                <h6>English Education Modules</h6>
+                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock</p>
+                                <hr>
+                                <h6>Projects & Research Intrests</h6>
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form</p>
+                                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum</p>                                                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="Gallery">
+                        <div class="card">
+                            <div class="body">                                
+                                <h6>Course Gallery</h6>
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <img src="../assets/images/image7.jpg" alt="" class="img-fluid rounded m-b-30">
                                     </div>
-                                </div>
-                                <div class="timeline-item border-warning border-l">
-                                    <div class="item-content">
-                                        <div class="text-small">10:30</div>
-                                        <p>Operation </p>
+                                    <div class="col-md-6 col-sm-12">
+                                        <img src="../assets/images/image2.jpg" alt="" class="img-fluid rounded m-b-30">
                                     </div>
-                                </div>
-                                <div class="timeline-item border-warning">
-                                    <div class="item-content">
-                                        <div class="text-small">3 days ago</div>
-                                        <p>Routine Checkup</p>
+                                    <div class="col-md-6 col-sm-12">
+                                        <img src="../assets/images/image3.jpg" alt="" class="img-fluid rounded m-b-30">
                                     </div>
-                                </div>
-                                <div class="timeline-item border-danger">
-                                    <div class="item-content">
-                                        <div class="text--muted">Thu, 10 Mar</div>
-                                        <p>Routine Checkup</p>
-                                    </div>
-                                </div>
-                                <div class="timeline-item border-info">
-                                    <div class="item-content">
-                                        <div class="text-small">Sat, 5 Mar</div>
-                                        <p>Routine Checkup</p>
-                                    </div>
-                                </div>
-                                <div class="timeline-item border-danger">
-                                    <div class="item-content">
-                                        <div class="text-small">Sun, 11 Feb</div>
-                                        <p>Blood checkup test</p>
-                                    </div>
-                                </div>
-                                <div class="timeline-item border-info">
-                                    <div class="item-content">
-                                        <div class="text-small">Thu, 17 Jan</div>
-                                        <p>Add Student ward no. 21</p>
+                                    <div class="col-md-6 col-sm-12">
+                                        <img src="../assets/images/image4.jpg" alt="" class="img-fluid rounded m-b-30">
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>            
         </div>
     </div>
 </section>
 <!-- Jquery Core Js --> 
-<script src="../assets/bundles/libscripts.bundle.js"></script> <!-- Bootstrap JS and jQuery v3.2.1 -->
-<script src="../assets/bundles/vendorscripts.bundle.js"></script> <!-- slimscroll, waves Scripts Plugin Js -->  
+<script src="../assets/bundles/libscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js --> 
+<script src="../assets/bundles/vendorscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js --> 
 
-<script src="../assets/bundles/morrisscripts.bundle.js"></script> <!-- Morris Plugin Js --> 
-<script src="../assets/bundles/mainscripts.bundle.js"></script><!-- Custom Js -->
-<script src="../assets/js/pages/student-profile.js"></script>
+<script src="../assets/bundles/mainscripts.bundle.js"></script>
 </body>
 </html>
