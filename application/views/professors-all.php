@@ -10,7 +10,6 @@
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <!-- Favicon-->
 <link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="../assets/plugins/morrisjs/morris.css" />
 <!-- Custom Css -->
 <link rel="stylesheet" href="../assets/css/main.css">
 <link rel="stylesheet" href="../assets/css/color_skins.css">
@@ -31,13 +30,13 @@
         <li>
             <div class="navbar-header">
                 <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="<?php echo site_url('dashboard');?>"><img src="../assets/images/logo.svg" width="30" alt="Oreo"><span class="m-l-10"><?php echo $company_name;?></span></a>
+                <a class="navbar-brand" href="index.html"><img src="../assets/images/logo.svg" width="30" alt="Oreo"><span class="m-l-10"><?php echo $company_name;?></span></a>
             </div>
         </li>
         <li><a href="javascript:void(0);" class="ls-toggle-btn" data-close="true"><i class="zmdi zmdi-swap"></i></a></li>
         <!-- <li class="hidden-md-down"><a href="events.html" title="Events"><i class="zmdi zmdi-calendar"></i></a></li>
-        <li class="hidden-md-down"><a href="mail-inbox.html" title="Inbox"><i class="zmdi zmdi-email"></i></a></li>
-         --><li><a href="contact.html" title="Contact List"><i class="zmdi zmdi-account-box-phone"></i></a></li>
+        <li class="hidden-md-down"><a href="mail-inbox.html" title="Inbox"><i class="zmdi zmdi-email"></i></a></li> -->
+        <li><a href="contact.html" title="Contact List"><i class="zmdi zmdi-account-box-phone"></i></a></li>
         <!-- <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-notifications"></i>
             <div class="notify"><span class="heartbit"></span><span class="point"></span></div>
             </a>
@@ -103,8 +102,8 @@
                 </li>
                 <li class="footer"> <a href="javascript:void(0);">View All</a> </li>
             </ul>
-        </li> -->
-      <!--   <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-flag"></i>
+        </li>
+        <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-flag"></i>
             <div class="notify">
                 <span class="heartbit"></span>
                 <span class="point"></span>
@@ -204,16 +203,18 @@
                     <i class="zmdi zmdi-search"></i>
                 </span>
             </div>
-        </li>         -->
+        </li>     -->    
         <li class="float-right">
             <a href="javascript:void(0);" class="fullscreen hidden-sm-down" data-provide="fullscreen" data-close="true"><i class="zmdi zmdi-fullscreen"></i></a>
-           <!--  <a href="sign-in.html" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i></a>
+            <!-- <a href="sign-in.html" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i></a>
             <a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="zmdi zmdi-settings zmdi-hc-spin"></i></a> -->
         </li>
     </ul>
 </nav>
 <!-- Left Sidebar -->
-<?php include 'leftside.php';?>
+<?php
+    include "leftside.php";
+?>
 <!-- Right Sidebar -->
 <!-- <aside id="rightsidebar" class="right-sidebar">
     <ul class="nav nav-tabs">
@@ -251,7 +252,7 @@
                     <h6>Left Menu</h6>
                     <button class="t-light btn btn-default btn-simple btn-round">Light Menu</button>
                     <button class="t-dark btn btn-default btn-round">Dark Menu</button>
-					<button class="m_img_btn btn btn-primary btn-round btn-block">Sidebar Image</button>                    
+                    <button class="m_img_btn btn btn-primary btn-round btn-block">Sidebar Image</button>                    
                 </div>
                 <div class="card">
                     <h6>General Settings</h6>
@@ -674,187 +675,86 @@
             </div>
         </div>
     </div>
-</div>
- -->
-<section class="content profile-page">
+</div> -->
+
+<section class="content">
     <div class="block-header">
         <div class="row">
-            <div class="col-lg-7 col-md-6 col-sm-12">
-                <h2>Student Profile
+            <div class="col-lg-5 col-md-5 col-sm-12">
+                <h2>All Professors
                 <small><?php echo $welcome_string;?></small>
                 </h2>
-            </div>
-            <!-- <div class="col-lg-5 col-md-6 col-sm-12">
+            </div>            
+            <!-- <div class="col-lg-7 col-md-7 col-sm-12 text-right">
                 <button class="btn btn-white btn-icon btn-round hidden-sm-down float-right m-l-10" type="button">
                     <i class="zmdi zmdi-plus"></i>
                 </button>
                 <ul class="breadcrumb float-md-right">
                     <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Oreo</a></li>
-                    <li class="breadcrumb-item"><a href="javascript:void(0);">Student</a></li>
-                    <li class="breadcrumb-item active">Profile</li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">Professors</a></li>
+                    <li class="breadcrumb-item active">All</li>
                 </ul>
             </div> -->
         </div>
     </div>
     <div class="container-fluid">
         <div class="row clearfix">
-            <div class="col-lg-4 col-md-12 col-sm-12">
-                <div class="card member-card bg-dark">
-                    <div class="header">
-                        <h4 class="m-t-10" style="color: #ffffff"><?php echo $name;?></h4>
-                    </div>
-                    <div class="member-img">
-                        <a href="javascript:void(0);">
-                        <img src="../assets/images/sm/avatar4.jpg" class="rounded-circle" alt="profile-image">
-                        </a>
-                    </div>
+            <div class="col-lg-12">
+                <!-- <div class="card">
                     <div class="body">
-                        <!-- <div class="col-12">
-                            <ul class="social-links list-unstyled">
-                                <li><a title="facebook" href="javascript:void(0);"><i class="zmdi zmdi-facebook"></i></a></li>
-                                <li><a title="twitter" href="javascript:void(0);"><i class="zmdi zmdi-twitter"></i></a></li>
-                                <li><a title="instagram" href="javascript:void(0);"><i class="zmdi zmdi-instagram"></i></a></li>
-                            </ul>                            
-                        </div> -->
-                        <hr>
-                        <strong class="text-muted">Class</strong>
-                        <p style="color: #ffffff"><?php echo $class;?></p>
-                        <strong style="color: #eeeeee">Email ID</strong>
-                        <p style="color: #ffffff"><?php echo $stud_email;?></p>
-                        <strong style="color: #eeeeee">Phone</strong>
-                        <p style="color: #ffffff"><?php echo $stud_phone;?></p>
-                        <hr>
-                        <strong class="text-muted">Address</strong>
-                        <address style="color: #ffffff"><?php echo $current_address;?></address>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="header">
-                        <h2><strong>General</strong> Report</h2>                                
-                    </div>
-                    <div class="body">
-                        <ul class="list-unstyled">
-                            <li>
-                                <div>Computer</div>
-                                <div class="progress m-b-20">
-                                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%"> <span class="sr-only">40% Complete (success)</span> </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div>Sport</div>
-                                <div class="progress m-b-20">
-                                    <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"> <span class="sr-only">20% Complete</span> </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div>English</div>
-                                <div class="progress m-b-20">
-                                    <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"> <span class="sr-only">60% Complete (warning)</span> </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div>Design</div>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"> <span class="sr-only">80% Complete (danger)</span> </div>
-                                </div>
-                            </li>
+                        <ul class="nav nav-tabs padding-0">
+                            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#Permanent">Permanent</a></li>
+                            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Consultant">Consultant</a></li>
                         </ul>
                     </div>
-                </div>             
-            </div>
-            <div class="col-lg-8 col-md-12 col-sm-12">
-                <div class="card">
-                    <div class="header">
-                        <h2><strong>Progress</strong> Report</h2>
-                        <ul class="header-dropdown">
-                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
-                                <ul class="dropdown-menu dropdown-menu-right slideUp float-right">
-                                    <li><a href="javascript:void(0);">Edit</a></li>
-                                    <li><a href="javascript:void(0);">Delete</a></li>
-                                    <li><a href="javascript:void(0);">Report</a></li>
-                                </ul>
-                            </li>
-                            <li class="remove">
-                                <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="body">
-                        <div id="m_area_chart"></div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="body">
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. </p>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source</p>
-                    </div>
-                </div>                               
-                <div class="card" id="timeline">
-                    <div class="body">
-                        <div class="timeline-body">
-                            <div class="timeline m-border">
-                                <div class="timeline-item">
-                                    <div class="item-content">
-                                        <div class="text-small">Just now</div>
-                                        <p>Discharge.</p>
+                </div> -->
+                <div class="tab-content m-t-10">
+                    <div class="tab-pane active" id="Permanent">
+                        <div class="row clearfix">
+
+
+                            <?php
+
+
+                            foreach ($details->result() as $row)
+                            {
+                                ?>
+
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                    <div class="card member-card">
+                                        <div class="body">
+                                            <div class="member-thumb">
+                                                <img src="<?php echo $row->photo;?>" class="img-fluid rounded" alt="profile-image">
+                                            </div>
+                                            <div class="detail">
+                                                <h4 class="m-b-0"><?php echo $row->prof_name;?></h4>
+                                                <p class="text-muted"><?php echo $row->highest_qualification;?></p>
+                                                <ul class="social-links list-inline m-t-20">
+                                                    <li><a title="facebook" href="javascript:void(0);"><i class="zmdi zmdi-facebook"></i></a></li>
+                                                    <li><a title="twitter" href="javascript:void(0);" ><i class="zmdi zmdi-twitter"></i></a></li>
+                                                    <li><a title="instagram" href="javascript:void(0);" ><i class="zmdi zmdi-instagram"></i></a></li>
+                                                </ul>
+                                                <p class="text-muted"><?php echo $row->current_address;?></p>
+                                                <a href="profile.html"  class="btn btn-default btn-round btn-simple">View Profile</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="timeline-item border-info">
-                                    <div class="item-content">
-                                        <div class="text-small">11:30</div>
-                                        <p>Routine Checkup</p>
-                                    </div>
-                                </div>
-                                <div class="timeline-item border-warning border-l">
-                                    <div class="item-content">
-                                        <div class="text-small">10:30</div>
-                                        <p>Operation </p>
-                                    </div>
-                                </div>
-                                <div class="timeline-item border-warning">
-                                    <div class="item-content">
-                                        <div class="text-small">3 days ago</div>
-                                        <p>Routine Checkup</p>
-                                    </div>
-                                </div>
-                                <div class="timeline-item border-danger">
-                                    <div class="item-content">
-                                        <div class="text--muted">Thu, 10 Mar</div>
-                                        <p>Routine Checkup</p>
-                                    </div>
-                                </div>
-                                <div class="timeline-item border-info">
-                                    <div class="item-content">
-                                        <div class="text-small">Sat, 5 Mar</div>
-                                        <p>Routine Checkup</p>
-                                    </div>
-                                </div>
-                                <div class="timeline-item border-danger">
-                                    <div class="item-content">
-                                        <div class="text-small">Sun, 11 Feb</div>
-                                        <p>Blood checkup test</p>
-                                    </div>
-                                </div>
-                                <div class="timeline-item border-info">
-                                    <div class="item-content">
-                                        <div class="text-small">Thu, 17 Jan</div>
-                                        <p>Add Student ward no. 21</p>
-                                    </div>
-                                </div>
-                            </div>
+
+                            <?php }
+
+                            ?>
+
+
                         </div>
-                    </div>
-                </div>
             </div>
-        </div>
+        </div> 
     </div>
 </section>
 <!-- Jquery Core Js --> 
 <script src="../assets/bundles/libscripts.bundle.js"></script> <!-- Bootstrap JS and jQuery v3.2.1 -->
-<script src="../assets/bundles/vendorscripts.bundle.js"></script> <!-- slimscroll, waves Scripts Plugin Js -->  
+<script src="../assets/bundles/vendorscripts.bundle.js"></script> <!-- slimscroll, waves Scripts Plugin Js --> 
 
-<script src="../assets/bundles/morrisscripts.bundle.js"></script> <!-- Morris Plugin Js --> 
-<script src="../assets/bundles/mainscripts.bundle.js"></script><!-- Custom Js -->
-<script src="../assets/js/pages/student-profile.js"></script>
+<script src="../assets/bundles/mainscripts.bundle.js"></script><!-- Custom Js --> 
 </body>
 </html>
