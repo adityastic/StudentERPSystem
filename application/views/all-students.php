@@ -6,7 +6,7 @@
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
 
-<title>:: Oreo University Admin ::</title>
+<title><?php echo $title;?></title>
 <!-- Favicon-->
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css">
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="../assets/css/main.css">
 <link rel="stylesheet" href="../assets/css/color_skins.css">
 </head>
-<body class="theme-purple">
+<body class="<?php echo $theme;?>">
 <!-- Page Loader -->
 <div class="page-loader-wrapper">
     <div class="loader">
@@ -32,14 +32,14 @@
         <li>
             <div class="navbar-header">
                 <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="index.html"><img src="../assets/images/logo.svg" width="30" alt="Oreo"><span class="m-l-10">Oreo</span></a>
+                <a class="navbar-brand" href="<?php echo site_url('dashboard');?>"><img src="../assets/images/logo.svg" width="30" alt="Oreo"><span class="m-l-10"><?php echo $company_name;?></span></a>
             </div>
         </li>
         <li><a href="javascript:void(0);" class="ls-toggle-btn" data-close="true"><i class="zmdi zmdi-swap"></i></a></li>
-        <li class="hidden-md-down"><a href="events.html" title="Events"><i class="zmdi zmdi-calendar"></i></a></li>
-        <li class="hidden-md-down"><a href="mail-inbox.html" title="Inbox"><i class="zmdi zmdi-email"></i></a></li>
+      <!--   <li class="hidden-md-down"><a href="events.html" title="Events"><i class="zmdi zmdi-calendar"></i></a></li>
+        <li class="hidden-md-down"><a href="mail-inbox.html" title="Inbox"><i class="zmdi zmdi-email"></i></a></li> -->
         <li><a href="contact.html" title="Contact List"><i class="zmdi zmdi-account-box-phone"></i></a></li>
-        <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-notifications"></i>
+      <!--   <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-notifications"></i>
             <div class="notify"><span class="heartbit"></span><span class="point"></span></div>
             </a>
             <ul class="dropdown-menu pullDown">
@@ -104,8 +104,8 @@
                 </li>
                 <li class="footer"> <a href="javascript:void(0);">View All</a> </li>
             </ul>
-        </li>
-        <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-flag"></i>
+        </li> -->
+        <!-- <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-flag"></i>
             <div class="notify">
                 <span class="heartbit"></span>
                 <span class="point"></span>
@@ -197,26 +197,26 @@
                 </li>
                 <li class="footer"><a href="javascript:void(0);">View All</a></li>
             </ul>
-        </li>
-        <li class="hidden-sm-down">
+        </li> -->
+        <!-- <li class="hidden-sm-down">
             <div class="input-group">                
                 <input type="text" class="form-control" placeholder="Search...">
                 <span class="input-group-addon">
                     <i class="zmdi zmdi-search"></i>
                 </span>
             </div>
-        </li>        
+        </li>     -->    
         <li class="float-right">
             <a href="javascript:void(0);" class="fullscreen hidden-sm-down" data-provide="fullscreen" data-close="true"><i class="zmdi zmdi-fullscreen"></i></a>
-            <a href="sign-in.html" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i></a>
-            <a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="zmdi zmdi-settings zmdi-hc-spin"></i></a>
+            <!-- <a href="sign-in.html" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i></a>
+            <a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="zmdi zmdi-settings zmdi-hc-spin"></i></a> -->
         </li>
     </ul>
 </nav>
 <!-- Left Sidebar -->
 <?php include 'leftside.php';?>
 <!-- Right Sidebar -->
-<aside id="rightsidebar" class="right-sidebar">
+<!-- <aside id="rightsidebar" class="right-sidebar">
     <ul class="nav nav-tabs">
         <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#setting"><i class="zmdi zmdi-settings zmdi-hc-spin"></i></a></li>
         <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#chat"><i class="zmdi zmdi-comments"></i></a></li>
@@ -614,9 +614,9 @@
             </div>
         </div>
     </div>
-</aside>
+</aside> -->
 <!-- Chat-launcher -->
-<div class="chat-launcher"></div>
+<!-- <div class="chat-launcher"></div>
 <div class="chat-wrapper">
     <div class="card">
         <div class="header">
@@ -675,7 +675,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <!-- Main Content -->
 <section class="content">
@@ -683,10 +683,10 @@
         <div class="row">
             <div class="col-lg-7 col-md-6 col-sm-12">
                 <h2>Students
-                <small>Welcome to Oreo</small>
+                <small><?php echo $welcome_string;?></small>
                 </h2>
             </div>
-            <div class="col-lg-5 col-md-6 col-sm-12">                
+            <!-- <div class="col-lg-5 col-md-6 col-sm-12">                
                 <button class="btn btn-white btn-icon btn-round hidden-sm-down float-right m-l-10" type="button">
                     <i class="zmdi zmdi-plus"></i>
                 </button>
@@ -694,7 +694,7 @@
                     <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Oreo</a></li>
                     <li class="breadcrumb-item"><a href="javascript:void(0);">Students</a></li>
                 </ul>                
-            </div>
+            </div> -->
         </div>
     </div>
     

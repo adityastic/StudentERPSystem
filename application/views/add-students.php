@@ -229,7 +229,7 @@
         <div class="row">
             <div class="col-lg-7 col-md-6 col-sm-12">
                 <h2>Add Student
-                <small class="text-muted"><?php echo $welcome_string;?></small>
+                <small><?php echo $welcome_string;?></small>
                 </h2>
             </div>
             <!-- <div class="col-lg-5 col-md-6 col-sm-12">
