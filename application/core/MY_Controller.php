@@ -15,4 +15,9 @@ class MY_Controller extends CI_Controller
         $data->theme = 'theme-purple';
         $this->load->vars($data);
     }
+    
+    private function logAlert($prin)
+    {
+        echo '<script>alert(" ' . $prin . ' ")</script>';
+    }
 }
