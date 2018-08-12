@@ -72,7 +72,7 @@
                     </li>
                     <li <?php if( strcmp(basename($_SERVER['PHP_SELF']) ,'subject') ==0 )
                             echo 'class="active open"'; ?>  >
-                        <a href="<?php echo site_url('subject') ?>"><i class="zmdi zmdi-ruler"></i><span>Subjects</span></a>
+                        <a href="<?php echo site_url('subject') ?>"><i class="zmdi zmdi-edit"></i><span>Subjects</span></a>
                     </li>
                     <li <?php if( strcmp(basename($_SERVER['PHP_SELF']) ,'event') ==0)
                         echo 'class="active"'; ?>>
