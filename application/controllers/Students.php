@@ -14,15 +14,6 @@ class Students extends MY_Controller
 
             $errors = new stdClass();
             $this->load->library('upload', $config);
-            if (!$this->upload->do_upload('field_photo')) {
-                $error = array('error' => $this->upload->display_errors());
-                if (strpos($error['error'], 'filetype') !== false) {
-                    $errors->has = true;
-                    $this->setErrorMessage($errors, "- Upload a Supported filetype (jpg,jpeg,png)");
-                }
-            } else {
-                $field_photo = '../uploads/' . $this->upload->data('file_name');
-            }
 
             //VALIDATION CODE
             $field_adm_number = $this->input->post('field_adm_number');
@@ -125,6 +116,18 @@ class Students extends MY_Controller
                 $errors->has = true;
                 $this->setErrorMessage($errors, "- Enter Academic Year");
                 $field_year_id="";
+            }
+
+            if(!isset($errors->has)){
+                if ($this->upload->do_upload('field_photo') == false) {
+                    $error = array('error' => $this->upload->display_errors());
+                    if (strpos($error['error'], 'filetype') !== false) {
+                        $errors->has = true;
+                        $this->setErrorMessage($errors, "- Upload a Supported filetype (jpg,jpeg,png)");
+                    }
+                } else {
+                    $field_photo = '../uploads/' . $this->upload->data('file_name');
+                }
             }
             //END VALIDATION CODE
 
