@@ -458,11 +458,12 @@
                             <div class="col-sm-12" >
                                 Enter Current Address :
                                 <div class="form-group">
-                                    <textarea rows="4" class="form-control no-resize" placeholder="Address" name="field_curradd" value="<?php 
+                                    <textarea rows="4" class="form-control no-resize" placeholder="Address" name="field_curradd" required ><?php
                                         if (isset($_reEntry)) {
                                             echo $_reEntry['field_curradd'];
                                         }
-                                    ?>" required ></textarea>
+                                        ?>
+                                    </textarea>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
@@ -480,16 +481,17 @@
                             <div class="col-sm-12">
                                 Enter Permanent Address :
                                 <div class="form-group">
-                                    <textarea rows="4" class="form-control no-resize" placeholder="Address" name="field_permadd" value="<?php 
+                                    <textarea rows="4" class="form-control no-resize" placeholder="Address" name="field_permadd" required><?php
                                         if (isset($_reEntry)) {
                                             echo $_reEntry['field_permadd'];
                                         }
-                                    ?>" required></textarea>
+                                        ?>
+                                    </textarea>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="number" min="111111" max="999999" class="form-control" placeholder="PinCode" name="field_permpin" value="<?php 
+                                    <input type="number" min="111111" max="999999" class="form-control" placeholder="PinCode" name="field_permpin" value="<?php
                                         if (isset($_reEntry)) {
                                             echo $_reEntry['field_permpin'];
                                         }
@@ -523,7 +525,7 @@
                         <div class="row clearfix">
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Father's Name" name="field_father_name" value="<?php 
+                                    <input type="text" class="form-control" placeholder="Father's Name" name="field_father_name" value="<?php
                                         if (isset($_reEntry)) {
                                             echo $_reEntry['field_father_name'];
                                         }
@@ -630,10 +632,23 @@
 
                                     <?php
 
-                                    foreach ($result->result() as $row) {
+//                                    foreach ($result->result() as $row) {
+//
+//                                          echo "<option value=$row->id>$row->class</option>";
+//                                        }
 
-                                          echo "<option value=$row->id>$row->class</option>";
+                                    foreach ($result->result() as $row) {
+                                        if (isset($_reEntry)) {
+                                            if (strcmp($row->id, $_reEntry['field_class_id']) == 0) {
+                                                echo "<option value=$row->id selected>$row->class</option>";
+                                            } else {
+                                                echo "<option value=$row->id>$row->class</option>";
+                                            }
+                                        } else {
+                                            echo "<option value=$row->id>$row->class</option>";
                                         }
+                                    }
+
                                     ?>
                                 </select>
                             </div>
@@ -643,7 +658,15 @@
 
                                     foreach ($result1->result() as $row) {
 
-                                        echo "<option value=$row->id>$row->year</option>";
+                                        if (isset($_reEntry)) {
+                                            if (strcmp($row->id, $_reEntry['field_year_id']) == 0) {
+                                                echo "<option value=$row->id selected>$row->year</option>";
+                                            } else {
+                                                echo "<option value=$row->id>$row->year</option>";
+                                            }
+                                        } else {
+                                            echo "<option value=$row->id>$row->year</option>";
+                                        }
                                     }
                                     ?>
 
