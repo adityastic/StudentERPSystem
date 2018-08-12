@@ -697,12 +697,24 @@
             </div> -->
         </div>
     </div>
-    
+    <div class="container-fluid">
+        <div class="row clearfix">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="header">
+                        <h2><strong>Students </strong> Details</h2>
+                        <ul class="header-dropdown">
+                            <li class="remove">
+                                <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="body">
                         <ul class="nav nav-tabs padding-0">
-                            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#librarylist">Library list</a></li>
-                            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#addlibrary">Add Library</a></li>
-                        </ul>                        
+                            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#librarylist">All Student list</a></li>
+                            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#addlibrary">2017</a></li>
+                            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#addlibrary">2018</a></li>
+                        </ul>
                     </div>
                 </div>
                 <div class="tab-content">                   
