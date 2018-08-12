@@ -624,7 +624,7 @@
             </div>
         </div>
         <div class="col-sm-12">
-            <button type="submit" class="btn btn-raised btn-round btn-primary">Submit</button>
+            <button type="submit" class="btn btn-raised btn-round btn-primary">Update</button>
         </div>
     </div>
 </form>
