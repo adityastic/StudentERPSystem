@@ -5,7 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
+    <style>
 
+        input::-webkit-input-placeholder {
+            color: rgba(2, 2, 2, 0.89) !important;
+        
+        }
+
+
+    </style>
 <title><?php echo $title;?></title>
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <!-- Favicon-->
@@ -300,7 +308,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
-                                
+
                             </div>
                             </div>
                           
@@ -315,8 +323,13 @@
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" class="datetimepicker form-control" placeholder="Date of Birth" name="field_stud_dob" value="<?php 
-                                       echo $student_dob
+                                    <input type="text" class="datetimepicker form-control" placeholder=<?php echo  $student_dob ?>  name="field_stud_dob" value="<?php
+                                    if (isset($_reEntry)) {
+                                        echo $_reEntry['field_stud_dob'];
+                                    }
+
+
+
                                     ?>" required>
                                 </div>
                             </div>
