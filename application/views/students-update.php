@@ -299,9 +299,13 @@
                                     <input type="text" class="form-control" placeholder="First Name" value="<?php echo $name; ?>" name="field_stud_fname" required >
                                 </div>
                             </div>
-                          
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                
                             </div>
-                        </div>
+                            </div>
+                          
+
+
                         <div class="row clearfix">
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
