@@ -18,5 +18,8 @@ class Classes extends MY_Controller {
         }
         $data['result'] = $this->_classes->getAllClasses();
 		$this->load->view('classes',$data);
+
+
 	}
+
 }

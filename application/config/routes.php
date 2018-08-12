@@ -53,4 +53,5 @@ $route['default_controller'] = 'dashboard';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['profile/(:any)'] = "students/show_profile/$1";
+$route['update/(:any)'] = "students/show_profile/$1";
 $route['editprofile/(:any)']="students/update_profile/$1";

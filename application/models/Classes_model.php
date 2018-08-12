@@ -23,4 +23,5 @@ class Classes_model extends CI_Model
         $this->db->where('id', $id);
         $this->db->delete('classes_list');
     }
+
 }

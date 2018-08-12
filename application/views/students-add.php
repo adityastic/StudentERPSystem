@@ -627,41 +627,27 @@
                         <div class="row clearfix">
                             <div class="col-lg-6 col-md-12">
                                 <select class="form-control show-tick" name="field_class_id">
-                                    <option value="none">-- Class --</option>
-                                    <?php 
-                                        $_genderArr = array(
-                                    "none"=>"-- Class --",
-                                    "1"=>"1st",
-                                    "2"=>"2nd",
-                                    "3"=>"3rd",
-                                    "4"=>"4th",
-                                    "5"=>"5th",
-                                    "6"=>"6th",
-                                    "7"=>"7th",
-                                    "8"=>"8th",
-                                    "9"=>"9th",
-                                    "10"=>"10th",
-                                    "11"=>"11th",
-                                    "12"=>"12th" );
-                                        foreach ($_genderArr as $key => $value) {
-                                            if (isset($_reEntry)) {
-                                                if (strcmp($key, $_reEntry['field_class_id']) == 0) {
-                                                    echo '<option value="' . $key . '" selected>' . $value . '</option>';
-                                                } else {
-                                                    echo '<option value="' . $key . '">' . $value . '</option>';
-                                                }
-                                            } else {
-                                                echo '<option value="' . $key . '">' . $value . '</option>';
-                                            }
+
+                                    <?php
+
+                                    foreach ($result->result() as $row) {
+
+                                          echo "<option value=$row->id>$row->class</option>";
                                         }
                                     ?>
                                 </select>
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <select class="form-control show-tick" name="field_year_id">
-                                    <option value="none">-- Academic Year --</option>
-                                    <option value="2017">2017</option>
-                                    <option value="2018">2018</option>
+                                    <?php
+
+                                    foreach ($result1->result() as $row) {
+
+                                        echo "<option value=$row->id>$row->year</option>";
+                                    }
+                                    ?>
+
+
                                 </select>
                             </div>
                         </div>

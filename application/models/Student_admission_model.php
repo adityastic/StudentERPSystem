@@ -19,4 +19,19 @@ class Student_admission_model extends CI_Model
        // $data['data'] = $this->db->get('posts');
         $this->db->insert('student_admission',$arr);
     }
+
+    public function get_all_classes()
+    {
+
+        $query = $this->db->get('classes_list');
+        return $query;
+
+    }
+    public function get_all_years()
+    {
+
+        $query = $this->db->get('years_list');
+        return $query;
+
+    }
 }
