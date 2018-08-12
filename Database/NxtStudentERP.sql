@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 11, 2018 at 09:52 AM
+-- Generation Time: Aug 12, 2018 at 11:17 AM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -108,6 +108,25 @@ INSERT INTO `student_admission` (`Id`, `adm_date`, `stud_name`, `father_name`, `
 (2, '2018-08-09', 'Aditya Gupta', 'Ravindra Gupta', 'Kiran Gupta', '9423232322', '1123456789', 'Katraj Pune', 'Khajrana Indore', 'gg@gmail.com', '2018-08-02', 'male', 'opos', 'gn', 'Indore', 'mp', 123455, 'Aditya@gmail.com', '8458892226', '../uploads/DEEPIKA_PADUKONE_indian_film_actress_model_bollywood_babe__64__4252x3189.jpg', '9423232322', '1123456789', 'Ag123456', 2, 2017, 412323),
 (3, '2018-08-09', 'Aditya Gupta', 'Ravindra Gupta', 'Kiran Gupta', '9423232322', '1123456789', 'Katraj Pune', 'Khajrana Indore', 'gg@gmail.com', '2018-08-02', 'male', 'opos', 'gn', 'Indore', 'mp', 123455, 'Aditya@gmail.com', '8458892226', '../uploads/avatar10.jpg', '9423232322', '1123456789', 'Ag123456', 1, 2017, 412323);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `subject_list`
+--
+
+CREATE TABLE `subject_list` (
+  `id` int(11) NOT NULL,
+  `subject` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `subject_list`
+--
+
+INSERT INTO `subject_list` (`id`, `subject`) VALUES
+(2, 'English'),
+(4, 'Mathematics');
+
 --
 -- Indexes for dumped tables
 --
@@ -125,6 +144,12 @@ ALTER TABLE `student_admission`
   ADD PRIMARY KEY (`Id`);
 
 --
+-- Indexes for table `subject_list`
+--
+ALTER TABLE `subject_list`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -139,6 +164,12 @@ ALTER TABLE `professor_joining`
 --
 ALTER TABLE `student_admission`
   MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `subject_list`
+--
+ALTER TABLE `subject_list`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
