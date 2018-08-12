@@ -6,6 +6,7 @@ class Students extends MY_Controller
     public function add_students()
     {
         $field_photo = '';
+        $field_photo1 = '';
         $this->load->model('student_admission_model', '_student');
         $data['error_list'] = array();
         if ($this->input->server('REQUEST_METHOD') == 'POST') {
@@ -127,6 +128,7 @@ class Students extends MY_Controller
                     }
                 } else {
                     $field_photo = '../uploads/' . $this->upload->data('file_name');
+                    $field_photo1  = '' .$this->upload->data('file_name');
                 }
             }
             //END VALIDATION CODE
@@ -153,7 +155,7 @@ class Students extends MY_Controller
                        'field_currpin'=>$field_currpin,
                         'field_stud_email'=>$field_stud_email,
                         'field_stud_ph'=>$field_stud_ph,
-                        'field_photo'=>$field_photo,
+                        'field_photo'=>$field_photo1,
                         'field_father_onumber'=>$field_father_onumber,
                         'field_mother_onumber'=>$field_mother_onumber,
                         'field_class_id'=>$field_class_id,
