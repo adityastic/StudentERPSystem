@@ -682,7 +682,7 @@
     <div class="block-header">
         <div class="row">
             <div class="col-lg-7 col-md-6 col-sm-12">
-                <h2>Students
+                <h2> Update Students
                 <small><?php echo $welcome_string;?></small>
                 </h2>
             </div>
@@ -698,13 +698,8 @@
         </div>
     </div>
     
-                    <div class="body">
-                        <ul class="nav nav-tabs padding-0">
-                            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#librarylist">Library list</a></li>
-                            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#addlibrary">Add Library</a></li>
-                        </ul>                        
-                    </div>
-                </div>
+
+
                 <div class="tab-content">                   
                     <div class="tab-pane active" id="librarylist">
                         <div class="card">
@@ -750,51 +745,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane" id="addlibrary">
-                        <div class="card">
-                            <div class="body">
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <div class="form-group">
-                                            <input type="text" value="" placeholder="Enter Title" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <div class="form-group">
-                                            <input type="text" value="" placeholder="Enter Subject" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <div class="form-group">
-                                            <input type="text" value="" placeholder="Department" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <div class="form-group">
-                                            <input type="text" value="" placeholder="Enter Type" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <div class="form-group">
-                                            <input type="text" value="" placeholder="Enter Year" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <div class="form-group">
-                                            <input type="text" value="" placeholder="Enter Status" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <button class="btn btn-primary btn-lg btn-round btn-simple">Add Library</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
-            </div>
-        </div>
-    </div>
+
 </section>
 <!-- Jquery Core Js --> 
 <script src="../assets/bundles/libscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js --> 

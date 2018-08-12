@@ -682,7 +682,7 @@
     <div class="block-header">
         <div class="row">
             <div class="col-lg-7 col-md-6 col-sm-12">
-                <h2>Students
+                <h2>All Students list
                 <small><?php echo $welcome_string;?></small>
                 </h2>
             </div>

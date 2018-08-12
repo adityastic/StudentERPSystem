@@ -6,13 +6,16 @@
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
 
-<title><?php echo $title;?></title>
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-<!-- Favicon-->
-<link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css">
-<!-- Custom Css -->
-<link rel="stylesheet" href="../assets/css/main.css">
-<link rel="stylesheet" href="../assets/css/color_skins.css">
+
+    <title><?php echo $title;?></title>
+    <!-- Favicon-->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- JQuery DataTable Css -->
+    <link rel="stylesheet" href="../assets/plugins/jquery-datatable/dataTables.bootstrap4.min.css">
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/color_skins.css">
 </head>
 <body class="<?php echo $theme;?>">
 <!-- Page Loader -->
@@ -708,53 +711,76 @@
                         </ul>
                     </div>
                 </div> -->
-                <div class="tab-content m-t-10">
-                    <div class="tab-pane active" id="Permanent">
-                        <div class="row clearfix">
+                <div class="container-fluid">
+                    <div class="row clearfix">
+                        <div class="col-lg-12">
+
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="librarylist">
+                                    <div class="card">
+                                        <div class="body table-responsive">
+                                            <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+                                                <thead>
+                                                <tr>
+                                                    <th align="center">&nbsp;&nbsp;Picture</th>
+                                                    <th align="center">Id</th>
+                                                    <th align="center">Name</th>
+                                                    <th align="center">Gender</th>
+                                                    <th align="center">Highest Qualification</th>
+                                                    <th align="center">Address</th>
+                                                    <th align="center">Join Date</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
 
 
-                            <?php
+                                                <?php
 
 
-                            foreach ($details->result() as $row)
-                            {
-                                ?>
+                                                foreach ($details->result() as $row) {
+                                                    ?><tr class="clickable-row" data-href="<?php echo site_url('profile/' . $row->id);?>" style="cursor: pointer">
+                                                    <td align="center"><span class="list-icon"><img class="rounded" src="<?php echo $row->photo; ?>" height="40" width="50" alt="laurels school"></span></td>
+                                                    <td><?php echo $row->id; ?></td>
 
-                                <div class="col-lg-3 col-md-6 col-sm-12">
-                                    <div class="card member-card">
-                                        <div class="body">
-                                            <div class="member-thumb">
-                                                <img src="<?php echo $row->photo;?>" class="img-fluid rounded" alt="profile-image">
-                                            </div>
-                                            <div class="detail">
-                                                <h4 class="m-b-0"><?php echo $row->prof_name;?></h4>
-                                                <p class="text-muted"><?php echo $row->highest_qualification;?></p>
-                                                <ul class="social-links list-inline m-t-20">
-                                                    <li><a title="facebook" href="javascript:void(0);"><i class="zmdi zmdi-facebook"></i></a></li>
-                                                    <li><a title="twitter" href="javascript:void(0);" ><i class="zmdi zmdi-twitter"></i></a></li>
-                                                    <li><a title="instagram" href="javascript:void(0);" ><i class="zmdi zmdi-instagram"></i></a></li>
-                                                </ul>
-                                                <p class="text-muted"><?php echo $row->current_address;?></p>
-                                                <a href="profile.html"  class="btn btn-default btn-round btn-simple">View Profile</a>
-                                            </div>
+                                                    <td><?php echo $row->prof_name; ?></td>
+                                                    <td><?php echo $row->gender; ?></td>
+
+                                                    <td><?php echo $row->highest_qualification; ?></td>
+                                                    <td><?php echo $row->current_address; ?></td>
+
+                                                    <td><?php echo $row->join_date; ?></td>
+                                                    </tr>
+                                                    <?php
+                                                }
+
+                                                ?>
+
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
-
-                            <?php }
-
-                            ?>
-
-
+                            </div>
                         </div>
-            </div>
-        </div> 
+                    </div>
+                </div>
+        </div>
     </div>
 </section>
-<!-- Jquery Core Js --> 
-<script src="../assets/bundles/libscripts.bundle.js"></script> <!-- Bootstrap JS and jQuery v3.2.1 -->
-<script src="../assets/bundles/vendorscripts.bundle.js"></script> <!-- slimscroll, waves Scripts Plugin Js --> 
+<!-- Jquery Core Js -->
+<script src="../assets/bundles/libscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js -->
+<script src="../assets/bundles/vendorscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js -->
 
-<script src="../assets/bundles/mainscripts.bundle.js"></script><!-- Custom Js --> 
+<!-- Jquery DataTable Plugin Js -->
+<script src="../assets/bundles/datatablescripts.bundle.js"></script>
+
+<script src="../assets/bundles/mainscripts.bundle.js"></script>
+<script src="../assets/js/pages/tables/jquery-datatable.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $(".clickable-row").click(function() {
+            window.location = $(this).data("href");
+        });
+    });
 </body>
 </html>
