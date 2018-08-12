@@ -328,6 +328,8 @@
                                         </thead>
                                         <tbody>
                                             <?php
+                                            if(isset($result))
+                                            {
                       foreach ($result->result() as $row) {
                           ?>
                                             <tr>
@@ -341,7 +343,7 @@
                                             </tr>    
 
                       <?php
-                      } ?>                               
+                      }} ?>                               
                                         </tbody>
                                     </table>
                                 </div>

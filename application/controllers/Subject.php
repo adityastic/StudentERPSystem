@@ -19,9 +19,4 @@ class Subject extends MY_Controller
         $data['result'] = $this->_subject->getAllSubjects();
         $this->load->view('subjects', $data);
     }
-
-    private function logAlert($prin)
-    {
-        echo '<script>alert(" ' . $prin . ' ")</script>';
-    }
 }
