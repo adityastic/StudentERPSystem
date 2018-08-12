@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 12, 2018 at 11:17 AM
+-- Generation Time: Aug 12, 2018 at 12:17 PM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -21,6 +21,24 @@ SET time_zone = "+00:00";
 --
 -- Database: `NxtStudentERP`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `classes_list`
+--
+
+CREATE TABLE `classes_list` (
+  `id` int(11) NOT NULL,
+  `class` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `classes_list`
+--
+
+INSERT INTO `classes_list` (`id`, `class`) VALUES
+(2, '1');
 
 -- --------------------------------------------------------
 
@@ -119,17 +137,34 @@ CREATE TABLE `subject_list` (
   `subject` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `subject_list`
+-- Table structure for table `years_list`
 --
 
-INSERT INTO `subject_list` (`id`, `subject`) VALUES
-(2, 'English'),
-(4, 'Mathematics');
+CREATE TABLE `years_list` (
+  `id` int(11) NOT NULL,
+  `year` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `years_list`
+--
+
+INSERT INTO `years_list` (`id`, `year`) VALUES
+(1, '2017'),
+(3, '2018');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `classes_list`
+--
+ALTER TABLE `classes_list`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `professor_joining`
@@ -150,8 +185,20 @@ ALTER TABLE `subject_list`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `years_list`
+--
+ALTER TABLE `years_list`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `classes_list`
+--
+ALTER TABLE `classes_list`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `professor_joining`
@@ -170,6 +217,12 @@ ALTER TABLE `student_admission`
 --
 ALTER TABLE `subject_list`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `years_list`
+--
+ALTER TABLE `years_list`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
