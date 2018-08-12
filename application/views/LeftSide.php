@@ -41,7 +41,7 @@
                     </li>
                     <li <?php if( strcmp(basename($_SERVER['PHP_SELF']) ,'all_professor') ==0 || strcmp(basename($_SERVER['PHP_SELF']) ,'add_professor') ==0)
                         echo 'class="active open"'; ?> >
-                        <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-accounts-outline"></i><span>Professors</span> </a>
+                        <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-accounts-alt"></i><span>Professors</span> </a>
                         <ul class="ml-menu">
                             <li <?php if( strcmp(basename($_SERVER['PHP_SELF']) ,'all_professor') ==0)
                                 echo 'class="active"'; ?> >
@@ -66,6 +66,14 @@
                         </ul>
                     </li> -->
                     <li class="header">UNIVERSITY</li>
+                    <li <?php if( strcmp(basename($_SERVER['PHP_SELF']) ,'classes') ==0 )
+                            echo 'class="active open"'; ?>  >
+                        <a href="<?php echo site_url('classes') ?>"><i class="zmdi zmdi-ruler"></i><span>Classes</span></a>
+                    </li>
+                    <li <?php if( strcmp(basename($_SERVER['PHP_SELF']) ,'subject') ==0 )
+                            echo 'class="active open"'; ?>  >
+                        <a href="<?php echo site_url('subject') ?>"><i class="zmdi zmdi-ruler"></i><span>Subjects</span></a>
+                    </li>
                     <li <?php if( strcmp(basename($_SERVER['PHP_SELF']) ,'event') ==0)
                         echo 'class="active"'; ?>>
                         <a href="<?php echo site_url('Events/event');?>"><i class="zmdi zmdi-calendar-check"></i><span>Events</span> </a>
