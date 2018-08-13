@@ -15,6 +15,7 @@ class Years extends MY_Controller {
                     );
                 $this->_years->insertintotable($insertArray);
             }
+            redirect('/years', 'refresh');
         }
         $data['result'] = $this->_years->getAllYears();
 		$this->load->view('years',$data);
