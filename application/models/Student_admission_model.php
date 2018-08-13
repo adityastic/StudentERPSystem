@@ -11,7 +11,7 @@ class Student_admission_model extends CI_Model
     {
         $this->db->select('MAX(id) as max');
         $query = $this->db->get('student_admission')->row();
-    	return $query->max ?$query->max:1;
+    	return $query->max ? ($query->max+1) :1;
     }
 
     public function insertintoadmission($arr)
