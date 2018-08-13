@@ -15,6 +15,7 @@ class Subject extends MY_Controller
                     );
                 $this->_subject->insertintotable($insertArray);
             }
+            redirect('/subject', 'refresh');
         }
         $data['result'] = $this->_subject->getAllSubjects();
         $this->load->view('subjects', $data);
