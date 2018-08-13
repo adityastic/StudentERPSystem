@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 12, 2018 at 12:17 PM
+-- Generation Time: Aug 13, 2018 at 09:03 AM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -38,7 +38,18 @@ CREATE TABLE `classes_list` (
 --
 
 INSERT INTO `classes_list` (`id`, `class`) VALUES
-(2, '1');
+(1, '1st'),
+(2, '2nd'),
+(3, '3rd'),
+(4, '4th'),
+(5, '5th'),
+(6, '6th'),
+(7, '7th'),
+(8, '8th'),
+(9, '9th'),
+(10, '10th'),
+(11, '11th'),
+(12, '12th');
 
 -- --------------------------------------------------------
 
@@ -73,14 +84,6 @@ CREATE TABLE `professor_joining` (
   `account_number` text NOT NULL,
   `ifsc` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `professor_joining`
---
-
-INSERT INTO `professor_joining` (`id`, `join_date`, `prof_name`, `phone`, `prof_dob`, `email`, `gender`, `prof_category`, `state`, `city`, `prof_bloodgroup`, `current_address`, `permanent_address`, `current_address_pin`, `permanent_address_pin`, `photo`, `father_name`, `mother_name`, `password`, `highest_qualification`, `bank_name`, `pan_number`, `branch_name`, `account_number`, `ifsc`) VALUES
-(1, '2018-08-09', 'bhbshcj sbvbad', '8446593128', '0000-00-00', 'cbh@g.c', 'female', 'obc', 'mp', 'fvdf', 'aneg', 'csbdvbhs', 'ssbdgs', 411043, 411043, '../uploads/avatar6.jpg', 'asasgf', 'scsjdhgv', 'GFG5FFFD5GDSs', '', '', '', '', '', ''),
-(2, '2018-08-09', 'bhbshcj sbvbad', '8446593128', '0000-00-00', 'cbh@g.c', 'female', 'obc', 'mp', 'fvdf', 'aneg', 'csbdvbhs', 'ssbdgs', 411043, 411043, '../uploads/avatar61.jpg', 'asasgf', 'scsjdhgv', 'GFG5FFFD5GDSs', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -122,9 +125,7 @@ CREATE TABLE `student_admission` (
 --
 
 INSERT INTO `student_admission` (`Id`, `adm_date`, `stud_name`, `father_name`, `mother_name`, `father_number`, `mother_number`, `current_address`, `perma_address`, `father_email`, `stud_dob`, `stud_gender`, `stud_blood_group`, `stud_caste`, `city`, `state`, `perma_address_pin`, `stud_email`, `stud_phone`, `photo`, `father_o_number`, `mother_o_number`, `password`, `class_id`, `year_id`, `currrent_address_pin`) VALUES
-(1, '2018-08-09', 'Aditya Gupta', 'Ravindra Gupta', 'Kiran Gupta', '9423232322', '1123456789', 'Katraj Pune', 'Khajrana Indore', 'gg@gmail.com', '2018-08-02', 'male', 'opos', 'gn', 'Indore', 'mp', 123455, 'Aditya@gmail.com', '8458892226', '../uploads/rakul_preet_singh_bollywood_actress_celebrity_model_girl_beautiful_brunette_pretty_cute_beauty_sexy_hot_pose_face_eyes_hair_lips_smile_figure_indian_3165x2048.jpg', '9423232322', '1123456789', 'Ag123456', 1, 2017, 412323),
-(2, '2018-08-09', 'Aditya Gupta', 'Ravindra Gupta', 'Kiran Gupta', '9423232322', '1123456789', 'Katraj Pune', 'Khajrana Indore', 'gg@gmail.com', '2018-08-02', 'male', 'opos', 'gn', 'Indore', 'mp', 123455, 'Aditya@gmail.com', '8458892226', '../uploads/DEEPIKA_PADUKONE_indian_film_actress_model_bollywood_babe__64__4252x3189.jpg', '9423232322', '1123456789', 'Ag123456', 2, 2017, 412323),
-(3, '2018-08-09', 'Aditya Gupta', 'Ravindra Gupta', 'Kiran Gupta', '9423232322', '1123456789', 'Katraj Pune', 'Khajrana Indore', 'gg@gmail.com', '2018-08-02', 'male', 'opos', 'gn', 'Indore', 'mp', 123455, 'Aditya@gmail.com', '8458892226', '../uploads/avatar10.jpg', '9423232322', '1123456789', 'Ag123456', 1, 2017, 412323);
+(1, '2018-08-13', 'Aditya Gupta', 'Ravindra Gupta', 'Kiran Gupta', '9425480356', '9425480356', 'C-2, Ridhi Sidhi Regency, Ganeshpuri, Near Khajrana Mandir, Khajrana, Indore', 'C-2, Ridhi Sidhi Regency, Ganeshpuri, Near Khajrana Mandir, Khajrana, Indore', 'ckenterprices@yahoo.in', '2018-08-02', 'male', 'opos', 'gn', 'Indore', 'mp', 452016, 'adityaofficialgupta@gmail.com', '8458892226', '../uploads/fullsizeoutput_21.jpeg', '9425480356', '9425480356', 'Ag123456', 1, 1, 452016);
 
 -- --------------------------------------------------------
 
@@ -136,6 +137,20 @@ CREATE TABLE `subject_list` (
   `id` int(11) NOT NULL,
   `subject` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `subject_list`
+--
+
+INSERT INTO `subject_list` (`id`, `subject`) VALUES
+(1, 'English'),
+(2, 'Hindi'),
+(3, 'Mathematics'),
+(4, 'Physics'),
+(5, 'Biology'),
+(6, 'History'),
+(7, 'Civics'),
+(8, 'Geography');
 
 -- --------------------------------------------------------
 
@@ -153,8 +168,8 @@ CREATE TABLE `years_list` (
 --
 
 INSERT INTO `years_list` (`id`, `year`) VALUES
-(1, '2017'),
-(3, '2018');
+(1, '2018'),
+(2, '2019');
 
 --
 -- Indexes for dumped tables
@@ -198,31 +213,31 @@ ALTER TABLE `years_list`
 -- AUTO_INCREMENT for table `classes_list`
 --
 ALTER TABLE `classes_list`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `professor_joining`
 --
 ALTER TABLE `professor_joining`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `student_admission`
 --
 ALTER TABLE `student_admission`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `subject_list`
 --
 ALTER TABLE `subject_list`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `years_list`
 --
 ALTER TABLE `years_list`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
