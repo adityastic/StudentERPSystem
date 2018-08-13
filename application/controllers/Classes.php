@@ -15,6 +15,7 @@ class Classes extends MY_Controller {
                     );
                 $this->_classes->insertintotable($insertArray);
             }
+            redirect('/classes', 'refresh');
         }
         $data['result'] = $this->_classes->getAllClasses();
 		$this->load->view('classes',$data);
