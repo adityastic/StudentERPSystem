@@ -5,11 +5,12 @@ class Students extends MY_Controller
 {
     public function add_students()
     {
-        $field_photo = '';
-        $field_photo1 = '';
         $this->load->model('student_admission_model', '_student');
         $data['error_list'] = array();
         if ($this->input->server('REQUEST_METHOD') == 'POST') {
+            $field_photo = '';
+            $field_photo_recovery = '';
+
             $config['upload_path'] = './uploads/';
             $config['allowed_types'] = 'jpeg|jpg|png';
 
@@ -119,7 +120,7 @@ class Students extends MY_Controller
                 $field_year_id="";
             }
 
-            if(!isset($errors->has)){
+            if (!isset($errors->has)) {
                 if ($this->upload->do_upload('field_photo') == false) {
                     $error = array('error' => $this->upload->display_errors());
                     if (strpos($error['error'], 'filetype') !== false) {
@@ -128,7 +129,7 @@ class Students extends MY_Controller
                     }
                 } else {
                     $field_photo = '../uploads/' . $this->upload->data('file_name');
-                    $field_photo1  = '' .$this->upload->data('file_name');
+                    $field_photo_recovery  = '' .$this->upload->data('file_name');
                 }
             }
             //END VALIDATION CODE
@@ -155,7 +156,7 @@ class Students extends MY_Controller
                        'field_currpin'=>$field_currpin,
                         'field_stud_email'=>$field_stud_email,
                         'field_stud_ph'=>$field_stud_ph,
-                        'field_photo'=>$field_photo1,
+                        'field_photo'=>$field_photo_recovery,
                         'field_father_onumber'=>$field_father_onumber,
                         'field_mother_onumber'=>$field_mother_onumber,
                         'field_class_id'=>$field_class_id,
@@ -163,7 +164,6 @@ class Students extends MY_Controller
                     );
                 $data['_reEntry'] = $modifiedArray;
             } else {
-                $data['done'] = true;
 
                 date_default_timezone_set('Asia/Kolkata');
                 $date = date('d.m.Y H:i:s', time());
@@ -197,11 +197,22 @@ class Students extends MY_Controller
                         'year_id'=>$field_year_id
                     );
                 $this->_student->insertintoadmission($insertArray);
+                $sessarr = array(
+                    'add_done' => 'yes',
+                );
+                $this->session->set_userdata($sessarr);
+                redirect('/students/add_students', 'refresh');
             }
         }
+        if(!empty($this->session->userdata('add_done')))
+        {
+            $this->session->sess_destroy();
+            $data['done'] = true;
+        }
+
         $data['admissionnumber'] = $this->_student->get_adm_number();
-        $data['result'] = $this->_student->get_all_classes();
-        $data['result1'] =$this->_student->get_all_years();
+        $data['classes'] = $this->_student->get_all_classes();
+        $data['years'] =$this->_student->get_all_years();
         
         $this->load->view('students-add', $data);
     }
@@ -252,12 +263,11 @@ class Students extends MY_Controller
             $data['stud_email'] = $result->stud_email;
             $data['stud_phone'] = $result->stud_phone;
             $data['photo']=$result->photo;
-            $this->load->view('students-profile',$data);
+            $this->load->view('students-profile', $data);
         }
     }
-     public function edit_profile()
+    public function edit_profile()
     {
-
         $this->load->model('Student_edit_model', '_student');
         $data['details']=$this->_student->get_all_students();
 
@@ -266,8 +276,6 @@ class Students extends MY_Controller
     public function update_profile($id)
     {
         if (!empty($id)) {
-
-
             $this->load->model('Student_profile_model', '_student');
 
 
@@ -300,8 +308,7 @@ class Students extends MY_Controller
             $data['admissionnumber'] = $result->Id;
 
         
-        $this->load->view('students-update', $data);
-
+            $this->load->view('students-update', $data);
         }
     }
 
@@ -502,7 +509,6 @@ class Students extends MY_Controller
         }
 
 
-        $this->load->view('students-add',$data);
+        $this->load->view('students-add', $data);
     }
-
 }
