@@ -637,7 +637,7 @@
 //                                          echo "<option value=$row->id>$row->class</option>";
 //                                        }
 
-                                    foreach ($result->result() as $row) {
+                                    foreach ($classes->result() as $row) {
                                         if (isset($_reEntry)) {
                                             if (strcmp($row->id, $_reEntry['field_class_id']) == 0) {
                                                 echo "<option value=$row->id selected>$row->class</option>";
@@ -656,7 +656,7 @@
                                 <select class="form-control show-tick" name="field_year_id">
                                     <?php
 
-                                    foreach ($result1->result() as $row) {
+                                    foreach ($years->result() as $row) {
 
                                         if (isset($_reEntry)) {
                                             if (strcmp($row->id, $_reEntry['field_year_id']) == 0) {
