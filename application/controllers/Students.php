@@ -106,18 +106,8 @@ class Students extends MY_Controller
             }
 
             $field_class_id = $this->input->post('field_class_id');
-            if (strcmp($field_class_id, 'none') == 0) {
-                $errors->has = true;
-                $this->setErrorMessage($errors, "- Enter Class");
-                $field_class_id="";
-            }
-
             $field_year_id = $this->input->post('field_year_id');
-            if (strcmp($field_year_id, 'none') == 0) {
-                $errors->has = true;
-                $this->setErrorMessage($errors, "- Enter Academic Year");
-                $field_year_id="";
-            }
+            $field_section_id = $this->input->post('field_section_id');
 
             if (!isset($errors->has)) {
                 if ($this->upload->do_upload('field_photo') == false) {
@@ -129,8 +119,17 @@ class Students extends MY_Controller
                 } else {
                     $field_photo = $this->upload->data('file_name');
                 }
-            }else
+            } else {
                 $this->setErrorMessage($errors, "- Upload the file again");
+            }
+
+            if (!isset($errors->has)) {
+                if(!$this->_student->checkBatch($field_class_id, $field_year_id, $field_section_id)){
+                    $errors = new stdClass();
+                    $errors->has = true;
+                    $this->setErrorMessage($errors, "- Batch not found, <a href=" . site_url('batches/add_batch') . ">Create a batch first</a>");
+                }
+            }
             //END VALIDATION CODE
 
             if (isset($errors->has)) {
@@ -138,62 +137,61 @@ class Students extends MY_Controller
                 $modifiedArray = array(
                     'field_stud_fname'=>$field_stud_fname,
                     'field_stud_lname'=>$field_stud_lname,
-                        'field_father_name'=>$field_father_name,
-                        'field_mother_name'=>$field_mother_name,
-                        'field_father_number'=>$field_father_number,
-                        'field_mother_number'=>$field_mother_number,
-                        'field_curradd'=>$field_curradd,
-                        'field_permadd'=>$field_permadd,
-                        'field_father_email'=>$field_father_email,
-                        'field_stud_dob'=>$date1,
-                        'field_stud_gender'=>$field_stud_gender,
-                        'field_bgroup'=>$field_bgroup,
-                        'field_stud_caste'=>$field_stud_caste,
-                        'field_city'=>$field_city,
-                        'field_state'=>$field_state,
-                        'field_permpin'=>$field_permpin,
-                       'field_currpin'=>$field_currpin,
-                        'field_stud_email'=>$field_stud_email,
-                        'field_stud_ph'=>$field_stud_ph,
-                        'field_father_onumber'=>$field_father_onumber,
-                        'field_mother_onumber'=>$field_mother_onumber,
-                        'field_class_id'=>$field_class_id,
-                        'field_year_id'=>$field_year_id
-                    );
+                    'field_father_name'=>$field_father_name,
+                    'field_mother_name'=>$field_mother_name,
+                    'field_father_number'=>$field_father_number,
+                    'field_mother_number'=>$field_mother_number,
+                    'field_curradd'=>$field_curradd,
+                    'field_permadd'=>$field_permadd,
+                    'field_father_email'=>$field_father_email,
+                    'field_stud_dob'=>$date1,
+                    'field_stud_gender'=>$field_stud_gender,
+                    'field_bgroup'=>$field_bgroup,
+                    'field_stud_caste'=>$field_stud_caste,
+                    'field_city'=>$field_city,
+                    'field_state'=>$field_state,
+                    'field_permpin'=>$field_permpin,
+                    'field_currpin'=>$field_currpin,
+                    'field_stud_email'=>$field_stud_email,
+                    'field_stud_ph'=>$field_stud_ph,
+                    'field_father_onumber'=>$field_father_onumber,
+                    'field_mother_onumber'=>$field_mother_onumber,
+                    'field_class_id'=>$field_class_id,
+                    'field_year_id'=>$field_year_id
+                );
                 $data['_reEntry'] = $modifiedArray;
             } else {
-
                 date_default_timezone_set('Asia/Kolkata');
                 $date = date('d.m.Y H:i:s', time());
                 $current_date  = DateTime::createFromFormat('d.m.Y H:i:s', $date)->format('Y-m-d h:i:s');
 
                 $insertArray = array(
-                        'adm_date'=>$current_date,
-                        'stud_name'=>$student_name,
-                        'father_name'=>$field_father_name,
-                        'mother_name'=>$field_mother_name,
-                        'father_number'=>$field_father_number,
-                        'mother_number'=>$field_mother_number,
-                        'current_address'=>$field_curradd,
-                        'perma_address'=>$field_permadd,
-                        'father_email'=>$field_father_email,
-                        'stud_dob'=>$field_stud_dob,
-                        'stud_gender'=>$field_stud_gender,
-                        'stud_blood_group'=>$field_bgroup,
-                        'stud_caste'=>$field_stud_caste,
-                        'city'=>$field_city,
-                        'state'=>$field_state,
-                        'perma_address_pin'=>$field_permpin,
-                       'currrent_address_pin'=>$field_currpin,
-                        'stud_email'=>$field_stud_email,
-                        'stud_phone'=>$field_stud_ph,
-                        'photo'=>$field_photo,
-                        'father_o_number'=>$field_father_onumber,
-                        'mother_o_number'=>$field_mother_onumber,
-                        'password'=>$password,
-                        'class_id'=>$field_class_id,
-                        'year_id'=>$field_year_id
-                    );
+                    'adm_date'=>$current_date,
+                    'stud_name'=>$student_name,
+                    'father_name'=>$field_father_name,
+                    'mother_name'=>$field_mother_name,
+                    'father_number'=>$field_father_number,
+                    'mother_number'=>$field_mother_number,
+                    'current_address'=>$field_curradd,
+                    'perma_address'=>$field_permadd,
+                    'father_email'=>$field_father_email,
+                    'stud_dob'=>$field_stud_dob,
+                    'stud_gender'=>$field_stud_gender,
+                    'stud_blood_group'=>$field_bgroup,
+                    'stud_caste'=>$field_stud_caste,
+                    'city'=>$field_city,
+                    'state'=>$field_state,
+                    'perma_address_pin'=>$field_permpin,
+                    'currrent_address_pin'=>$field_currpin,
+                    'stud_email'=>$field_stud_email,
+                    'stud_phone'=>$field_stud_ph,
+                    'photo'=>$field_photo,
+                    'father_o_number'=>$field_father_onumber,
+                    'mother_o_number'=>$field_mother_onumber,
+                    'password'=>$password,
+                    'class_id'=>$field_class_id,
+                    'year_id'=>$field_year_id
+                );
                 $this->_student->insertintoadmission($insertArray);
                 $sessarr = array(
                     'add_done' => 'yes',
@@ -202,8 +200,7 @@ class Students extends MY_Controller
                 redirect('/students/add_students', 'refresh');
             }
         }
-        if(!empty($this->session->userdata('add_done')))
-        {
+        if (!empty($this->session->userdata('add_done'))) {
             $this->session->sess_destroy();
             $data['done'] = true;
         }
@@ -211,6 +208,7 @@ class Students extends MY_Controller
         $data['admissionnumber'] = $this->_student->get_adm_number();
         $data['classes'] = $this->_student->get_all_classes();
         $data['years'] =$this->_student->get_all_years();
+        $data['sections'] =$this->_student->get_all_sections();
         
         $this->load->view('students-add', $data);
     }

@@ -11,27 +11,32 @@ class Student_admission_model extends CI_Model
     {
         $this->db->select('MAX(id) as max');
         $query = $this->db->get('student_admission')->row();
-    	return $query->max ? ($query->max+1) :1;
+        return $query->max ? ($query->max+1) :1;
     }
 
     public function insertintoadmission($arr)
     {
-       // $data['data'] = $this->db->get('posts');
-        $this->db->insert('student_admission',$arr);
+        $this->db->insert('student_admission', $arr);
     }
 
     public function get_all_classes()
     {
-
         $query = $this->db->get('classes_list');
         return $query;
-
     }
     public function get_all_years()
     {
-
         $query = $this->db->get('years_list');
         return $query;
-
+    }
+    public function get_all_sections()
+    {
+        $query = $this->db->get('section_list');
+        return $query;
+    }
+    public function checkBatch($class,$year,$section)
+    {
+        $query = $this->db->get_where('batches_all', array('class_id =' => $class,'year_id =' => $year,'section_id =' => $section));
+        return ($query->num_rows() > 0)?true:false; 
     }
 }

@@ -629,21 +629,10 @@
                         <div class="row clearfix">
                             <div class="col-lg-6 col-md-12">
                                 <select class="form-control show-tick" name="field_class_id">
-
                                     <?php
-
-//                                    foreach ($result->result() as $row) {
-//
-//                                          echo "<option value=$row->id>$row->class</option>";
-//                                        }
-
                                     foreach ($classes->result() as $row) {
-                                        if (isset($_reEntry)) {
-                                            if (strcmp($row->id, $_reEntry['field_class_id']) == 0) {
+                                        if (isset($_reEntry) && strcmp($row->id, $_reEntry['field_class_id']) == 0) {
                                                 echo "<option value=$row->id selected>$row->class</option>";
-                                            } else {
-                                                echo "<option value=$row->id>$row->class</option>";
-                                            }
                                         } else {
                                             echo "<option value=$row->id>$row->class</option>";
                                         }
@@ -657,13 +646,8 @@
                                     <?php
 
                                     foreach ($years->result() as $row) {
-
-                                        if (isset($_reEntry)) {
-                                            if (strcmp($row->id, $_reEntry['field_year_id']) == 0) {
+                                        if (isset($_reEntry) && strcmp($row->id, $_reEntry['field_year_id']) == 0) {
                                                 echo "<option value=$row->id selected>$row->year</option>";
-                                            } else {
-                                                echo "<option value=$row->id>$row->year</option>";
-                                            }
                                         } else {
                                             echo "<option value=$row->id>$row->year</option>";
                                         }
@@ -671,6 +655,23 @@
                                     ?>
 
 
+                                </select>
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+                            <div class="col-sm-12">
+                                <select class="form-control show-tick" name="field_section_id">
+                                    <?php
+
+                                    foreach ($sections->result() as $row) {
+                                        if (isset($_reEntry) && strcmp($row->id, $_reEntry['field_section_id']) == 0) {
+                                            echo "<option value=$row->id selected>$row->section</option>";
+                                        } else {
+                                            echo "<option value=$row->id>$row->section</option>";
+                                        }
+                                    }
+                                    ?>
                                 </select>
                             </div>
                         </div>
