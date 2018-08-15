@@ -70,13 +70,13 @@
                         echo 'class="active open"'; ?> >
                         <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-city-alt"></i><span>Batches</span> </a>
                         <ul class="ml-menu">
-                            <li <?php if( strcmp(basename($_SERVER['PHP_SELF']) ,'Departments') ==0 )
+                            <li <?php if( strcmp(basename($_SERVER['PHP_SELF']) ,'all_batch') ==0 )
                                 echo 'class="active"'; ?>>
-                                <a href="<?php echo site_url('Departments') ?>">All Batches</a>
+                                <a href="<?php echo site_url('Batches/all_batch') ?>">All Batches</a>
                             </li>
-                            <li <?php if( strcmp(basename($_SERVER['PHP_SELF']) ,'Departments') ==0 )
+                            <li <?php if( strcmp(basename($_SERVER['PHP_SELF']) ,'add_batch') ==0 )
                                 echo 'class="active"'; ?>>
-                                <a href="<?php echo site_url('Departments/add_department');?>">Add batch</a>
+                                <a href="<?php echo site_url('Batches/add_batch');?>">Add batch</a>
                             </li>
                             <li <?php if( strcmp(basename($_SERVER['PHP_SELF']) ,'classes') ==0 )
                                 echo 'class="active"'; ?>>
