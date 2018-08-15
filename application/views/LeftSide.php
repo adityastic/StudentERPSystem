@@ -66,7 +66,7 @@
                         </ul>
                     </li> -->
                     <li class="header">UNIVERSITY</li>
-                    <li <?php if( strcmp(basename($_SERVER['PHP_SELF']) ,'classes') ==0 || strcmp(basename($_SERVER['PHP_SELF']) ,'years') ==0 )
+                    <li <?php if( strcmp(basename($_SERVER['PHP_SELF']) ,'classes') ==0 || strcmp(basename($_SERVER['PHP_SELF']) ,'years') ==0 || strcmp(basename($_SERVER['PHP_SELF']) ,'section') ==0)
                         echo 'class="active open"'; ?> >
                         <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-city-alt"></i><span>Batches</span> </a>
                         <ul class="ml-menu">
@@ -81,6 +81,10 @@
                             <li <?php if( strcmp(basename($_SERVER['PHP_SELF']) ,'classes') ==0 )
                                 echo 'class="active"'; ?>>
                                 <a href="<?php echo site_url('classes') ?>">Classes</a>
+                            </li>
+                            <li <?php if( strcmp(basename($_SERVER['PHP_SELF']) ,'section') ==0 )
+                                echo 'class="active"'; ?>>
+                                <a href="<?php echo site_url('section');?>">Sections</a>
                             </li>
                             <li <?php if( strcmp(basename($_SERVER['PHP_SELF']) ,'years') ==0 )
                                 echo 'class="active"'; ?>>
