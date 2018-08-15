@@ -6,7 +6,7 @@
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
 
-<title><?php echo $title;?></title>
+<title><?php echo $title; ?></title>
 <!-- Favicon-->
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css">
@@ -16,12 +16,12 @@
 <link rel="stylesheet" href="../assets/css/main.css">
 <link rel="stylesheet" href="../assets/css/color_skins.css">
 </head>
-<body class="<?php echo $theme;?>">
+<body class="<?php echo $theme; ?>">
 <!-- Page Loader -->
 <div class="page-loader-wrapper">
     <div class="loader">
         <div class="m-t-30"><img class="zmdi-hc-spin" src="../assets/images/logo.svg" width="48" height="48" alt="Oreo"></div>
-        <p>Please wait...</p>        
+        <p>Please wait...</p>
     </div>
 </div>
 <!-- Overlay For Sidebars -->
@@ -32,7 +32,7 @@
         <li>
             <div class="navbar-header">
                 <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="<?php echo site_url('dashboard');?>"><img src="../assets/images/logo.svg" width="30" alt="Oreo"><span class="m-l-10"><?php echo $company_name;?></span></a>
+                <a class="navbar-brand" href="<?php echo site_url('dashboard'); ?>"><img src="../assets/images/logo.svg" width="30" alt="Oreo"><span class="m-l-10"><?php echo $company_name; ?></span></a>
             </div>
         </li>
         <li><a href="javascript:void(0);" class="ls-toggle-btn" data-close="true"><i class="zmdi zmdi-swap"></i></a></li>
@@ -51,7 +51,7 @@
                                     <img class="media-object" src="../assets/images/xs/avatar2.jpg" alt="">
                                     <div class="media-body">
                                         <span class="name">Sophia <span class="time">30min ago</span></span>
-                                        <span class="message">There are many variations of passages</span>                                        
+                                        <span class="message">There are many variations of passages</span>
                                     </div>
                                 </div>
                             </a>
@@ -62,7 +62,7 @@
                                     <img class="media-object" src="../assets/images/xs/avatar3.jpg" alt="">
                                     <div class="media-body">
                                         <span class="name">Sophia <span class="time">31min ago</span></span>
-                                        <span class="message">There are many variations of passages of Lorem Ipsum</span>                                        
+                                        <span class="message">There are many variations of passages of Lorem Ipsum</span>
                                     </div>
                                 </div>
                             </a>
@@ -73,7 +73,7 @@
                                     <img class="media-object" src="../assets/images/xs/avatar4.jpg" alt="">
                                     <div class="media-body">
                                         <span class="name">Isabella <span class="time">35min ago</span></span>
-                                        <span class="message">There are many variations of passages</span>                                        
+                                        <span class="message">There are many variations of passages</span>
                                     </div>
                                 </div>
                             </a>
@@ -84,7 +84,7 @@
                                     <img class="media-object" src="../assets/images/xs/avatar5.jpg" alt="">
                                     <div class="media-body">
                                         <span class="name">Alexander <span class="time">35min ago</span></span>
-                                        <span class="message">Contrary to popular belief, Lorem Ipsum random</span>                                        
+                                        <span class="message">Contrary to popular belief, Lorem Ipsum random</span>
                                     </div>
                                 </div>
                             </a>
@@ -95,11 +95,11 @@
                                     <img class="media-object" src="../assets/images/xs/avatar6.jpg" alt="">
                                     <div class="media-body">
                                         <span class="name">Grayson <span class="time">1hr ago</span></span>
-                                        <span class="message">There are many variations of passages</span>                                        
+                                        <span class="message">There are many variations of passages</span>
                                     </div>
                                 </div>
                             </a>
-                        </li>                        
+                        </li>
                     </ul>
                 </li>
                 <li class="footer"> <a href="javascript:void(0);">View All</a> </li>
@@ -123,7 +123,7 @@
                                         <div class="progress-bar" role="progressbar" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100" style="width: 86%;">
                                             <span class="progress-value">86%</span>
                                         </div>
-                                    </div>                        
+                                    </div>
                                     <ul class="list-unstyled team-info">
                                         <li class="m-r-15"><small class="text-muted">Team</small></li>
                                         <li>
@@ -134,7 +134,7 @@
                                         </li>
                                         <li>
                                             <img src="../assets/images/xs/avatar4.jpg" alt="Avatar">
-                                        </li>                            
+                                        </li>
                                     </ul>
                                 </div>
                             </a>
@@ -188,24 +188,24 @@
                                         </li>
                                         <li>
                                             <img src="../assets/images/xs/avatar7.jpg" alt="Avatar">
-                                        </li>                            
+                                        </li>
                                     </ul>
                                 </div>
                             </a>
-                        </li>                    
+                        </li>
                     </ul>
                 </li>
                 <li class="footer"><a href="javascript:void(0);">View All</a></li>
             </ul>
         </li> -->
         <!-- <li class="hidden-sm-down">
-            <div class="input-group">                
+            <div class="input-group">
                 <input type="text" class="form-control" placeholder="Search...">
                 <span class="input-group-addon">
                     <i class="zmdi zmdi-search"></i>
                 </span>
             </div>
-        </li>     -->    
+        </li>     -->
         <li class="float-right">
             <a href="javascript:void(0);" class="fullscreen hidden-sm-down" data-provide="fullscreen" data-close="true"><i class="zmdi zmdi-fullscreen"></i></a>
             <!-- <a href="sign-in.html" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i></a>
@@ -224,18 +224,18 @@
     </ul>
     <div class="tab-content">
         <div class="tab-pane slideRight active" id="setting">
-            <div class="slim_scroll">                                
+            <div class="slim_scroll">
                 <div class="card">
                     <h6>Skins</h6>
                     <ul class="choose-skin list-unstyled">
                         <li data-theme="purple">
                             <div class="purple"></div>
-                        </li>                   
+                        </li>
                         <li data-theme="blue">
                             <div class="blue"></div>
                         </li>
                         <li data-theme="cyan">
-                            <div class="cyan"></div>                    
+                            <div class="cyan"></div>
                         </li>
                         <li data-theme="green">
                             <div class="green"></div>
@@ -244,15 +244,15 @@
                             <div class="orange"></div>
                         </li>
                         <li data-theme="blush" class="active">
-                            <div class="blush"></div>                    
+                            <div class="blush"></div>
                         </li>
-                    </ul>                    
+                    </ul>
                 </div>
                 <div class="card theme-light-dark">
                     <h6>Left Menu</h6>
                     <button class="t-light btn btn-default btn-simple btn-round">Light Menu</button>
                     <button class="t-dark btn btn-default btn-round">Dark Menu</button>
-                    <button class="m_img_btn btn btn-primary btn-round btn-block">Sidebar Image</button>                    
+                    <button class="m_img_btn btn btn-primary btn-round btn-block">Sidebar Image</button>
                 </div>
                 <div class="card">
                     <h6>General Settings</h6>
@@ -273,7 +273,7 @@
                             <div class="checkbox">
                                 <input id="checkbox3" type="checkbox" checked="">
                                 <label for="checkbox3">Notifications</label>
-                            </div>                        
+                            </div>
                         </li>
                         <li>
                             <div class="checkbox">
@@ -292,7 +292,7 @@
                 <div class="card">
                     <h6>Information Summary</h6>
                     <div class="row m-b-20">
-                        <div class="col-7">                            
+                        <div class="col-7">
                             <small class="displayblock">MEMORY USAGE</small>
                             <h5 class="m-b-0 h6">512</h5>
                         </div>
@@ -301,7 +301,7 @@
                         </div>
                     </div>
                     <div class="row m-b-20">
-                        <div class="col-7">                            
+                        <div class="col-7">
                             <small class="displayblock">CPU USAGE</small>
                             <h5 class="m-b-0 h6">90%</h5>
                         </div>
@@ -310,7 +310,7 @@
                         </div>
                     </div>
                     <div class="row m-b-20">
-                        <div class="col-7">                            
+                        <div class="col-7">
                             <small class="displayblock">DAILY TRAFFIC</small>
                             <h5 class="m-b-0 h6">25 142</h5>
                         </div>
@@ -319,7 +319,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-7">                            
+                        <div class="col-7">
                             <small class="displayblock">DISK USAGE</small>
                             <h5 class="m-b-0 h6">60.10%</h5>
                         </div>
@@ -329,11 +329,11 @@
                     </div>
                 </div>
             </div>
-        </div>       
+        </div>
         <div class="tab-pane right_chat stretchLeft" id="chat">
             <div class="slim_scroll">
                 <div class="card">
-                    <div class="search">                        
+                    <div class="search">
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Search...">
                             <span class="input-group-addon">
@@ -355,7 +355,7 @@
                                         <span class="badge badge-outline status"></span>
                                     </div>
                                 </div>
-                            </a>                            
+                            </a>
                         </li>
                         <li class="online">
                             <a href="javascript:void(0);">
@@ -367,7 +367,7 @@
                                         <span class="badge badge-outline status"></span>
                                     </div>
                                 </div>
-                            </a>                            
+                            </a>
                         </li>
                         <li class="offline">
                             <a href="javascript:void(0);">
@@ -379,7 +379,7 @@
                                         <span class="badge badge-outline status"></span>
                                     </div>
                                 </div>
-                            </a>                            
+                            </a>
                         </li>
                         <li class="me">
                             <a href="javascript:void(0);">
@@ -391,7 +391,7 @@
                                         <span class="badge badge-outline status"></span>
                                     </div>
                                 </div>
-                            </a>                            
+                            </a>
                         </li>
                         <li class="online">
                             <a href="javascript:void(0);">
@@ -403,8 +403,8 @@
                                         <span class="badge badge-outline status"></span>
                                     </div>
                                 </div>
-                            </a>                            
-                        </li>                        
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <div class="card">
@@ -549,7 +549,7 @@
                                 <h5 class="m-b-0">New Email</h5>
                                 <small>45min ago <a href="javascript:void(0);" class="text-info">Fidel Tonn</a>.</small>
                             </div>
-                        </div>                        
+                        </div>
                     </div>
                 </div>
                 <div class="card">
@@ -557,58 +557,58 @@
                     <ul class="list-unstyled activity">
                         <li>
                             <a href="javascript:void(0)">
-                                <i class="zmdi zmdi-collection-pdf l-blush"></i>                    
+                                <i class="zmdi zmdi-collection-pdf l-blush"></i>
                                 <div class="info">
-                                    <h4>info_258.pdf</h4>                    
+                                    <h4>info_258.pdf</h4>
                                     <small>2MB</small>
                                 </div>
                             </a>
                         </li>
                         <li>
                             <a href="javascript:void(0)">
-                                <i class="zmdi zmdi-collection-text l-amber"></i>                    
+                                <i class="zmdi zmdi-collection-text l-amber"></i>
                                 <div class="info">
-                                    <h4>newdoc_214.doc</h4>                    
+                                    <h4>newdoc_214.doc</h4>
                                     <small>900KB</small>
                                 </div>
                             </a>
                         </li>
                         <li>
                             <a href="javascript:void(0)">
-                                <i class="zmdi zmdi-image l-parpl"></i>                    
+                                <i class="zmdi zmdi-image l-parpl"></i>
                                 <div class="info">
-                                    <h4>MG_4145.jpg</h4>                    
+                                    <h4>MG_4145.jpg</h4>
                                     <small>5.6MB</small>
                                 </div>
                             </a>
                         </li>
                         <li>
                             <a href="javascript:void(0)">
-                                <i class="zmdi zmdi-image l-parpl"></i>                    
+                                <i class="zmdi zmdi-image l-parpl"></i>
                                 <div class="info">
-                                    <h4>MG_4100.jpg</h4>                    
+                                    <h4>MG_4100.jpg</h4>
                                     <small>5MB</small>
                                 </div>
                             </a>
                         </li>
                         <li>
                             <a href="javascript:void(0)">
-                                <i class="zmdi zmdi-collection-text l-amber"></i>                    
+                                <i class="zmdi zmdi-collection-text l-amber"></i>
                                 <div class="info">
-                                    <h4>Reports_end.doc</h4>                    
+                                    <h4>Reports_end.doc</h4>
                                     <small>780KB</small>
                                 </div>
                             </a>
                         </li>
                         <li>
                             <a href="javascript:void(0)">
-                                <i class="zmdi zmdi-videocam l-turquoise"></i>                    
+                                <i class="zmdi zmdi-videocam l-turquoise"></i>
                                 <div class="info">
-                                    <h4>movie2018.MKV</h4>                    
+                                    <h4>movie2018.MKV</h4>
                                     <small>750MB</small>
                                 </div>
                             </a>
-                        </li>                        
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -637,7 +637,7 @@
                 <li>
                     <a href="javascript:void(0);" title="Add Member"><i class="zmdi zmdi-plus-circle"></i></a>
                 </li>
-            </ul>                       
+            </ul>
         </div>
         <div class="body">
             <div class="chat-widget">
@@ -646,7 +646,7 @@
                     <img src="../assets/images/xs/avatar3.jpg" class="rounded-circle" alt="">
                     <div class="chat-info">
                         <a class="name" href="javascript:void(0);">Alexander</a>
-                        <span class="datetime">6:12</span>                            
+                        <span class="datetime">6:12</span>
                         <span class="message">Hello, John </span>
                     </div>
                 </li>
@@ -683,17 +683,17 @@
         <div class="row">
             <div class="col-lg-7 col-md-6 col-sm-12">
                 <h2>All Students list
-                <small><?php echo $welcome_string;?></small>
+                <small><?php echo $welcome_string; ?></small>
                 </h2>
             </div>
-            <!-- <div class="col-lg-5 col-md-6 col-sm-12">                
+            <!-- <div class="col-lg-5 col-md-6 col-sm-12">
                 <button class="btn btn-white btn-icon btn-round hidden-sm-down float-right m-l-10" type="button">
                     <i class="zmdi zmdi-plus"></i>
                 </button>
                 <ul class="breadcrumb float-md-right">
                     <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Oreo</a></li>
                     <li class="breadcrumb-item"><a href="javascript:void(0);">Students</a></li>
-                </ul>                
+                </ul>
             </div> -->
         </div>
     </div>
@@ -712,13 +712,13 @@
                     <div class="body">
                         <ul class="nav nav-tabs padding-0">
                             <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#librarylist">All Student list</a></li>
-                            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#addlibrary">2017</a></li>
-                            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#addlibrary">2018</a></li>
+                            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#librarylist1">2017</a></li>
+                            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#librarylist2">2018</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="tab-content">                   
-                    <div class="tab-pane active" id="librarylist">
+                <div class="tab-content">
+                    <div class="tab-pane active" id="librarylist">-
                         <div class="card">
                             <div class="body table-responsive">
                                 <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
@@ -732,15 +732,14 @@
                                             <th align="center">Contact Number</th>
                                             <th align="center">Class</th>
                                         </tr>
-                                    </thead>                            
+                                    </thead>
                                     <tbody>
-                                        
-                                        
+
+
                       <?php
 
-
-                      foreach ($details->result() as $row) {
-                          ?><tr class="clickable-row" data-href="<?php echo site_url('profile/' . $row->Id);?>" style="cursor: pointer">
+foreach ($details->result() as $row) {
+    ?><tr class="clickable-row" data-href="<?php echo site_url('profile/' . $row->Id); ?>" style="cursor: pointer">
                               <td align="center"><span class="list-icon"><img class="rounded" src="<?php echo $row->photo; ?>" height="40" width="50" alt="laurels school"></span></td>
                               <td><?php echo $row->Id; ?></td>
 
@@ -753,53 +752,191 @@
                               <td><?php echo $row->class_id; ?></td>
                           </tr>
                       <?php
-                      }
+}
 
-                      ?>
+?>
 
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane" id="addlibrary">
-                        <div class="card">
-                            <div class="body">
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <div class="form-group">
-                                            <input type="text" value="" placeholder="Enter Title" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <div class="form-group">
-                                            <input type="text" value="" placeholder="Enter Subject" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <div class="form-group">
-                                            <input type="text" value="" placeholder="Department" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <div class="form-group">
-                                            <input type="text" value="" placeholder="Enter Type" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <div class="form-group">
-                                            <input type="text" value="" placeholder="Enter Year" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <div class="form-group">
-                                            <input type="text" value="" placeholder="Enter Status" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <button class="btn btn-primary btn-lg btn-round btn-simple">Add Library</button>
-                                    </div>
-                                </div>
+
+
+<!--                    <div class="tab-content">-->
+<!--                        <div class="tab-pane active" id="librarylist1">--->
+<!--                            <div class="card">-->
+<!--                                <div class="body table-responsive">-->
+<!--                                    <table class="table table-bordered table-striped table-hover js-basic-example dataTable">-->
+<!--                                        <thead>-->
+<!--                                        <tr>-->
+<!--                                            <th align="center">&nbsp;&nbsp;Picture</th>-->
+<!--                                            <th align="center">Id</th>-->
+<!--                                            <th align="center">Name</th>-->
+<!--                                            <th align="center">Gender</th>-->
+<!--                                            <th align="center">Address</th>-->
+<!--                                            <th align="center">Contact Number</th>-->
+<!--                                            <th align="center">Class</th>-->
+<!--                                        </tr>-->
+<!--                                        </thead>-->
+<!--                                        <tbody>-->
+<!---->
+<!---->
+<!--                                        --><?php
+//
+//                                        foreach ($details1->result() as $row) {
+//                                            ?><!--<tr class="clickable-row" data-href="--><?php //echo site_url('profile/' . $row->Id); ?><!--" style="cursor: pointer">-->
+<!--                                            <td align="center"><span class="list-icon"><img class="rounded" src="--><?php //echo $row->photo; ?><!--" height="40" width="50" alt="laurels school"></span></td>-->
+<!--                                            <td>--><?php //echo $row->Id; ?><!--</td>-->
+<!---->
+<!--                                            <td>--><?php //echo $row->stud_name; ?><!--</td>-->
+<!--                                            <td>--><?php //echo $row->stud_gender; ?><!--</td>-->
+<!---->
+<!--                                            <td>--><?php //echo $row->perma_address; ?><!--</td>-->
+<!--                                            <td>--><?php //echo $row->stud_phone; ?><!--</td>-->
+<!---->
+<!--                                            <td>--><?php //echo $row->class_id; ?><!--</td>-->
+<!--                                            </tr>-->
+<!--                                            --><?php
+//                                        }
+//
+//                                        ?>
+<!---->
+<!--                                        </tbody>-->
+<!--                                    </table>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+<!--                        <div class="tab-content">-->
+<!--                            <div class="tab-pane active" id="librarylist2">--->
+<!--                                <div class="card">-->
+<!--                                    <div class="body table-responsive">-->
+<!--                                        <table class="table table-bordered table-striped table-hover js-basic-example dataTable">-->
+<!--                                            <thead>-->
+<!--                                            <tr>-->
+<!--                                                <th align="center">&nbsp;&nbsp;Picture</th>-->
+<!--                                                <th align="center">Id</th>-->
+<!--                                                <th align="center">Name</th>-->
+<!--                                                <th align="center">Gender</th>-->
+<!--                                                <th align="center">Address</th>-->
+<!--                                                <th align="center">Contact Number</th>-->
+<!--                                                <th align="center">Class</th>-->
+<!--                                            </tr>-->
+<!--                                            </thead>-->
+<!--                                            <tbody>-->
+<!---->
+<!---->
+<!--                                            --><?php
+//
+//                                            foreach ($details2->result() as $row) {
+//                                                ?><!--<tr class="clickable-row" data-href="--><?php //echo site_url('profile/' . $row->Id); ?><!--" style="cursor: pointer">-->
+<!--                                                <td align="center"><span class="list-icon"><img class="rounded" src="--><?php //echo $row->photo; ?><!--" height="40" width="50" alt="laurels school"></span></td>-->
+<!--                                                <td>--><?php //echo $row->Id; ?><!--</td>-->
+<!---->
+<!--                                                <td>--><?php //echo $row->stud_name; ?><!--</td>-->
+<!--                                                <td>--><?php //echo $row->stud_gender; ?><!--</td>-->
+<!---->
+<!--                                                <td>--><?php //echo $row->perma_address; ?><!--</td>-->
+<!--                                                <td>--><?php //echo $row->stud_phone; ?><!--</td>-->
+<!---->
+<!--                                                <td>--><?php //echo $row->class_id; ?><!--</td>-->
+<!--                                                </tr>-->
+<!--                                                --><?php
+//                                            }
+//
+//                                            ?>
+<!---->
+<!--                                            </tbody>-->
+<!--                                        </table>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+                    <div class="tab-pane" id="librarylist1">
+                        <div class="card">-->
+                                                            <div class="body table-responsive">
+                                                                <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+                                                                    <thead>
+                                                                    <tr>
+                                                                        <th align="center">&nbsp;&nbsp;Picture</th>
+                                                                        <th align="center">Id</th>
+                                                                        <th align="center">Name</th>
+                                                                        <th align="center">Gender</th>
+                                                                        <th align="center">Address</th>
+                                                                        <th align="center">Contact Number</th>
+                                                                        <th align="center">Class</th>
+                                                                    </tr>
+                                                                    </thead>
+                                                                    <tbody>
+
+
+                                                                    <?php
+
+                                                                    foreach ($details1->result() as $row) {
+                                                                        ?><tr class="clickable-row" data-href="<?php echo site_url('profile/' . $row->Id); ?>" style="cursor: pointer">
+                                                                        <td align="center"><span class="list-icon"><img class="rounded" src="<?php echo $row->photo; ?>" height="40" width="50" alt="laurels school"></span></td>
+                                                                        <td><?php echo $row->Id; ?></td>
+
+                                                                        <td><?php echo $row->stud_name; ?></td>
+                                                                        <td><?php echo $row->stud_gender; ?></td>
+
+                                                                        <td><?php echo $row->perma_address; ?></td>
+                                                                        <td><?php echo $row->stud_phone; ?></td>
+
+                                                                        <td><?php echo $row->class_id; ?></td>
+                                                                        </tr>
+                                                                        <?php
+                                                                    }
+
+                                                                    ?>
+
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="librarylist2">
+                        <div class="card">-->
+                            <div class="body table-responsive">
+                                <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+                                    <thead>
+                                    <tr>
+                                        <th align="center">&nbsp;&nbsp;Picture</th>
+                                        <th align="center">Id</th>
+                                        <th align="center">Name</th>
+                                        <th align="center">Gender</th>
+                                        <th align="center">Address</th>
+                                        <th align="center">Contact Number</th>
+                                        <th align="center">Class</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+
+
+                                    <?php
+
+                                    foreach ($details2->result() as $row) {
+                                        ?><tr class="clickable-row" data-href="<?php echo site_url('profile/' . $row->Id); ?>" style="cursor: pointer">
+                                        <td align="center"><span class="list-icon"><img class="rounded" src="<?php echo $row->photo; ?>" height="40" width="50" alt="laurels school"></span></td>
+                                        <td><?php echo $row->Id; ?></td>
+
+                                        <td><?php echo $row->stud_name; ?></td>
+                                        <td><?php echo $row->stud_gender; ?></td>
+
+                                        <td><?php echo $row->perma_address; ?></td>
+                                        <td><?php echo $row->stud_phone; ?></td>
+
+                                        <td><?php echo $row->class_id; ?></td>
+                                        </tr>
+                                        <?php
+                                    }
+
+                                    ?>
+
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -808,11 +945,11 @@
         </div>
     </div>
 </section>
-<!-- Jquery Core Js --> 
-<script src="../assets/bundles/libscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js --> 
-<script src="../assets/bundles/vendorscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js --> 
+<!-- Jquery Core Js -->
+<script src="../assets/bundles/libscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js -->
+<script src="../assets/bundles/vendorscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js -->
 
-<!-- Jquery DataTable Plugin Js --> 
+<!-- Jquery DataTable Plugin Js -->
 <script src="../assets/bundles/datatablescripts.bundle.js"></script>
 
 <script src="../assets/bundles/mainscripts.bundle.js"></script>

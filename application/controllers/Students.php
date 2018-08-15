@@ -249,8 +249,11 @@ class Students extends MY_Controller
     {
         $this->load->model('Student_all_model', '_student');
         $data['details']=$this->_student->get_all_students();
+        $data['details1']=$this->_student->get_all_students_2017();
+        $data['details2']=$this->_student->get_all_students_2018();
         $this->load->view('students-all', $data);
     }
+
 
     public function show_profile($id)
     {
