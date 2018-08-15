@@ -9,7 +9,6 @@ class Students extends MY_Controller
         $data['error_list'] = array();
         if ($this->input->server('REQUEST_METHOD') == 'POST') {
             $field_photo = '';
-            $field_photo_recovery = '';
 
             $config['upload_path'] = './uploads/';
             $config['allowed_types'] = 'jpeg|jpg|png';
@@ -128,10 +127,10 @@ class Students extends MY_Controller
                         $this->setErrorMessage($errors, "- Upload a Supported filetype (jpg,jpeg,png)");
                     }
                 } else {
-                    $field_photo = '../uploads/' . $this->upload->data('file_name');
-                    $field_photo_recovery  = '' .$this->upload->data('file_name');
+                    $field_photo = $this->upload->data('file_name');
                 }
-            }
+            }else
+                $this->setErrorMessage($errors, "- Upload the file again");
             //END VALIDATION CODE
 
             if (isset($errors->has)) {
@@ -156,7 +155,6 @@ class Students extends MY_Controller
                        'field_currpin'=>$field_currpin,
                         'field_stud_email'=>$field_stud_email,
                         'field_stud_ph'=>$field_stud_ph,
-                        'field_photo'=>$field_photo_recovery,
                         'field_father_onumber'=>$field_father_onumber,
                         'field_mother_onumber'=>$field_mother_onumber,
                         'field_class_id'=>$field_class_id,
