@@ -16,7 +16,7 @@ class MY_Controller extends CI_Controller
         $this->load->vars($data);
     }
     
-    private function logAlert($prin)
+    public function logAlert($prin)
     {
         echo '<script>alert(" ' . $prin . ' ")</script>';
     }
