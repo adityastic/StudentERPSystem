@@ -5,6 +5,6 @@ class Batches extends MY_Controller {
 
 	public function add_batch()
 	{
-		$this->load->view('add-courses');
+		$this->load->view('batches-add');
 	}
 }

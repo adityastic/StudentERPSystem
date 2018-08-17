@@ -21,3 +21,4 @@ class Subject extends MY_Controller
         $this->load->view('subjects', $data);
     }
 }
+

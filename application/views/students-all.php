@@ -712,13 +712,22 @@
                     <div class="body">
                         <ul class="nav nav-tabs padding-0">
                             <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#librarylist">All Student list</a></li>
-                            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#librarylist1">2017</a></li>
-                            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#librarylist2">2018</a></li>
+
+<?php
+foreach($details1->result() as $row) {
+
+    echo '<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#library' . $row->year . '">' . $row->year . '</a></li>';
+
+}
+
+    ?>
                         </ul>
-                    </div>
+  </div>
                 </div>
                 <div class="tab-content">
-                    <div class="tab-pane active" id="librarylist">-
+                    <div class="tab-pane active" id="librarylist">
+
+
                         <div class="card">
                             <div class="body table-responsive">
                                 <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
@@ -730,7 +739,7 @@
                                             <th align="center">Gender</th>
                                             <th align="center">Address</th>
                                             <th align="center">Contact Number</th>
-                                            <th align="center">Class</th>
+
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -749,7 +758,7 @@ foreach ($details->result() as $row) {
                               <td><?php echo $row->perma_address; ?></td>
                               <td><?php echo $row->stud_phone; ?></td>
 
-                              <td><?php echo $row->class_id; ?></td>
+
                           </tr>
                       <?php
 }
@@ -852,29 +861,65 @@ foreach ($details->result() as $row) {
 <!--                                    </div>-->
 <!--                                </div>-->
 <!--                            </div>-->
+<!--                    <?php
+//                    foreach($details1->result() as $row) {
+//
+//
+//                    echo '<div class="tab-pane" id="library'.$row->year.'">
+//                        <div class="card">-->
+//                            <div class="body table-responsive">
+//                                <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+//                                    <thead>
+//                                    <tr>
+//                                        <th align="center">&nbsp;&nbsp;Picture</th>
+//                                        <th align="center">"Iddd' . $row->year . '"</th>
+//                                        <th align="center">Nameee</th>
+//                                        <th align="center">Gender</th>
+//                                        <th align="center">Address</th>
+//                                        <th align="center">Contact Number</th>
+//
+//                                    </tr>
+//
+//
+//                                                                       </thead>
+//                                                                    <tbody>
+//                                                                      </tbody>
+//                                                                </table>';
+//
+//
+//                    }
+//                    ?>
+<!---->
+<!---->
+<!--                                                            </div>-->
+<!--                                                        </div>-->
+<!--                                                        </div>-->
+<!--                                                      </div>-->
 
-                    <div class="tab-pane" id="librarylist1">
-                        <div class="card">-->
+
+       <div class="tab-pane" id="library2019">
+                        <div class="card">
                                                             <div class="body table-responsive">
                                                                 <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
                                                                     <thead>
                                                                     <tr>
                                                                         <th align="center">&nbsp;&nbsp;Picture</th>
-                                                                        <th align="center">Id</th>
+                                                                        <th align="center">Idd</th>
                                                                         <th align="center">Name</th>
                                                                         <th align="center">Gender</th>
                                                                         <th align="center">Address</th>
                                                                         <th align="center">Contact Number</th>
-                                                                        <th align="center">Class</th>
+
                                                                     </tr>
                                                                     </thead>
                                                                     <tbody>
 
 
-                                                                    <?php
 
-                                                                    foreach ($details1->result() as $row) {
-                                                                        ?><tr class="clickable-row" data-href="<?php echo site_url('profile/' . $row->Id); ?>" style="cursor: pointer">
+                                                                   <?php
+
+                                                                    foreach ($details->result() as $row) {
+                                                                        ?><tr class="clickable-row">
                                                                         <td align="center"><span class="list-icon"><img class="rounded" src="<?php echo $row->photo; ?>" height="40" width="50" alt="laurels school"></span></td>
                                                                         <td><?php echo $row->Id; ?></td>
 
@@ -884,7 +929,7 @@ foreach ($details->result() as $row) {
                                                                         <td><?php echo $row->perma_address; ?></td>
                                                                         <td><?php echo $row->stud_phone; ?></td>
 
-                                                                        <td><?php echo $row->class_id; ?></td>
+
                                                                         </tr>
                                                                         <?php
                                                                     }
@@ -896,54 +941,58 @@ foreach ($details->result() as $row) {
                                                             </div>
                                                         </div>
                     </div>
-
-                    <div class="tab-pane" id="librarylist2">
-                        <div class="card">-->
-                            <div class="body table-responsive">
-                                <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
-                                    <thead>
-                                    <tr>
-                                        <th align="center">&nbsp;&nbsp;Picture</th>
-                                        <th align="center">Id</th>
-                                        <th align="center">Name</th>
-                                        <th align="center">Gender</th>
-                                        <th align="center">Address</th>
-                                        <th align="center">Contact Number</th>
-                                        <th align="center">Class</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-
-
-                                    <?php
-
-                                    foreach ($details2->result() as $row) {
-                                        ?><tr class="clickable-row" data-href="<?php echo site_url('profile/' . $row->Id); ?>" style="cursor: pointer">
-                                        <td align="center"><span class="list-icon"><img class="rounded" src="<?php echo $row->photo; ?>" height="40" width="50" alt="laurels school"></span></td>
-                                        <td><?php echo $row->Id; ?></td>
-
-                                        <td><?php echo $row->stud_name; ?></td>
-                                        <td><?php echo $row->stud_gender; ?></td>
-
-                                        <td><?php echo $row->perma_address; ?></td>
-                                        <td><?php echo $row->stud_phone; ?></td>
-
-                                        <td><?php echo $row->class_id; ?></td>
-                                        </tr>
-                                        <?php
-                                    }
-
-                                    ?>
-
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
+
+
+
+
+<!--                    <div class="tab-pane" id="2019">-->
+<!--                        <div class="card">-->-->
+<!--                            <div class="body table-responsive">-->
+<!--                                <table class="table table-bordered table-striped table-hover js-basic-example dataTable">-->
+<!--                                    <thead>-->
+<!--                                    <tr>-->
+<!--                                        <th align="center">&nbsp;&nbsp;Picture</th>-->
+<!--                                        <th align="center">Id</th>-->
+<!--                                        <th align="center">Name</th>-->
+<!--                                        <th align="center">Gender</th>-->
+<!--                                        <th align="center">Address</th>-->
+<!--                                        <th align="center">Contact Number</th>-->
+<!--                                        <th align="center">Class</th>-->
+<!--                                    </tr>-->
+<!--                                    </thead>-->
+<!--                                    <tbody>-->
+<!---->
+<!---->
+<!--                                    --><?php
+//
+//                                    foreach ($details2->result() as $row) {
+//                                        ?><!--<tr class="clickable-row" data-href="--><?php //echo site_url('profile/' . $row->Id); ?><!--" style="cursor: pointer">-->
+<!--                                        <td align="center"><span class="list-icon"><img class="rounded" src="--><?php //echo $row->photo; ?><!--" height="40" width="50" alt="laurels school"></span></td>-->
+<!--                                        <td>--><?php //echo $row->Id; ?><!--</td>-->
+<!---->
+<!--                                        <td>--><?php //echo $row->stud_name; ?><!--</td>-->
+<!--                                        <td>--><?php //echo $row->stud_gender; ?><!--</td>-->
+<!---->
+<!--                                        <td>--><?php //echo $row->perma_address; ?><!--</td>-->
+<!--                                        <td>--><?php //echo $row->stud_phone; ?><!--</td>-->
+<!---->
+<!--                                        <td>--><?php //echo $row->class_id; ?><!--</td>-->
+<!--                                        </tr>-->
+<!--                                        --><?php
+//                                    }
+//
+//                                    ?>
+<!---->
+<!--                                    </tbody>-->
+<!--                                </table>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 </section>
 <!-- Jquery Core Js -->
 <script src="../assets/bundles/libscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js -->
