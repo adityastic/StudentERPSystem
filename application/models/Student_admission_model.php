@@ -18,7 +18,7 @@ class Student_admission_model extends CI_Model
     {
         $this->db->insert('student_admission', $arr);
     }
-
+    
     public function get_all_classes()
     {
         $query = $this->db->get('classes_list');
