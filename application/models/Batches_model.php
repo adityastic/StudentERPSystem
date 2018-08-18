@@ -7,23 +7,6 @@ class Batches_model extends CI_Model
         $this->load->database();
     }
 
-    // public function getAllSubjects()
-    // {
-    //     $query = $this->db->get('batches');
-    //     return $query;
-    // }
-
-    // public function insertintotable($arr)
-    // {
-    //     $this->db->insert('subject_list', $arr);
-    // }
-
-    // public function deletefromtable($id)
-    // {
-    //     $this->db->where('id', $id);
-    //     $this->db->delete('subject_list');
-    // }
-    
     public function get_all_teachers()
     {
         $this->db->select('id, prof_name');
@@ -50,5 +33,10 @@ class Batches_model extends CI_Model
     {
         $query = $this->db->get('section_list');
         return $query;
+    }
+    public function checkBatch($class,$year,$section)
+    {
+        $query = $this->db->get_where('batches_all', array('class_id =' => $class,'year_id =' => $year,'section_id =' => $section));
+        return ($query->num_rows() > 0)?true:false; 
     }
 }
