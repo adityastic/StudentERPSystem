@@ -20,4 +20,13 @@ class MY_Controller extends CI_Controller
     {
         echo '<script>alert(" ' . $prin . ' ")</script>';
     }
+
+    public function setErrorMessage($errors, $strin)
+    {
+        if (isset($errors->msg)) {
+            $errors->msg = $errors->msg . "<br>" . $strin;
+        } else {
+            $errors->msg = $strin;
+        }
+    }
 }
