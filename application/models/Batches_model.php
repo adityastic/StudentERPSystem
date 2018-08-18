@@ -39,4 +39,9 @@ class Batches_model extends CI_Model
         $query = $this->db->get_where('batches_all', array('class_id =' => $class,'year_id =' => $year,'section_id =' => $section));
         return ($query->num_rows() > 0)?true:false; 
     }
+    
+    public function insertBatch($arr)
+    {
+        $this->db->insert('batches_all', $arr);
+    }
 }
