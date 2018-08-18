@@ -276,7 +276,7 @@ include "leftside.php";
                                 <div class="alert-icon">
                                     <i class="zmdi zmdi-thumb-up"></i>
                                 </div>
-                                <strong>Success!</strong> Student Info Uploaded Successfully.
+                                <strong>Success!</strong> Professor Info Uploaded Successfully.
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">
                                         <i class="zmdi zmdi-close"></i>
@@ -500,7 +500,7 @@ include "leftside.php";
 
                             <div class="row clearfix">
                                 <div class="col-lg-12 col-md-12 col-sm-12">
-                                    Upload Student Photo :
+                                    Upload Professor Photo :
                                     <input id="files" type="file" name="field_photo" accept="image/*" value="<?php
                                     if (isset($_reEntry)) {
                                         echo $_reEntry['field_photo'];
@@ -639,7 +639,7 @@ include "leftside.php";
                                         if (isset($_reEntry)) {
                                             echo $_reEntry['field_pan_num'];
                                         }
-                                        ?>" >
+                                        ?>" required>
                                     </div>
                                 </div>
 
@@ -649,23 +649,23 @@ include "leftside.php";
                                         if (isset($_reEntry)) {
                                             echo $_reEntry['field_branch_name'];
                                         }
-                                        ?>" >
+                                        ?>" required>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-6 col-md-12">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Account Number" name="field_acc_num" value="<?php
+                                        <input type="number" class="form-control" placeholder="Account Number" name="field_acc_num" value="<?php
                                         if (isset($_reEntry)) {
                                             echo $_reEntry['field_acc_num'];
                                         }
-                                        ?>" >
+                                        ?>" required>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-6 col-md-12">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="IFSC Code" name="field_ifsc_code" value="<?php
+                                        <input type="text" class="form-control" placeholder="IFSC Code" name="field_ifsc_code" pattern="^[A-Za-z]{4}[a-zA-Z0-9]{7}$" value="<?php
                                         if (isset($_reEntry)) {
                                             echo $_reEntry['field_ifsc_code'];
                                         }
