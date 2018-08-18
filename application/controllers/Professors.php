@@ -225,11 +225,6 @@ class professors extends MY_Controller {
         $this->load->view('professors-add', $data);
 	}
 
-    private function logAlert($prin)
-    {
-        echo '<script>alert(" ' . $prin . ' ")</script>';
-    }
-
     private function checkNumbersinString($string)
     {
         if (preg_match('/[0-9]/', $string)) {
