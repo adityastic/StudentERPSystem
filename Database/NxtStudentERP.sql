@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0.1
+-- version 4.8.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 15, 2018 at 10:24 AM
--- Server version: 10.1.32-MariaDB
--- PHP Version: 7.2.5
+-- Generation Time: Aug 18, 2018 at 07:36 PM
+-- Server version: 10.1.34-MariaDB
+-- PHP Version: 7.2.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `NxtStudentERP` 
+-- Database: `NxtStudentERP`
 --
 
 -- --------------------------------------------------------
@@ -34,7 +34,7 @@ CREATE TABLE `batches_all` (
   `class_id` int(11) NOT NULL,
   `section_id` int(11) NOT NULL,
   `coordinator` int(11) NOT NULL,
-  `subject_teachers` int(11) NOT NULL,
+  `subject_teachers` text NOT NULL,
   `students_list` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -156,16 +156,6 @@ CREATE TABLE `student_admission` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `student_admission`
---
-
-INSERT INTO `student_admission` (`Id`, `adm_date`, `stud_name`, `father_name`, `mother_name`, `father_number`, `mother_number`, `current_address`, `perma_address`, `father_email`, `stud_dob`, `stud_gender`, `stud_blood_group`, `stud_caste`, `city`, `state`, `perma_address_pin`, `stud_email`, `stud_phone`, `photo`, `father_o_number`, `mother_o_number`, `password`, `currrent_address_pin`) VALUES
-(1, '2018-08-13', 'Aditya Gupta', 'Ravindra Gupta', 'Kiran Gupta', '9425480356', '9425480356', 'C-2, Ridhi Sidhi Regency, Ganeshpuri, Near Khajrana Mandir, Khajrana, Indore', 'C-2, Ridhi Sidhi Regency, Ganeshpuri, Near Khajrana Mandir, Khajrana, Indore', 'ckenterprices@yahoo.in', '2018-08-02', 'male', 'opos', 'gn', 'Indore', 'mp', 452016, 'adityaofficialgupta@gmail.com', '8458892226', '../uploads/fullsizeoutput_21.jpeg', '9425480356', '9425480356', 'Ag123456', 452016),
-(2, '2018-08-13', 'Yash Golchha', 'Nirmal Golchha', 'Hema Golchha', '9424122932', '9424122932', 'Jain Cloth Stores, Azad Chawk, Rajnandgaon', 'Jain Cloth Stores, Azad Chawk, Rajnandgaon', 'nirmalgolchha@yahoo.in', '1998-09-27', 'male', 'opos', 'gn', 'Rajnandgaon', 'mp', 491441, 'yashgolchha27@gmail.com', '9424122932', '../uploads/Screen_Shot_2018-08-13_at_1_20_00_PM.png', '9424122932', '9424122932', 'Yg123456', 491441);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `subject_list`
 --
 
@@ -257,48 +247,6 @@ ALTER TABLE `years_list`
 -- AUTO_INCREMENT for dumped tables
 --
 
---
--- AUTO_INCREMENT for table `batches_all`
---
-ALTER TABLE `batches_all`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `classes_list`
---
-ALTER TABLE `classes_list`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
---
--- AUTO_INCREMENT for table `professor_joining`
---
-ALTER TABLE `professor_joining`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `section_list`
---
-ALTER TABLE `section_list`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `student_admission`
---
-ALTER TABLE `student_admission`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `subject_list`
---
-ALTER TABLE `subject_list`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
--- AUTO_INCREMENT for table `years_list`
---
-ALTER TABLE `years_list`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
