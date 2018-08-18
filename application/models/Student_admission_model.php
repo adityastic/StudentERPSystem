@@ -14,8 +14,17 @@ class Student_admission_model extends CI_Model
         return $query->max ? ($query->max+1) :1;
     }
 
-    public function insertintoadmission($arr)
+    public function insertintoadmission($arr,$classid,$yearid,$sectionid)
     {
+        $query = $this->db->get_where('batches_all', array('class_id =' => $classid,'year_id =' => $yearid,'section_id =' => $sectionid))->row();
+        $student_list = json_decode($query->students_list);
+        $student_list[] = $this->get_adm_number();
+        $student_list = array_unique($student_list);
+
+        $data=array('students_list'=>json_encode($student_list));
+        $this->db->where('id',$query->id);
+        $this->db->update('batches_all',$data);
+
         $this->db->insert('student_admission', $arr);
     }
     
