@@ -157,7 +157,8 @@ class Students extends MY_Controller
                     'field_father_onumber'=>$field_father_onumber,
                     'field_mother_onumber'=>$field_mother_onumber,
                     'field_class_id'=>$field_class_id,
-                    'field_year_id'=>$field_year_id
+                    'field_year_id'=>$field_year_id,
+                    'field_section_id'=>$field_section_id
                 );
                 $data['_reEntry'] = $modifiedArray;
             } else {
@@ -189,17 +190,15 @@ class Students extends MY_Controller
                     'father_o_number'=>$field_father_onumber,
                     'mother_o_number'=>$field_mother_onumber,
                     'password'=>$password,
-                    'class_id'=>$field_class_id,
-                    'year_id'=>$field_year_id
                 );
-                $this->_student->insertintoadmission($insertArray);
+                $this->_student->insertintoadmission($insertArray,$field_class_id,$field_year_id,$field_section_id);
                 $sessarr = array(
                     'add_done' => 'yes',
                 );
                 $this->session->set_userdata($sessarr);
                 redirect('/students/add_students', 'refresh');
             }
-        }
+        }else
         if (!empty($this->session->userdata('add_done'))) {
             $this->session->sess_destroy();
             $data['done'] = true;
@@ -225,15 +224,6 @@ class Students extends MY_Controller
     public function isValidEmail($email)
     {
         return filter_var($email, FILTER_VALIDATE_EMAIL) !== false;
-    }
-
-    private function setErrorMessage($errors, $strin)
-    {
-        if (isset($errors->msg)) {
-            $errors->msg = $errors->msg . "<br>" . $strin;
-        } else {
-            $errors->msg = $strin;
-        }
     }
 
     public function all_students()
