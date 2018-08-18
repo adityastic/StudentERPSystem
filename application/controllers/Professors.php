@@ -241,14 +241,4 @@ class professors extends MY_Controller {
         return filter_var($email, FILTER_VALIDATE_EMAIL) !== false;
     }
 
-    private function setErrorMessage($errors, $strin)
-    {
-        if (isset($errors->msg)) {
-            $errors->msg = $errors->msg . "<br>" . $strin;
-        } else {
-            $errors->msg = $strin;
-        }
-    }
-
-
 }

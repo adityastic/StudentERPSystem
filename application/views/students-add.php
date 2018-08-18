@@ -503,11 +503,7 @@
                         <div class="row clearfix">
                             <div class="col-lg-12 col-md-12 col-sm-12">
                                 Upload Student Photo :
-                <input id="files" type="file" name="field_photo" accept="image/*" value="<?php 
-                                        if (isset($_reEntry)) {
-                                            echo $_reEntry['field_photo'];
-                                        }
-                                    ?>" required><br><br>
+                <input id="files" type="file" name="field_photo" accept="image/*" required><br><br>
                 <img id="image" />
                             </div>
                         </div>
