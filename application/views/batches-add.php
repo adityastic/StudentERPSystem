@@ -324,6 +324,60 @@ if (isset($sections)) {
               </div>
             </div>
           </div>
+          <?php 
+          if (isset($errorstring)) {
+              echo '<div class="alert alert-danger">
+                            <strong>Oh snap!</strong> Change a few things up and try submitting again.<br>
+                            ' . $errorstring . '
+                        </div>';
+          }
+          if (isset($done)) {
+            echo '<div class="alert alert-success" role="alert">
+                            <div class="container">
+                                <div class="alert-icon">
+                                    <i class="zmdi zmdi-thumb-up"></i>
+                                </div>
+                                <strong>Success!</strong> Batch Added Successfully.
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">
+                                        <i class="zmdi zmdi-close"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>';
+        }
+        ?>
+          <div class="row clearfix">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="header">
+                  <h2>
+                    <strong>Select
+                    </strong> Coordinator 
+                    <small>Monitoring Teacher Information
+                    </small> 
+                  </h2>
+                </div>
+                <div class="body">
+                  <div class="row clearfix">
+                    <div class="col-lg-5">
+                      <div class="form-group">
+                        <select class='form-control show-tick' name='field_coordinator'>
+                            <?php
+if (isset($allProfs)) {
+            foreach ($allProfs->result() as $row) {
+                echo '<option value='.$row->id.'>'.$row->prof_name.'</option>';
+            }
+        }
+?>
+                          </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="row clearfix">
             <div class="col-md-12">
               <div class="card">
@@ -390,10 +444,10 @@ if (isset($sections)) {
     <script src="../assets/js/pages/forms/basic-form-elements.js">
     </script>
     <script type="text/javascript">
-	    $("#buttonAdd").click(function () {
-		    for(var i = 0 ; i < document.getElementById('numberofsubjects').value ; i++)
-		        {
-		          $('#teachersSubjectList').append("<div class='row'>\
+        $("#buttonAdd").click(function () {
+            for(var i = 0 ; i < document.getElementById('numberofsubjects').value ; i++)
+                {
+                  $('#teachersSubjectList').append("<div class='row'>\
                       <div class='col-lg-5'>\
                         <div class='form-group'>\
                           <select class='form-control show-tick' name='subjects[]'>\
@@ -429,13 +483,13 @@ if (isset($allProfs)) {
                         </button>\
                       </div>\
                     </div>");
-		        }
-		    }
-	    );
-	    function buttonDelete(e)
-	    {
-	    	e.parentNode.parentNode.remove(e.parentNode.parentNode);
-	    }
+                }
+            }
+        );
+        function buttonDelete(e)
+        {
+            e.parentNode.parentNode.remove(e.parentNode.parentNode);
+        }
     </script>
   </body>
 </html>
