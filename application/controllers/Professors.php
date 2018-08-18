@@ -23,15 +23,6 @@ class professors extends MY_Controller {
 
             $errors = new stdClass();
             $this->load->library('upload', $config);
-            if (!$this->upload->do_upload('field_photo')) {
-                $error = array('error' => $this->upload->display_errors());
-                if (strpos($error['error'], 'filetype') !== false) {
-                    $errors->has = true;
-                    $this->setErrorMessage($errors, "- Upload a Supported filetype (jpg,jpeg,png)");
-                }
-            } else {
-                $field_photo = '../uploads/' . $this->upload->data('file_name');
-            }
 
             //VALIDATION CODE
             $field_adm_number = $this->input->post('field_id');
@@ -135,24 +126,28 @@ class professors extends MY_Controller {
             }
 
             $field_pan_num = $this->input->post('field_pan_num');
-           // if ($this->checkNumbersinString($field_pan_num)) {
-           //     $errors->has = true;
-           //     $this->setErrorMessage($errors, "- Enter Pan Nummber");
-           //     $field_pan_num="";
-           // }
-
             $field_ifsc_code = $this->input->post('field_ifsc_code');
-            if ($this->checkNumbersinString($field_ifsc_code)) {
-                $errors->has = true;
-                $this->setErrorMessage($errors, "- Enter ifsc code");
-                $field_ifsc_code="";
-            }
 
             $field_highest_qualification = $this->input->post('field_highest_qualification');
             if (strcmp($field_highest_qualification, 'none') == 0) {
                 $errors->has = true ;
                 $this->setErrorMessage($errors, "- Enter Qualification");
             }
+
+            if (!isset($errors->has)) {
+                if ($this->upload->do_upload('field_photo') == false) {
+                    $error = array('error' => $this->upload->display_errors());
+                    if (strpos($error['error'], 'filetype') !== false) {
+                        $errors->has = true;
+                        $this->setErrorMessage($errors, "- Upload a Supported filetype (jpg,jpeg,png)");
+                    }
+                } else {
+                    $field_photo = $this->upload->data('file_name');
+                }
+            } else {
+                $this->setErrorMessage($errors, "- Upload the file again");
+            }
+
             //END VALIDATION CODE
 
             if (isset($errors->has)) {
@@ -184,8 +179,6 @@ class professors extends MY_Controller {
                 );
                 $data['_reEntry'] = $modifiedArray;
             } else {
-                $data['done'] = true;
-
                 date_default_timezone_set('Asia/Kolkata');
                 $date = date('d.m.Y H:i:s', time());
                 $current_date  = DateTime::createFromFormat('d.m.Y H:i:s', $date)->format('Y-m-d h:i:s');
@@ -217,11 +210,20 @@ class professors extends MY_Controller {
                     'pan_number'=>$field_pan_num,
                 );
                 $this->_profesor->insertintoprof($insertArray);
+
+                $sessarr = array(
+                    'add_done' => 'yes',
+                );
+                $this->session->set_userdata($sessarr);
+                redirect('/professors/add_professor', 'refresh');
             }
         }
+        if (!empty($this->session->userdata('add_done'))) {
+            $this->session->sess_destroy();
+            $data['done'] = true;
+        }
+
         $data['profnumber'] = $this->_profesor->get_adm_number();
-
-
         $this->load->view('professors-add', $data);
 	}
 
