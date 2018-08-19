@@ -5,7 +5,7 @@ class Batches extends MY_Controller
 {
     public function add_batch()
     {
-        $this->load->model('Batches_model', '_batchmodel');
+        $this->load->model('Batches_add_model', '_batchmodel');
 
         if ($this->input->server('REQUEST_METHOD') == 'POST') {
             $errors = new stdClass();
@@ -65,5 +65,12 @@ class Batches extends MY_Controller
         $data['years'] =$this->_batchmodel->get_all_years();
         $data['sections'] =$this->_batchmodel->get_all_sections();
         $this->load->view('batches-add', $data);
+    }
+
+    public function all_batch()
+    {
+        $this->load->model('Batches_all_model', '_batchmodel');
+        $data['batchDetails']=$this->_batchmodel->getBatchDetails();
+        $this->load->view('batches-all', $data);
     }
 }
