@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0.1
+-- version 4.8.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Aug 18, 2018 at 09:20 PM
--- Server version: 10.1.32-MariaDB
--- PHP Version: 7.2.5
+-- Host: localhost
+-- Generation Time: Aug 19, 2018 at 08:56 PM
+-- Server version: 10.1.34-MariaDB
+-- PHP Version: 7.2.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `nxtstudenterp`
+-- Database: `NxtStudentERP`
 --
 
 -- --------------------------------------------------------
@@ -45,8 +45,9 @@ CREATE TABLE `batches_all` (
 INSERT INTO `batches_all` (`id`, `year_id`, `class_id`, `section_id`, `coordinator`, `subject_teachers`, `students_list`) VALUES
 (1, 1, 1, 1, 4, '{\"1\":[\"4\"],\"5\":[\"2\"]}', '[1,4]'),
 (2, 1, 1, 2, 1, '{\"1\":[\"2\"],\"3\":[\"3\"],\"7\":[\"1\"],\"8\":[\"4\"]}', '[2]'),
-(3, 1, 1, 3, 1, '{\"1\":[\"4\"],\"2\":[\"2\"],\"3\":[\"3\"]}', '[3]'),
-(4, 1, 6, 1, 1, '{\"1\":[\"4\"],\"8\":[\"4\"],\"3\":[\"3\"],\"2\":[\"2\"],\"4\":[\"3\"],\"7\":[\"1\"],\"5\":[\"2\"],\"6\":[\"4\"]}', '[]');
+(3, 1, 1, 3, 1, '{\"1\":[\"4\"],\"2\":[\"2\"],\"2\":[\"3\"]}', '[3]'),
+(4, 1, 6, 1, 1, '{\"1\":[\"4\"],\"8\":[\"4\"],\"3\":[\"3\"],\"2\":[\"2\"],\"4\":[\"3\"],\"7\":[\"1\"],\"5\":[\"2\"],\"6\":[\"4\"]}', '[]'),
+(5, 2, 1, 1, 1, '{\"1\":[\"1\"],\"3\":[\"2\"],\"4\":[\"3\"]}', '[5]');
 
 -- --------------------------------------------------------
 
@@ -172,18 +173,20 @@ CREATE TABLE `student_admission` (
   `father_o_number` text NOT NULL,
   `mother_o_number` text NOT NULL,
   `password` text NOT NULL,
-  `currrent_address_pin` int(7) NOT NULL
+  `currrent_address_pin` int(7) NOT NULL,
+  `batch_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `student_admission`
 --
 
-INSERT INTO `student_admission` (`Id`, `adm_date`, `stud_name`, `father_name`, `mother_name`, `father_number`, `mother_number`, `current_address`, `perma_address`, `father_email`, `stud_dob`, `stud_gender`, `stud_blood_group`, `stud_caste`, `city`, `state`, `perma_address_pin`, `stud_email`, `stud_phone`, `photo`, `father_o_number`, `mother_o_number`, `password`, `currrent_address_pin`) VALUES
-(1, '2018-08-19', 'Burhan Mullamitha', 'XYZ', 'ASD', '9424122932', '9424122932', 'Dahode                                    ', 'Dahode                                    ', 'DSD@yahoo.in', '1998-09-27', 'male', 'opos', 'gn', 'Gujrat', 'mp', 491441, 'burhan@gmail.com', '9424122932', '', '9424122932', '9424122932', 'Yasskdk`134', 491441),
-(2, '2018-08-19', 'Yash Golchha', 'XYZ', 'ASD', '9424122932', '9424122932', 'Dahode                                    ', 'Dahode                                    ', 'DSD@yahoo.in', '1998-09-27', 'male', 'opos', 'gn', 'Gujrat', 'mp', 491441, 'burhan@gmail.com', '9424122932', '', '9424122932', '9424122932', 'Yasdsfdjd23', 491441),
-(3, '2018-08-19', 'Aditya Gupta', 'XYZ', 'ASD', '9424122932', '9424122932', 'Dahode', 'Dahode', 'DSD@yahoo.in', '1998-09-27', 'male', 'opos', 'gn', 'Gujrat', 'mp', 491441, 'burhan@gmail.com', '9424122932', '', '9424122932', '9424122932', 'Burhan123456', 491441),
-(4, '2018-08-19', 'Subham Singh', 'XYZ', 'ASD', '9424122932', '9424122932', 'Dahode', 'Dahode', 'DSD@yahoo.in', '1998-09-27', 'male', 'opos', 'gn', 'Gujrat', 'mp', 491441, 'burhan@gmail.com', '9424122932', '', '9424122932', '9424122932', 'Burhan123456', 491441);
+INSERT INTO `student_admission` (`Id`, `adm_date`, `stud_name`, `father_name`, `mother_name`, `father_number`, `mother_number`, `current_address`, `perma_address`, `father_email`, `stud_dob`, `stud_gender`, `stud_blood_group`, `stud_caste`, `city`, `state`, `perma_address_pin`, `stud_email`, `stud_phone`, `photo`, `father_o_number`, `mother_o_number`, `password`, `currrent_address_pin`, `batch_id`) VALUES
+(1, '2018-08-19', 'Burhan Mullamitha', 'XYZ', 'ASD', '9424122932', '9424122932', 'Dahode                                    ', 'Dahode                                    ', 'DSD@yahoo.in', '1998-09-27', 'male', 'opos', 'gn', 'Gujrat', 'mp', 491441, 'burhan@gmail.com', '9424122932', 'modi.png', '9424122932', '9424122932', 'Yasskdk`134', 491441, 1),
+(2, '2018-08-19', 'Yash Golchha', 'XYZ', 'ASD', '9424122932', '9424122932', 'Dahode                                    ', 'Dahode                                    ', 'DSD@yahoo.in', '1998-09-27', 'male', 'opos', 'gn', 'Gujrat', 'mp', 491441, 'burhan@gmail.com', '9424122932', 'modi.png', '9424122932', '9424122932', 'Yasdsfdjd23', 491441, 2),
+(3, '2018-08-19', 'Aditya Gupta', 'XYZ', 'ASD', '9424122932', '9424122932', 'Dahode', 'Dahode', 'DSD@yahoo.in', '1998-09-27', 'male', 'opos', 'gn', 'Gujrat', 'mp', 491441, 'burhan@gmail.com', '9424122932', 'modi.png', '9424122932', '9424122932', 'Burhan123456', 491441, 3),
+(4, '2018-08-19', 'Subham Singh', 'XYZ', 'ASD', '9424122932', '9424122932', 'Dahode', 'Dahode', 'DSD@yahoo.in', '1998-09-27', 'male', 'opos', 'gn', 'Gujrat', 'mp', 491441, 'burhan@gmail.com', '9424122932', 'modi.png', '9424122932', '9424122932', 'Burhan123456', 491441, 1),
+(5, '2018-08-20', 'Deepansh Dubey', 'XYZ', 'ASD', '9424122932', '9424122932', 'Pune                                    ', 'Pune                                    ', 'DSD@yahoo.in', '1998-09-27', 'male', 'opos', 'gn', 'Mandla', 'mp', 491441, 'deepansh@gmail.com', '9424122932', 'deeepansh1.png', '9424122932', '9424122932', 'Deep1234', 491441, 5);
 
 -- --------------------------------------------------------
 
@@ -283,7 +286,7 @@ ALTER TABLE `years_list`
 -- AUTO_INCREMENT for table `batches_all`
 --
 ALTER TABLE `batches_all`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `classes_list`
@@ -307,7 +310,7 @@ ALTER TABLE `section_list`
 -- AUTO_INCREMENT for table `student_admission`
 --
 ALTER TABLE `student_admission`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `subject_list`
