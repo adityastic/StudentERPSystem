@@ -25,6 +25,8 @@ class Student_admission_model extends CI_Model
         $this->db->where('id',$query->id);
         $this->db->update('batches_all',$data);
 
+        $arr['batch_id'] = $query->id;
+
         $this->db->insert('student_admission', $arr);
     }
     
