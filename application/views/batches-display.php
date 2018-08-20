@@ -116,7 +116,7 @@
                                     <?php
                                         foreach ($batchStudentsInfo as $row) {
                                     ?>
-                                    <tr>
+                                    <tr class="clickable-row" data-href="<?php echo site_url('profile/' . $row->id); ?>" style="cursor: pointer">
                                         <td><span class="list-icon"><img class="rounded" src="../uploads/<?php echo $row->photo; ?>" alt=""></span></td>
                                         <td><span class="badge badge-<?php echo $badgeArray[rand(0,4)]?>"><?php echo $row->id; ?></span></td>
                                         <td><?php echo $row->name; ?></td>
