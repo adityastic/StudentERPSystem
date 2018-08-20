@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 20, 2018 at 05:10 PM
+-- Generation Time: Aug 20, 2018 at 06:29 PM
 -- Server version: 10.1.34-MariaDB
 -- PHP Version: 7.2.8
 
@@ -37,17 +37,6 @@ CREATE TABLE `batches_all` (
   `subject_teachers` text NOT NULL,
   `students_list` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `batches_all`
---
-
-INSERT INTO `batches_all` (`id`, `year_id`, `class_id`, `section_id`, `coordinator`, `subject_teachers`, `students_list`) VALUES
-(1, 1, 1, 1, 4, '{\"1\":[\"4\"],\"5\":[\"2\"]}', '[1,4]'),
-(2, 1, 1, 2, 1, '{\"1\":[\"2\"],\"3\":[\"3\"],\"7\":[\"1\"],\"8\":[\"4\"]}', '[2]'),
-(3, 1, 1, 3, 1, '{\"1\":[\"4\"],\"2\":[\"2\"],\"2\":[\"3\"]}', '[3]'),
-(4, 1, 6, 1, 1, '{\"1\":[\"4\"],\"8\":[\"4\"],\"3\":[\"3\"],\"2\":[\"2\"],\"4\":[\"3\"],\"7\":[\"1\"],\"5\":[\"2\"],\"6\":[\"4\"]}', '[]'),
-(5, 2, 1, 1, 1, '{\"1\":[\"1\"],\"3\":[\"2\"],\"4\":[\"3\"]}', '[5]');
 
 -- --------------------------------------------------------
 
@@ -112,16 +101,6 @@ CREATE TABLE `professor_joining` (
   `ifsc` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `professor_joining`
---
-
-INSERT INTO `professor_joining` (`id`, `join_date`, `prof_name`, `phone`, `prof_dob`, `email`, `gender`, `prof_category`, `state`, `city`, `prof_bloodgroup`, `current_address`, `permanent_address`, `current_address_pin`, `permanent_address_pin`, `photo`, `father_name`, `mother_name`, `password`, `highest_qualification`, `bank_name`, `pan_number`, `branch_name`, `account_number`, `ifsc`) VALUES
-(1, '2018-08-18', 'Hinduja Amplifier', '9424122932', '1998-09-27', 'hinduja@gmail.com', 'female', 'gn', 'mp', 'Indore', 'opos', 'Kartaj, Pune', 'Katraj, Indore', 491441, 491441, '', 'Golchha Modi', 'Golchha Modi', 'Yg123456', 'MA', 'SBI', 'AQWE0132DD', 'Indore', '1234567890', 'SBIN0000123'),
-(2, '2018-08-19', 'Vivek Modi', '9158392945', '1998-09-21', 'modi@gmail.com', 'male', 'gn', 'mp', 'Mandla', 'opos', 'Kartaj, Pune', 'Katraj, Indore', 491441, 491441, '', 'Aditya Gupta', 'Safari', 'Vm123458', 'MA', 'SBI', 'AQWE0132DD', 'Indore', '1234567890', 'SBIN0000123'),
-(3, '2018-08-19', 'Yash Golchha', '9424122932', '1998-09-27', 'yash@gmail.com', 'male', 'gn', 'mp', 'rajnandgaon', 'opos', 'Kartaj, Pune', 'Katraj, Pune', 491441, 491441, '', 'Nirmal Golchha', 'Hema Golchha', 'Yg123458', 'MA', 'SBI', 'AQWE0132DD', 'Indore', '1234567890', 'SBIN0000123'),
-(4, '2018-08-19', 'Rupal Singh', '9424122932', '1998-09-27', 'yash@gmail.com', 'male', 'gn', 'mp', 'rajnandgaon', 'opos', 'Kartaj, Pune', 'Katraj, Pune', 491441, 491441, '', 'Abc', 'abc', 'Yg123458', 'MA', 'SBI', 'AQWE0132DD', 'Indore', '1234567890', 'SBIN0000123');
-
 -- --------------------------------------------------------
 
 --
@@ -176,17 +155,6 @@ CREATE TABLE `student_admission` (
   `currrent_address_pin` int(7) NOT NULL,
   `batch_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `student_admission`
---
-
-INSERT INTO `student_admission` (`Id`, `adm_date`, `stud_name`, `father_name`, `mother_name`, `father_number`, `mother_number`, `current_address`, `perma_address`, `father_email`, `stud_dob`, `stud_gender`, `stud_blood_group`, `stud_caste`, `city`, `state`, `perma_address_pin`, `stud_email`, `stud_phone`, `photo`, `father_o_number`, `mother_o_number`, `password`, `currrent_address_pin`, `batch_id`) VALUES
-(1, '2018-08-19', 'Burhan Mullamitha', 'XYZ', 'ASD', '9424122932', '9424122932', 'Dahode                                    ', 'Dahode                                    ', 'DSD@yahoo.in', '1998-09-27', 'male', 'opos', 'gn', 'Gujrat', 'mp', 491441, 'burhan@gmail.com', '9424122932', 'modi.png', '9424122932', '9424122932', 'Yasskdk`134', 491441, 1),
-(2, '2018-08-19', 'Yash Golchha', 'XYZ', 'ASD', '9424122932', '9424122932', 'Dahode                                    ', 'Dahode                                    ', 'DSD@yahoo.in', '1998-09-27', 'male', 'opos', 'gn', 'Gujrat', 'mp', 491441, 'burhan@gmail.com', '9424122932', 'modi.png', '9424122932', '9424122932', 'Yasdsfdjd23', 491441, 2),
-(3, '2018-08-19', 'Aditya Gupta', 'XYZ', 'ASD', '9424122932', '9424122932', 'Dahode', 'Dahode', 'DSD@yahoo.in', '1998-09-27', 'male', 'opos', 'gn', 'Gujrat', 'mp', 491441, 'burhan@gmail.com', '9424122932', 'modi.png', '9424122932', '9424122932', 'Burhan123456', 491441, 3),
-(4, '2018-08-19', 'Subham Singh', 'XYZ', 'ASD', '9424122932', '9424122932', 'Dahode', 'Dahode', 'DSD@yahoo.in', '1998-09-27', 'male', 'opos', 'gn', 'Gujrat', 'mp', 491441, 'burhan@gmail.com', '9424122932', 'modi.png', '9424122932', '9424122932', 'Burhan123456', 491441, 1),
-(5, '2018-08-20', 'Deepansh Dubey', 'XYZ', 'ASD', '9424122932', '9424122932', 'Pune                                    ', 'Pune                                    ', 'DSD@yahoo.in', '1998-09-27', 'male', 'opos', 'gn', 'Mandla', 'mp', 491441, 'deepansh@gmail.com', '9424122932', 'deeepansh1.png', '9424122932', '9424122932', 'Deep1234', 491441, 5);
 
 -- --------------------------------------------------------
 
@@ -286,7 +254,7 @@ ALTER TABLE `years_list`
 -- AUTO_INCREMENT for table `batches_all`
 --
 ALTER TABLE `batches_all`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 --
 -- AUTO_INCREMENT for table `classes_list`
@@ -298,7 +266,7 @@ ALTER TABLE `classes_list`
 -- AUTO_INCREMENT for table `professor_joining`
 --
 ALTER TABLE `professor_joining`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 --
 -- AUTO_INCREMENT for table `section_list`
@@ -310,7 +278,7 @@ ALTER TABLE `section_list`
 -- AUTO_INCREMENT for table `student_admission`
 --
 ALTER TABLE `student_admission`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 --
 -- AUTO_INCREMENT for table `subject_list`
