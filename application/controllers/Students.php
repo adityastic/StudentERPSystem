@@ -241,7 +241,7 @@ class Students extends MY_Controller
             $result = $this->_student->get_profile($id);
             $data['name'] = $result->stud_name;
             $data['current_address'] = $result->current_address;
-            $data['class'] = $result->class_id;
+            
             $data['stud_email'] = $result->stud_email;
             $data['stud_phone'] = $result->stud_phone;
             $data['photo']=$result->photo;
