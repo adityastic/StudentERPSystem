@@ -21,7 +21,10 @@ class Student_all_model extends CI_Model
         foreach ( $yearQuery as $row)
         {
             $yearSQL = 'SELECT *  
-            FROM student_admission';
+            FROM batches_all
+            INNER JOIN years_list ON batches_all.year_id=years_list.id 
+            INNER JOIN student_admission ON batches_all.students_list=student_admission.id
+            where batches_all.year_id ='.$row->id;
             $yearQuery = $this->db->query($yearSQL)->result();
 
             $batchDetailsArray["ALL"] = array_merge($batchDetailsArray["ALL"],$yearQuery);
