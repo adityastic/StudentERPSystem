@@ -73,4 +73,12 @@ class Batches extends MY_Controller
         $data['batchDetails']=$this->_batchmodel->getBatchDetails();
         $this->load->view('batches-all', $data);
     }
+
+    public function displayBatch($id)
+    {
+        $this->load->model('Batches_display_model', '_batchmodel');
+        $data['batchStudentsInfo']=$this->_batchmodel->getBatchStudentInfo($id);
+        $data['batchInfo']=$this->_batchmodel->getBatchInfo($id);
+        $this->load->view('batches-display', $data);
+    }
 }
