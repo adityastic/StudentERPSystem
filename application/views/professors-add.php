@@ -665,7 +665,7 @@ include "leftside.php";
 
                                 <div class="col-lg-6 col-md-12">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="IFSC Code" name="field_ifsc_code" pattern="^[A-Za-z]{4}[a-zA-Z0-9]{7}$" value="<?php
+                                        <input type="text" class="form-control" placeholder="IFSC Code" name="field_ifsc_code"  value="<?php
                                         if (isset($_reEntry)) {
                                             echo $_reEntry['field_ifsc_code'];
                                         }

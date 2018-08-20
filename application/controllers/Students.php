@@ -265,7 +265,7 @@ class Students extends MY_Controller
 
             $data['name'] = $result->stud_name;
             $data['current_address'] = $result->current_address;
-            $data['class'] = $result->class_id;
+            //$data['class'] = $result->class_id;
             $data['stud_email'] = $result->stud_email;
             $data['stud_phone'] = $result->stud_phone;
             $data['photo']=$result->photo;
@@ -285,7 +285,7 @@ class Students extends MY_Controller
             $data['father_office_no']=$result->father_o_number;
             $data['mother_office_no']=$result->mother_o_number;
             $data['stud_password']=$result->password;
-            $data['year']=$result->year_id;
+           // $data['year']=$result->year_id;
             $data['current_address_pin']=$result->currrent_address_pin;
             $data['admissionnumber'] = $result->Id;
 

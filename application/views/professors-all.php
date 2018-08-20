@@ -739,7 +739,7 @@
 
                                                 foreach ($details->result() as $row) {
                                                     ?><tr class="clickable-row" data-href="<?php echo site_url('profile/' . $row->id);?>" style="cursor: pointer">
-                                                    <td align="center"><span class="list-icon"><img class="rounded" src="<?php echo $row->photo; ?>" height="40" width="50" alt="laurels school"></span></td>
+                                                    <td align="center"><span class="list-icon"><img class="rounded" src="../uploads/<?php echo $row->photo; ?>" height="40" width="50" alt="laurels school"></span></td>
                                                     <td><?php echo $row->id; ?></td>
 
                                                     <td><?php echo $row->prof_name; ?></td>
