@@ -703,7 +703,7 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="header">
-                        <h2><strong>Batch</strong> Details</h2>
+                        <h2><strong>Student</strong> Details</h2>
                         <ul class="header-dropdown">
                             <li class="remove">
                                 <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
@@ -747,12 +747,14 @@
                                         {
                                             ?>
                                             <tr>
-                                                <td><?php echo $row->id;?></td>
-                                                <td><?php echo $row->year;?></td>
-                                                <td><?php echo $row->class;?></td>
+                                                <td align="center"><span class="list-icon"><img class="rounded" src="<?php echo $row->photo; ?>" height="40" width="50" alt="laurels school"></span></td>
 
-                                                <td><?php echo $row->section;?></td>
-                                                <td><?php echo $row->prof_name;?></td>
+                                                <td><?php echo $row->Id;?></td>
+                                                <td><?php echo $row->stud_name;?></td>
+                                                <td><?php echo $row->stud_gender;?></td>
+
+                                                <td><?php echo $row->perma_address;?></td>
+                                                <td><?php echo $row->stud_phone;?></td>
                                             </tr>
                                             <?php
                                         }
