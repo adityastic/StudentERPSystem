@@ -704,15 +704,12 @@ include "leftside.php";
             <div class="col-md-12 col-lg-4">
                 <div class="card">
                     <div class="body">
-                        <img src="<?php echo $photo; ?>" alt=""  class="img-fluid rounded m-b-20">
+                        <img src="../uploads/<?php echo $photo;?>" alt="hiiiii"  class="img-fluid rounded m-b-20">
                         <h6 class="m-t-10" style="color: #111111"><?php echo $name;?></h6>
                         <div class="table-responsive">
                             <table class="table table-hover m-t-20">
                                 <tbody>
-                                    <tr>
-                                        <td>Class</td>
-                                        <td><?php echo $class;?></td>
-                                    </tr>
+                                   
                                     <tr>
                                         <td>Email ID</td>
                                         <td><strong class="col-blush"><?php echo $stud_email;?></strong></td>
