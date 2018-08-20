@@ -10,9 +10,6 @@ class Student_all_model extends CI_Model
     public function get_all_students()
     {
 
-//        $query = $this->db->get('student_admission');
-//        return $query;
-
         $batchDetailsArray = array();
         $batchDetailsArray["ALL"] = array();
 
@@ -23,7 +20,7 @@ class Student_all_model extends CI_Model
             $yearSQL = 'SELECT *  
             FROM batches_all
             INNER JOIN years_list ON batches_all.year_id=years_list.id 
-            INNER JOIN student_admission ON FIND_IN_SET(student_admission.id , batches_all.students_list) > 0
+            INNER JOIN student_admission ON FIND_IN_SET(student_admission.id , LEFT(RIGHT(batches_all.students_list, CHAR_LENGTH(batches_all.students_list)-1),CHAR_LENGTH(batches_all.students_list)-2)) > 0
             where batches_all.year_id ='.$row->id;
             $yearQuery = $this->db->query($yearSQL)->result();
 
