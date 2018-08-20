@@ -734,7 +734,7 @@
                                         <thead>
                                         <tr>
                                             <th align="center">&nbsp;&nbsp;Picture</th>
-                                            <th align="center">Id</th>
+                                            <th align="center">#</th>
                                             <th align="center">Name</th>
                                             <th align="center">Gender</th>
                                             <th align="center">Address</th>
@@ -747,7 +747,7 @@
                                         {
                                             ?>
                                             <tr>
-                                                <td align="center"><span class="list-icon"><img class="rounded" src="<?php echo $row->photo; ?>" height="40" width="50" alt="laurels school"></span></td>
+                                                <td align="center"><span class="list-icon"><img class="rounded" src="../uploads/<?php echo $row->photo; ?>" height="40" width="50" alt="laurels school"></span></td>
 
                                                 <td><?php echo $row->Id;?></td>
                                                 <td><?php echo $row->stud_name;?></td>
