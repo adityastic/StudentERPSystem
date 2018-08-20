@@ -862,13 +862,6 @@
         window.location = $(this).data("href");
     });
 });
-    jQuery(document).ready(function($) {
-        $(".clickable-line").click(function () {
-            alert($(this).text());
-            
-        });
-    });
-
 </script>
 </body>
 </html>
