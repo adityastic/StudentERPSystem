@@ -69,81 +69,68 @@
     <!-- Left Sidebar -->
     <?php include 'leftside.php';?>
     <!-- Main Content -->
-    <section class="content">
+    <?php $badgeArray = array('primary','warning','info','default','success');?>
+    <section class="content profile-page">
     <div class="block-header">
         <div class="row">
             <div class="col-lg-7 col-md-6 col-sm-12">
-                <h2>All Batches
-                <small><?php echo $welcome_string; ?></small>
+                <h2>Class : <?php echo $batchInfo->class?><br>Section :  <?php echo $batchInfo->section?><br>Year :  <?php echo $batchInfo->year?>
+                <small><?php echo $schoolname;?></small>
                 </h2>
             </div>
         </div>
     </div>
     <div class="container-fluid">
         <div class="row clearfix">
-            <div class="col-lg-12">
-                <div class="card">
+            <div class="col-md-12">
+                <div class="card student-list">
                     <div class="header">
-                        <h2><strong>Batch</strong> Details</h2>
-                        <ul class="header-dropdown">                            
+                        <h2><strong>Student</strong> List</h2>
+                        <ul class="header-dropdown">
+                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
+                                <ul class="dropdown-menu dropdown-menu-right slideUp">
+                                    <li><a href="javascript:void(0);">2017 Year</a></li>
+                                    <li><a href="javascript:void(0);">2016 Year</a></li>
+                                    <li><a href="javascript:void(0);">2015 Year</a></li>
+                                </ul>
+                            </li>
                             <li class="remove">
                                 <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
                             </li>
                         </ul>
                     </div>
                     <div class="body">
-                        <ul class="nav nav-tabs padding-0">
-                            <?php 
-                                foreach ($batchDetails as $key => $value)
-                                {?>
-                                    <li class="nav-item"><a class="nav-link <?php echo (strcmp($key,'ALL')==0)?'active':'';?>" data-toggle="tab" href="#tab<?php echo $key;?>"><?php echo $key;?></a></li>
-                                <?php
-                                }
-                            ?>
-                        </ul>                        
-                    </div>
-                </div>
-                <div class="tab-content">  
-                    <?php 
-                        foreach ($batchDetails as $key => $value)
-                        {
-                    ?>                 
-                    <div class="tab-pane <?php echo (strcmp($key,'ALL')==0)?'active':'';?>" id="tab<?php echo $key;?>">
-                        <div class="card">
-                            <div class="body table-responsive">
-                                <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Year</th>
-                                            <th>Class</th>
-                                            <th>Section</th>
-                                            <th>Coordinator</th>
-                                        </tr>
-                                    </thead>                            
-                                    <tbody>
-                                        <?php
-                                            foreach ($value as $row)
-                                            {
-                                        ?>
-                                            <tr class="clickable-row" data-href="<?php echo site_url('batchDetail/' . $row->id); ?>" style="cursor: pointer">
-                                                <td><?php echo $row->id;?></td>
-                                                <td><?php echo $row->year;?></td>
-                                                <td><?php echo $row->class;?></td>
-                                                <td><?php echo $row->section;?></td>
-                                                <td><?php echo $row->prof_name;?></td>
-                                            </tr>
-                                        <?php
-                                            }
-                                        ?>
-                                    </tbody>
-                                </table>
-                            </div>
+                        <div class="table-responsive">
+                            <table class="table table-hover m-b-0">
+                                <thead>
+                                    <tr>                                       
+                                        <th>Photo</th>
+                                        <th>#</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Father Name</th>
+                                        <th>Father Number</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                        foreach ($batchStudentsInfo as $row) {
+                                    ?>
+                                    <tr>
+                                        <td><span class="list-icon"><img class="rounded" src="../uploads/<?php echo $row->photo; ?>" alt=""></span></td>
+                                        <td><span class="badge badge-<?php echo $badgeArray[rand(0,4)]?>"><?php echo $row->id; ?></span></td>
+                                        <td><?php echo $row->name; ?></td>
+                                        <td><?php echo $row->email; ?></td>
+                                        <td><?php echo $row->father_number; ?></td>
+                                        <td><?php echo $row->father_name; ?></td>
+                                    </tr>
+                                    <?php
+                                        }
+                                    ?>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                    <?php 
-                        }
-                    ?>
                 </div>
             </div>
         </div>
