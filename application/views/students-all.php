@@ -747,7 +747,7 @@
                                         {
                                             ?>
                                             <tr class="clickable-row" data-href="<?php echo site_url('profile/' . $row->Id); ?>" style="cursor: pointer">
-                                                <td align="center"><span class="list-icon"><img class="rounded" src="../uploads/<?php echo $row->photo; ?>" height="40" width="50" alt="laurels school"></span></td>
+                                                <td align="center"><span class="list-icon"><img class="rounded" src="../uploads/<?php echo $row->photo; ?>" height="53.3" width="40" alt="laurels school"></span></td>
 
                                                 <td><?php echo $row->Id;?></td>
                                                 <td><?php echo $row->stud_name;?></td>
