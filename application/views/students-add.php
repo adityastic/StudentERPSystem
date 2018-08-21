@@ -220,7 +220,7 @@
 </nav>
 <!-- Left Sidebar -->
 <?php
-    include "leftside.php";
+    include "LeftSide.php";
 ?>
 
 <section class="content profile-page">

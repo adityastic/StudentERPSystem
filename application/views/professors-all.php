@@ -216,7 +216,7 @@
 </nav>
 <!-- Left Sidebar -->
 <?php
-    include "leftside.php";
+    include "LeftSide.php";
 ?>
 <!-- Right Sidebar -->
 <!-- <aside id="rightsidebar" class="right-sidebar">

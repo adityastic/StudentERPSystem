@@ -67,7 +67,7 @@
       </ul>
     </nav>
     <!-- Left Sidebar -->
-    <?php include 'leftside.php';?>
+    <?php include 'LeftSide.php';?>
     <!-- Main Content -->
     <section class="content">
     <div class="block-header">

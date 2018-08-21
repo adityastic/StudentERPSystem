@@ -67,7 +67,7 @@
       </ul>
     </nav>
     <!-- Left Sidebar -->
-    <?php include 'leftside.php';?>
+    <?php include 'LeftSide.php';?>
     <!-- Main Content -->
     <?php $badgeArray = array('primary','warning','info','default','success');?>
     <section class="content profile-page">
