@@ -5,38 +5,30 @@
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
-    <style>
 
-        input::-webkit-input-placeholder {
-            color: rgba(2, 2, 2, 0.89) !important;
-        
-        }
-
-
-    </style>
 <title><?php echo $title;?></title>
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <!-- Favicon-->
-<link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/plugins/bootstrap/css/bootstrap.min.css">
 <!-- Dropzone Css -->
-<!-- <link href="../assets/plugins/dropzone/dropzone.css" rel="stylesheet"> -->
-    <link href="../assets/plugins/valid/valid.css" rel="stylesheet">
+<!-- <link href="../../assets/plugins/dropzone/dropzone.css" rel="stylesheet"> -->
+    <link href="../../assets/plugins/valid/valid.css" rel="stylesheet">
 <!-- Bootstrap Material Datetime Picker Css -->
-<link href="../assets/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet" />
+<link href="../../assets/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet" />
 <!-- Bootstrap Select Css -->
-<link href="../assets/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+<link href="../../assets/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
 <!-- Custom Css -->
-<link rel="stylesheet" href="../assets/css/main.css">
-<link rel="stylesheet" href="../assets/css/color_skins.css">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="../../assets/css/color_skins.css">
 </head>
 <body class="<?php echo $theme;?>">
 <!-- Page Loader -->
 <div class="page-loader-wrapper">
     <div class="loader">
-        <div class="m-t-30"><img class="zmdi-hc-spin" src="../assets/images/logo.svg" width="48" height="48" alt="Oreo"></div>
+        <div class="m-t-30"><img class="zmdi-hc-spin" src="../../assets/images/logo.svg" width="48" height="48" alt="Oreo"></div>
         <p>Please wait...</p>
     </div>
-</div>
+</div> 
 <!-- Overlay For Sidebars -->
 <div class="overlay"></div>
 <!-- Top Bar -->
@@ -45,7 +37,7 @@
         <li>
             <div class="navbar-header">
                 <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="<?php echo site_url('dashboard');?>"><img src="../assets/images/logo.svg" width="30" alt="Oreo"><span class="m-l-10"><?php echo $company_name;?></span></a>
+                <a class="navbar-brand" href="<?php echo site_url('dashboard');?>"><img src="../../assets/images/logo.svg" width="30" alt="Oreo"><span class="m-l-10"><?php echo $company_name;?></span></a>
             </div>
         </li>
         <li><a href="javascript:void(0);" class="ls-toggle-btn" data-close="true"><i class="zmdi zmdi-swap"></i></a></li>
@@ -61,7 +53,7 @@
 <!--                        <li>-->
 <!--                            <a href="javascript:void(0);">-->
 <!--                                <div class="media">-->
-<!--                                    <img class="media-object" src="../assets/images/xs/avatar2.jpg" alt="">-->
+<!--                                    <img class="media-object" src="../../assets/images/xs/avatar2.jpg" alt="">-->
 <!--                                    <div class="media-body">-->
 <!--                                        <span class="name">Sophia <span class="time">30min ago</span></span>-->
 <!--                                        <span class="message">There are many variations of passages</span>-->
@@ -72,7 +64,7 @@
 <!--                        <li>-->
 <!--                            <a href="javascript:void(0);">-->
 <!--                                <div class="media">-->
-<!--                                    <img class="media-object" src="../assets/images/xs/avatar3.jpg" alt="">-->
+<!--                                    <img class="media-object" src="../../assets/images/xs/avatar3.jpg" alt="">-->
 <!--                                    <div class="media-body">-->
 <!--                                        <span class="name">Sophia <span class="time">31min ago</span></span>-->
 <!--                                        <span class="message">There are many variations of passages of Lorem Ipsum</span>-->
@@ -83,7 +75,7 @@
 <!--                        <li>-->
 <!--                            <a href="javascript:void(0);">-->
 <!--                                <div class="media">-->
-<!--                                    <img class="media-object" src="../assets/images/xs/avatar4.jpg" alt="">-->
+<!--                                    <img class="media-object" src="../../assets/images/xs/avatar4.jpg" alt="">-->
 <!--                                    <div class="media-body">-->
 <!--                                        <span class="name">Isabella <span class="time">35min ago</span></span>-->
 <!--                                        <span class="message">There are many variations of passages</span>-->
@@ -94,7 +86,7 @@
 <!--                        <li>-->
 <!--                            <a href="javascript:void(0);">-->
 <!--                                <div class="media">-->
-<!--                                    <img class="media-object" src="../assets/images/xs/avatar5.jpg" alt="">-->
+<!--                                    <img class="media-object" src="../../assets/images/xs/avatar5.jpg" alt="">-->
 <!--                                    <div class="media-body">-->
 <!--                                        <span class="name">Alexander <span class="time">35min ago</span></span>-->
 <!--                                        <span class="message">Contrary to popular belief, Lorem Ipsum random</span>-->
@@ -105,7 +97,7 @@
 <!--                        <li>-->
 <!--                            <a href="javascript:void(0);">-->
 <!--                                <div class="media">-->
-<!--                                    <img class="media-object" src="../assets/images/xs/avatar6.jpg" alt="">-->
+<!--                                    <img class="media-object" src="../../assets/images/xs/avatar6.jpg" alt="">-->
 <!--                                    <div class="media-body">-->
 <!--                                        <span class="name">Grayson <span class="time">1hr ago</span></span>-->
 <!--                                        <span class="message">There are many variations of passages</span>-->
@@ -140,13 +132,13 @@
 <!--                                    <ul class="list-unstyled team-info">-->
 <!--                                        <li class="m-r-15"><small class="text-muted">Team</small></li>-->
 <!--                                        <li>-->
-<!--                                            <img src="../assets/images/xs/avatar2.jpg" alt="Avatar">-->
+<!--                                            <img src="../../assets/images/xs/avatar2.jpg" alt="Avatar">-->
 <!--                                        </li>-->
 <!--                                        <li>-->
-<!--                                            <img src="../assets/images/xs/avatar3.jpg" alt="Avatar">-->
+<!--                                            <img src="../../assets/images/xs/avatar3.jpg" alt="Avatar">-->
 <!--                                        </li>-->
 <!--                                        <li>-->
-<!--                                            <img src="../assets/images/xs/avatar4.jpg" alt="Avatar">-->
+<!--                                            <img src="../../assets/images/xs/avatar4.jpg" alt="Avatar">-->
 <!--                                        </li>                            -->
 <!--                                    </ul>-->
 <!--                                </div>-->
@@ -164,19 +156,19 @@
 <!--                                    <ul class="list-unstyled team-info">-->
 <!--                                        <li class="m-r-15"><small class="text-muted">Team</small></li>-->
 <!--                                        <li>-->
-<!--                                            <img src="../assets/images/xs/avatar10.jpg" alt="Avatar">-->
+<!--                                            <img src="../../assets/images/xs/avatar10.jpg" alt="Avatar">-->
 <!--                                        </li>-->
 <!--                                        <li>-->
-<!--                                            <img src="../assets/images/xs/avatar9.jpg" alt="Avatar">-->
+<!--                                            <img src="../../assets/images/xs/avatar9.jpg" alt="Avatar">-->
 <!--                                        </li>-->
 <!--                                        <li>-->
-<!--                                            <img src="../assets/images/xs/avatar8.jpg" alt="Avatar">-->
+<!--                                            <img src="../../assets/images/xs/avatar8.jpg" alt="Avatar">-->
 <!--                                        </li>-->
 <!--                                        <li>-->
-<!--                                            <img src="../assets/images/xs/avatar7.jpg" alt="Avatar">-->
+<!--                                            <img src="../../assets/images/xs/avatar7.jpg" alt="Avatar">-->
 <!--                                        </li>-->
 <!--                                        <li>-->
-<!--                                            <img src="../assets/images/xs/avatar6.jpg" alt="Avatar">-->
+<!--                                            <img src="../../assets/images/xs/avatar6.jpg" alt="Avatar">-->
 <!--                                        </li>-->
 <!--                                    </ul>-->
 <!--                                </div>-->
@@ -194,13 +186,13 @@
 <!--                                    <ul class="list-unstyled team-info">-->
 <!--                                        <li class="m-r-15"><small class="text-muted">Team</small></li>-->
 <!--                                        <li>-->
-<!--                                            <img src="../assets/images/xs/avatar5.jpg" alt="Avatar">-->
+<!--                                            <img src="../../assets/images/xs/avatar5.jpg" alt="Avatar">-->
 <!--                                        </li>-->
 <!--                                        <li>-->
-<!--                                            <img src="../assets/images/xs/avatar2.jpg" alt="Avatar">-->
+<!--                                            <img src="../../assets/images/xs/avatar2.jpg" alt="Avatar">-->
 <!--                                        </li>-->
 <!--                                        <li>-->
-<!--                                            <img src="../assets/images/xs/avatar7.jpg" alt="Avatar">-->
+<!--                                            <img src="../../assets/images/xs/avatar7.jpg" alt="Avatar">-->
 <!--                                        </li>                            -->
 <!--                                    </ul>-->
 <!--                                </div>-->
@@ -232,7 +224,7 @@
 ?>
 
 <section class="content profile-page">
-    <form method="post" action="<?php echo site_url('students/all_students');?>" enctype="multipart/form-data">
+    <form method="post" action="<?php echo site_url('students/update_students/'.$admissionnumber);?>" enctype="multipart/form-data">
     <div class="block-header">
         <div class="row">
             <div class="col-lg-7 col-md-6 col-sm-12">
@@ -263,7 +255,7 @@
                         <div class="row clearfix">
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                      <input type="text" class="form-control" placeholder="Admission Number" value="<?php echo  $admissionnumber; ?>" name="field_adm_number" disabled>
+                                    <input type="text" class="form-control" placeholder="Admission Number" value="<?php echo $admissionnumber;?>" name="field_adm_number" disabled>
                                 </div>
                             </div>
                         </div>                        
@@ -271,7 +263,7 @@
                 </div>
             </div>
         </div>
-        <!--  <?php
+        <?php
         if (isset($errorstring)) {
             echo '<div class="alert alert-danger">
                             <strong>Oh snap!</strong> Change a few things up and try submitting again.<br>
@@ -293,7 +285,7 @@
                             </div>
                         </div>';
         }
-        ?> -->
+        ?> 
         <div class="row clearfix">
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="card">
@@ -304,32 +296,24 @@
                         <div class="row clearfix">
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="First Name" value="<?php echo $name; ?>" name="field_stud_fname" required >
+                                    <input type="text" class="form-control" placeholder="Name" value="<?php
+                                        echo $name;
+                                    ?>" name="field_stud_fname" required >
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12">
-
-                            </div>
-                            </div>
-                          
-
-
+                        </div>
                         <div class="row clearfix">
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="number *" min="1111111111" max="9999999999" class="form-control" placeholder="Phone No." name="field_stud_ph" value="<?php 
-                                     echo $stud_phone?>" required>
+                                    <input type="number *" min="1111111111" max="9999999999" class="form-control" placeholder="Phone No." name="field_stud_ph" value="<?php
+                                        echo $stud_phone;
+                                    ?>" required>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" class="datetimepicker form-control" placeholder=<?php echo  $student_dob ?>  name="field_stud_dob" value="<?php
-                                    if (isset($_reEntry)) {
-                                        echo $_reEntry['field_stud_dob'];
-                                    }
-
-
-
+                                    <input type="text" class="datetimepicker form-control" placeholder="Date of Birth" name="field_stud_dob" value="<?php
+                                        echo $student_dob;
                                     ?>" required>
                                 </div>
                             </div>
@@ -337,9 +321,9 @@
                         <div class="row clearfix">
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Email" name="field_stud_email"value="<?php 
-                                        echo $stud_email
-                                    ?>" 
+                                    <input type="email" class="form-control" placeholder="Email" name="field_stud_email"value="<?php
+                                        echo $stud_email;
+                                    ?>"
                                     required >
                                 </div>
                             </div>
@@ -348,45 +332,36 @@
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <select class="form-control show-tick" name="field_stud_gender" >
                                     <?php 
-
-                                        $_genderArr = array(
+                                        $_genderArr = array("none"=>"-- Gender --",
                                                             "male"=>"Male",
                                                             "female"=>"Female",
                                                             "other"=>"Other");
                                         foreach ($_genderArr as $key => $value) {
-                                            if (isset($_reEntry)) {
-                                                if (strcmp($value, $student_gender['field_stud_gender']) == 0) {
-                                                    echo '<option value="' . $key . '" selected>' . $student_gender . '</option>';
+                                                if (strcmp($key, $student_gender) == 0) {
+                                                    echo '<option value="' . $key . '" selected>' . $value . '</option>';
                                                 } else {
-                                                    echo '<option value="' . $key . '">' . $student_gender . '</option>';
+                                                    echo '<option value="' . $key . '">' . $value . '</option>';
                                                 }
-                                            } else {
-                                                echo '<option value="' . $key . '">' . $value . '</option>';
-                                            }
-                                        }
+                                            } 
                                     ?>
                                 </select>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <select class="form-control show-tick" name="field_stud_caste" >
                                     <?php 
-                                        $_genderArr = array(
+                                        $_genderArr = array("none"=>"-- Category --",
                                                             "gn"=>"GN",
                                                             "obc"=>"OBC",
                                                             "ST"=>"ST",
                                                             "sc"=>"SC");
                                         foreach ($_genderArr as $key => $value) {
-                                            if (isset($_reEntry)) {
-                                                if (strcmp($value, $student_caste['field_stud_caste']) == 0) {
-                                                    echo '<option value="' . $key . '" selected>' . $student_caste . '</option>';
+                                                if (strcmp($key, $student_caste) == 0) {
+                                                    echo '<option value="' . $key . '" selected>' . $value . '</option>';
                                                 } else {
-                                                    echo '<option value="' . $key . '">' . $student_caste. '</option>';
+                                                    echo '<option value="' . $key . '">' . $value . '</option>';
                                                 }
-                                            } else {
-                                                echo '<option value="' . $key . '">' . $value . '</option>';
                                             }
-                                        }
-                                    ?>
+                                        ?>
                                 </select>
                             </div>
                         </div>
@@ -395,29 +370,25 @@
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <select class="form-control show-tick" name="field_state" >
                                     <?php 
-                                        $_genderArr = array(
+                                        $_genderArr = array("none"=>"- State --",
                                                             "mp"=>"Madhya Pradesh",
                                                             );
                                         foreach ($_genderArr as $key => $value) {
-                                            if (isset($_reEntry)) {
-                                                if (strcmp($key, $state['field_state']) == 0) {
-                                                    echo '<option value="' . $key . '" selected>' . $state . '</option>';
+                                                if (strcmp($key, $state) == 0) {
+                                                    echo '<option value="' . $key . '" selected>' . $value . '</option>';
                                                 } else {
-                                                    echo '<option value="' . $key . '">' . $state . '</option>';
+                                                    echo '<option value="' . $key . '">' . $value . '</option>';
                                                 }
-                                            } else {
-                                                echo '<option value="' . $key . '">' . $value . '</option>';
                                             }
-                                        }
                                     ?>
                                 </select>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
                                     <input type="text" class="form-control" placeholder="City" name="field_city" 
-                                    value="<?php 
-                                      echo $city
-                                    ?>" 
+                                    value="<?php
+                                        echo $city;
+                                    ?>"
                                     required>
                                 </div>
                             </div>
@@ -425,7 +396,7 @@
                                 <select class="form-control show-tick" name="field_bgroup" >
                                     <?php 
                                         $_genderArr = array(
-                                  
+                                    "none"=>"-- Blood Group --",
                                     "opos"=>"O+",
                                     "oneg"=>"O-",
                                     "apos"=>"A+",
@@ -435,16 +406,12 @@
                                     "abpos"=>"AB+",
                                     "abneg"=>"AB-" );
                                         foreach ($_genderArr as $key => $value) {
-                                            if (isset($_reEntry)) {
-                                                if (strcmp($key,$student_bg) == 0) {
-                                                    echo '<option value="' . $key . '" selected>' . $student_bg . '</option>';
+                                            if (strcmp($key, $student_bg) == 0) {
+                                                    echo '<option value="' . $key . '" selected>' . $value . '</option>';
                                                 } else {
-                                                    echo '<option value="' . $key . '">' . $student_bg . '</option>';
+                                                    echo '<option value="' . $key . '">' . $value . '</option>';
                                                 }
-                                            } else {
-                                                echo '<option value="' . $key . '">' . $value . '</option>';
                                             }
-                                        }
                                     ?>
                                 </select>
                             </div>
@@ -454,13 +421,16 @@
                             <div class="col-sm-12" >
                                 Enter Current Address :
                                 <div class="form-group">
-                                    <textarea rows="4" class="form-control no-resize" placeholder="Address" name="field_curradd" required ><?php echo $current_address ?></textarea>
+                                    <textarea rows="4" class="form-control no-resize" placeholder="Address" name="field_curradd" required ><?php
+                                        echo $current_address;
+                                    ?>
+                                    </textarea>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="number" min="111111" max="999999" class="form-control" placeholder="PinCode" name="field_currpin" value="<?php 
-                                       echo $current_address_pin
+                                    <input type="number" min="111111" max="999999" class="form-control" placeholder="PinCode" name="field_currpin" value="<?php
+                                        echo $current_address_pin;
                                     ?>" required>
                                 </div>
                             </div>
@@ -470,13 +440,16 @@
                             <div class="col-sm-12">
                                 Enter Permanent Address :
                                 <div class="form-group">
-                                    <textarea rows="4" class="form-control no-resize" placeholder="Address" name="field_permadd"  required><?php echo $perma_address ?> </textarea>
+                                    <textarea rows="4" class="form-control no-resize" placeholder="Address" name="field_permadd" required><?php
+                                        echo $perma_address;
+                                    ?>
+                                    </textarea>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="number" min="111111" max="999999" class="form-control" placeholder="PinCode" name="field_permpin" value="<?php 
-                                       echo $perma_address_pin
+                                    <input type="number" min="111111" max="999999" class="form-control" placeholder="PinCode" name="field_permpin" value="<?php
+                                        echo $perma_address_pin;
                                     ?>" required>
                                 </div>
                             </div>
@@ -485,11 +458,7 @@
                         <div class="row clearfix">
                             <div class="col-lg-12 col-md-12 col-sm-12">
                                 Upload Student Photo :
-                <input id="files" type="file" name="field_photo" accept="image/*" value="<?php 
-                                        if (isset($_reEntry)) {
-                                            echo $_reEntry['field_photo'];
-                                        }
-                                    ?>" required><br><br>
+                <input id="files" type="file" name="field_photo" accept="image/*"><br><br>
                 <img id="image" />
                             </div>
                         </div>
@@ -507,52 +476,52 @@
                         <div class="row clearfix">
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Father's Name" name="field_father_name" value="<?php 
-                                       echo $father_name
+                                    <input type="text" class="form-control" placeholder="Father's Name" name="field_father_name" value="<?php
+                                        echo $father_name;
                                     ?>" required>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Mother's Name" name="field_mother_name" value="<?php 
-                                       echo $mother_name
+                                    <input type="text" class="form-control" placeholder="Mother's Name" name="field_mother_name" value="<?php
+                                        echo $mother_name;
                                     ?>" >
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="number" class="form-control" placeholder="Father's Contact Number" name="field_father_number" value="<?php 
-                                       echo $father_no
+                                    <input type="number" class="form-control" placeholder="Father's Contact Number" name="field_father_number" value="<?php
+                                        echo $father_no;
                                     ?>" required>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Mother's Contact Number" name="field_mother_number" value="<?php 
-                                       echo $mother_no
+                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Mother's Contact Number" name="field_mother_number" value="<?php
+                                        echo $mother_no;
                                     ?>" required>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Father's Office Number" name="field_father_onumber"value="<?php 
-                                        echo $father_office_no
+                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Father's Office Number" name="field_father_onumber"value="<?php
+                                        echo $father_office_no;
                                     ?>"  
                                     required>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Mother's Office Number" name="field_mother_onumber"value="<?php 
-                                        echo $mother_office_no
-                                    ?>"  required>
+                                    <input type="number" min="1111111111" max="9999999999" class="form-control" placeholder="Mother's Office Number" name="field_mother_onumber"value="<?php
+                                        echo $mother_office_no;
+                                    ?>"   required>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Fathers's Email" name="field_father_email" value="<?php 
-                                        echo $father_email
-                                    ?>" required>
+                                    <input type="email" class="form-control" placeholder="Fathers's Email" name="field_father_email" value="<?php
+                                        echo $father_email;
+                                    ?>"  required>
                                 </div>
                             </div>
                         </div>
@@ -570,7 +539,9 @@
                         <div class="row clearfix">
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="psw" placeholder="Password"  name="psw" pattern="(?=.*\d)(?=.*[A-Z]title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  value ="<?php echo $stud_password ?>"required>
+                                    <input type="password" class="form-control" id="psw" value="<?php
+                                        echo $stud_password;
+                                    ?>"  placeholder="Password"  name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
                                 </div>
                             </div>
                         </div>
@@ -597,42 +568,47 @@
                         <div class="row clearfix">
                             <div class="col-lg-6 col-md-12">
                                 <select class="form-control show-tick" name="field_class_id">
-                                    <option value="$class"><?php echo $class ?></option>
-                                    <?php 
-                                        $_genderArr = array(
-                                   
-                                    "1"=>"1st",
-                                    "2"=>"2nd",
-                                    "3"=>"3rd",
-                                    "4"=>"4th",
-                                    "5"=>"5th",
-                                    "6"=>"6th",
-                                    "7"=>"7th",
-                                    "8"=>"8th",
-                                    "9"=>"9th",
-                                    "10"=>"10th",
-                                    "11"=>"11th",
-                                    "12"=>"12th" );
-                                        foreach ($_genderArr as $key => $value) {
-                                            if (isset($_reEntry)) {
-                                                if (strcmp($key,$class) == 0) {
-                                                    echo '<option value="' . $key . '" selected>' . $class . '</option>';
-                                                } else {
-                                                    echo '<option value="' . $key . '">' . $class. '</option>';
-                                                }
-                                            } else {
-                                                echo '<option value="' . $key . '">' . $value . '</option>';
-                                            }
+                                    <?php
+                                    foreach ($classes->result() as $row) {
+                                        if (strcmp($row->class, $class1) == 0) {
+                                                echo "<option value=$row->id selected>$row->class</option>";
+                                        } else {
+                                            echo "<option value=$row->id>$row->class</option>";
                                         }
+                                    }
+
                                     ?>
                                 </select>
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <select class="form-control show-tick" name="field_year_id">
-                                    <option value="$year"><?php echo $year ?></option>
+                                    <?php
 
-                                    <option value="2017">2017</option>
-                                    <option value="2018">2018</option>
+                                    foreach ($years->result() as $row) {
+                                        if (strcmp($row->year, $year1) == 0) {
+                                                echo "<option value=$row->id selected>$row->year</option>";
+                                        } else {
+                                            echo "<option value=$row->id>$row->year</option>";
+                                        }
+                                    }
+                                    ?>
+                                </select>
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+                            <div class="col-sm-12">
+                                <select class="form-control show-tick" name="field_section_id">
+                                    <?php
+
+                                    foreach ($sections->result() as $row) {
+                                        if (strcmp($row->section, $section1) == 0) {
+                                            echo "<option value=$row->id selected>$row->section</option>";
+                                        } else {
+                                            echo "<option value=$row->id>$row->section</option>";
+                                        }
+                                    }
+                                    ?>
                                 </select>
                             </div>
                         </div>
@@ -641,24 +617,24 @@
             </div>
         </div>
         <div class="col-sm-12">
-            <button type="submit" class="btn btn-raised btn-round btn-primary">Update</button>
+            <button type="submit" class="btn btn-raised btn-round btn-primary">Submit</button>
         </div>
     </div>
 </form>
 </section>
 <!-- Jquery Core Js --> 
-<script src="../assets/bundles/libscripts.bundle.js"></script> <!-- Bootstrap JS and jQuery v3.2.1 -->
-<script src="../assets/bundles/vendorscripts.bundle.js"></script> <!-- slimscroll, waves Scripts Plugin Js -->  
+<script src="../../assets/bundles/libscripts.bundle.js"></script> <!-- Bootstrap JS and jQuery v3.2.1 -->
+<script src="../../assets/bundles/vendorscripts.bundle.js"></script> <!-- slimscroll, waves Scripts Plugin Js -->  
 
-<script src="../assets/plugins/autosize/autosize.js"></script> <!-- Autosize Plugin Js --> 
-<script src="../assets/plugins/momentjs/moment.js"></script> <!-- Moment Plugin Js --> 
-<!-- <script src="../assets/plugins/dropzone/dropzone.js"></script> Dropzone Plugin Js -->
-<script src="../assets/plugins/valid/valid.js"></script> <!-- valid Plugin Js -->
+<script src="../../assets/plugins/autosize/autosize.js"></script> <!-- Autosize Plugin Js --> 
+<script src="../../assets/plugins/momentjs/moment.js"></script> <!-- Moment Plugin Js --> 
+<!-- <script src="../../assets/plugins/dropzone/dropzone.js"></script> Dropzone Plugin Js -->
+<script src="../../assets/plugins/valid/valid.js"></script> <!-- valid Plugin Js -->
 <!-- Bootstrap Material Datetime Picker Plugin Js --> 
-<script src="../assets/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+<script src="../../assets/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
 
-<script src="../assets/bundles/mainscripts.bundle.js"></script><!-- Custom Js -->
-<script src="../assets/js/pages/forms/basic-form-elements.js"></script>
+<script src="../../assets/bundles/mainscripts.bundle.js"></script><!-- Custom Js -->
+<script src="../../assets/js/pages/forms/basic-form-elements.js"></script>
 <script type="text/javascript">
     document.getElementById("files").onchange = function () {
     var reader = new FileReader();

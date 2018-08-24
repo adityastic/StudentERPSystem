@@ -726,7 +726,7 @@ include "leftside.php";
                             </table>
                         </div>
                         <a href="courses-info.html" class="btn btn-block btn-raised btn-primary btn-round waves-effect" role="button">DElETE STUDENT</a>
-                         <a href="courses-info.html" class="btn btn-block btn-raised btn-primary btn-round waves-effect" role="button">UPDATE STUDENT</a>
+                         <a href="<?php echo site_url('students/update_profile/'.$id);?>" class="btn btn-block btn-raised btn-primary btn-round waves-effect" role="button">UPDATE STUDENT</a>
                     </div>
                 </div>
             </div>

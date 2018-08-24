@@ -31,10 +31,9 @@ class Student_all_model extends CI_Model
     }
 
     public function get_years()
-{
-
-    $query = $this->db->get('years_list');
-    return $query;
-}
+    {
+        $query = $this->db->get('years_list');
+        return $query;
+    }
 
 }
