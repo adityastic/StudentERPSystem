@@ -244,7 +244,7 @@
     </nav>
     <!-- Left Sidebar -->
     <?php
-include "leftside.php";
+include "LeftSide.php";
 ?>
     <section class="content profile-page">
       <form method="post" action="<?php echo site_url('Batches/add_batch');?>" enctype="multipart/form-data">

@@ -216,7 +216,7 @@
 </nav>
 <!-- Left Sidebar -->
 
-<?php include "leftside.php";?>
+<?php include "LeftSide.php";?>
 <!-- Chat-launcher -->
 <!-- <div class="chat-launcher"></div>
 <div class="chat-wrapper">
