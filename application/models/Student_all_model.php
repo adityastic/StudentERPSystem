@@ -7,6 +7,8 @@ class Student_all_model extends CI_Model
         $this->load->database();
     }
 
+
+
     public function get_all_students()
     {
 

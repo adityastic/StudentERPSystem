@@ -516,7 +516,7 @@ class Students extends MY_Controller
                     'password'=>$password,
                 );}
 
-                $this->_student1->update_student($id1,$insertArray);
+                $this->_student1->update_student($id1,$insertArray,$field_class_id,$field_year_id,$field_section_id);
 
             }
         }else
