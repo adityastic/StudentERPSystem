@@ -24,28 +24,12 @@ class Student_profile_model extends CI_Model
             $yearQuery = $this->db->query($query);
     	    return $yearQuery;
     }
-    public function update_student($data,$id,$classid,$yearid,$sectionid)
-    {
-        $query = $this->db->get_where('batches_all', array('class_id =' => $classid,'year_id =' => $yearid,'section_id =' => $sectionid))->row();
 
-        $data['batch_id'] = $query->id;
+    public function update_student($id,$arr)
+    {
 
         $this->db->where('id', $id);
-        $this->db->update('student_admission', $data);
-        
-        $student_list = json_decode($query->students_list);
-        foreach ($students_list as $key) {
-            # code...
-        }
+        $this->db->update('student_admission', $arr);
 
-
-        $this->db->where('id',$query->id);
-        $this->db->update('batches_all',$data);
-
-
-
-        /*$this->db->where('id',$query->id);
-        $this->db->update('batches_all',$data);
-*/
     }
 }

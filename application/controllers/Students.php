@@ -290,7 +290,7 @@ class Students extends MY_Controller
             $data['current_address_pin']=$result->currrent_address_pin;
             $data['admissionnumber'] = $id;
 
-            $Batch_result = $this->_student->get_batch($result->batch_id);            
+            $Batch_result = $this->_student->get_batch($result->batch_id);
             $data['batch']=$Batch_result;
             $data['batch1']=$result->batch_id;
             foreach ($Batch_result->result() as $row)
@@ -310,10 +310,10 @@ class Students extends MY_Controller
     {
         $this->load->model('student_admission_model', '_student');
         $this->load->model('Student_profile_model', '_student1');
-        
+
         $data['admissionnumber'] =$id1;
         $data['error_list'] = array();
-        
+
         if ($this->input->server('REQUEST_METHOD') == 'POST') {
             $field_photo = '';
 
@@ -515,11 +515,9 @@ class Students extends MY_Controller
                     'mother_o_number'=>$field_mother_onumber,
                     'password'=>$password,
                 );}
-                
-                $this->_student1->update_student($insertArray,$id1);
-                $sessarr = array(
-                    'add_done' => 'yes',
-                );
+
+                $this->_student1->update_student($id1,$insertArray);
+
             }
         }else
         if (!empty($this->session->userdata('add_done'))) {
@@ -530,6 +528,6 @@ class Students extends MY_Controller
         $data['classes'] = $this->_student->get_all_classes();
         $data['years'] =$this->_student->get_all_years();
         $data['sections'] =$this->_student->get_all_sections();
-        $this->load->view('students/all_students', $data);   
+        $this->load->view('dashboard');
     }
 }
