@@ -21,7 +21,7 @@
                             echo 'class="active open"'; ?>  >
                         <a href="<?php echo site_url('dashboard') ?>"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a>
                     </li>
-                    <li <?php if( strcmp(basename($_SERVER['PHP_SELF']) ,'all_students') ==0 || strcmp(basename($_SERVER['PHP_SELF']) ,'add_students') ==0 || strcmp($this->uri->segment(1),'profile') == 0)
+                    <li <?php if( strcmp(basename($_SERVER['PHP_SELF']) ,'all_students') ==0 || strcmp(basename($_SERVER['PHP_SELF']) ,'add_students') ==0 || strcmp($this->uri->segment(1),'profile') ==0)
                         echo 'class="active open"'; ?> >
                         <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-accounts-outline"></i><span>Students</span> </a>
                         <ul class="ml-menu">
@@ -32,10 +32,6 @@
                             <li <?php if( strcmp(basename($_SERVER['PHP_SELF']) ,'add_students') ==0 )
                                 echo 'class="active"'; ?> >
                                 <a href="<?php echo site_url('students/add_students');?>">Add Students</a>
-                            </li>
-                            <li <?php if( strcmp(basename($_SERVER['PHP_SELF']) ,'edit_profile') ==0 )
-                                echo 'class="active"'; ?> >
-                                <a href="<?php echo site_url('students/edit_profile');?>">Edit Students</a>
                             </li>
                         </ul>
                     </li>
