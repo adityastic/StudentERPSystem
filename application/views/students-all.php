@@ -713,21 +713,37 @@
                     <div class="body">
                         <ul class="nav nav-tabs padding-0">
                             <?php
-                            foreach ($details as $key => $value)
-                            {?>
-                                <li class="nav-item"><a class="nav-link <?php echo (strcmp($key,'ALL')==0)?'active':'';?>" data-toggle="tab" href="#tab<?php echo $key;?>"><?php echo $key;?></a></li>
+                            foreach ($details as $key => $value) {
+                                ?>
+                                <li class="nav-item"><a class="nav-link <?php echo (strcmp($key, 'ALL')==0)?'active':''; ?>" data-toggle="tab" href="#tab<?php echo $key; ?>"><?php echo $key; ?></a></li>
                                 <?php
                             }
                             ?>
                         </ul>
                     </div>
                 </div>
+                <?php
+                if (isset($done)) {
+                    echo '<div class="alert alert-success" role="alert">
+                            <div class="container">
+                                <div class="alert-icon">
+                                    <i class="zmdi zmdi-thumb-up"></i>
+                                </div>
+                                <strong>Success!</strong> Student Uploaded Successfully.
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">
+                                        <i class="zmdi zmdi-close"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>';
+                }
+        ?>
                 <div class="tab-content">
                     <?php
-                    foreach ($details as $key => $value)
-                    {
+                    foreach ($details as $key => $value) {
                         ?>
-                        <div class="tab-pane <?php echo (strcmp($key,'ALL')==0)?'active':'';?>" id="tab<?php echo $key;?>">
+                        <div class="tab-pane <?php echo (strcmp($key, 'ALL')==0)?'active':''; ?>" id="tab<?php echo $key; ?>">
                             <div class="card">
                                 <div class="body table-responsive">
                                     <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
@@ -743,22 +759,20 @@
                                         </thead>
                                         <tbody>
                                         <?php
-                                        foreach ($value as $row)
-                                        {
+                                        foreach ($value as $row) {
                                             ?>
                                             <tr class="clickable-row" data-href="<?php echo site_url('profile/' . $row->Id); ?>" style="cursor: pointer">
                                                 <td align="center"><span class="list-icon"><img class="rounded" src="../uploads/<?php echo $row->photo; ?>" height="53.3" width="40" alt="laurels school"></span></td>
 
-                                                <td><?php echo $row->Id;?></td>
-                                                <td><?php echo $row->stud_name;?></td>
-                                                <td><?php echo $row->stud_gender;?></td>
+                                                <td><?php echo $row->Id; ?></td>
+                                                <td><?php echo $row->stud_name; ?></td>
+                                                <td><?php echo $row->stud_gender; ?></td>
 
-                                                <td><?php echo $row->perma_address;?></td>
-                                                <td><?php echo $row->stud_phone;?></td>
+                                                <td><?php echo $row->perma_address; ?></td>
+                                                <td><?php echo $row->stud_phone; ?></td>
                                             </tr>
                                             <?php
-                                        }
-                                        ?>
+                                        } ?>
                                         </tbody>
                                     </table>
                                 </div>
