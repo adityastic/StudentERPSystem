@@ -9,23 +9,23 @@
 <title><?php echo $title;?></title>
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <!-- Favicon-->
-<link rel="stylesheet" href="../../assets/plugins/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css">
 <!-- Dropzone Css -->
-<!-- <link href="../../assets/plugins/dropzone/dropzone.css" rel="stylesheet"> -->
-    <link href="../../assets/plugins/valid/valid.css" rel="stylesheet">
+<!-- <link href="../assets/plugins/dropzone/dropzone.css" rel="stylesheet"> -->
+    <link href="../assets/plugins/valid/valid.css" rel="stylesheet">
 <!-- Bootstrap Material Datetime Picker Css -->
-<link href="../../assets/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet" />
+<link href="../assets/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet" />
 <!-- Bootstrap Select Css -->
-<link href="../../assets/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+<link href="../assets/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
 <!-- Custom Css -->
-<link rel="stylesheet" href="../../assets/css/main.css">
-<link rel="stylesheet" href="../../assets/css/color_skins.css">
+<link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="../assets/css/color_skins.css">
 </head>
 <body class="<?php echo $theme;?>">
 <!-- Page Loader -->
 <div class="page-loader-wrapper">
     <div class="loader">
-        <div class="m-t-30"><img class="zmdi-hc-spin" src="../../assets/images/logo.svg" width="48" height="48" alt="Oreo"></div>
+        <div class="m-t-30"><img class="zmdi-hc-spin" src="../assets/images/logo.svg" width="48" height="48" alt="Oreo"></div>
         <p>Please wait...</p>
     </div>
 </div> 
@@ -37,7 +37,7 @@
         <li>
             <div class="navbar-header">
                 <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="<?php echo site_url('dashboard');?>"><img src="../../assets/images/logo.svg" width="30" alt="Oreo"><span class="m-l-10"><?php echo $company_name;?></span></a>
+                <a class="navbar-brand" href="<?php echo site_url('dashboard');?>"><img src="../assets/images/logo.svg" width="30" alt="Oreo"><span class="m-l-10"><?php echo $company_name;?></span></a>
             </div>
         </li>
         <li><a href="javascript:void(0);" class="ls-toggle-btn" data-close="true"><i class="zmdi zmdi-swap"></i></a></li>
@@ -53,7 +53,7 @@
 <!--                        <li>-->
 <!--                            <a href="javascript:void(0);">-->
 <!--                                <div class="media">-->
-<!--                                    <img class="media-object" src="../../assets/images/xs/avatar2.jpg" alt="">-->
+<!--                                    <img class="media-object" src="../assets/images/xs/avatar2.jpg" alt="">-->
 <!--                                    <div class="media-body">-->
 <!--                                        <span class="name">Sophia <span class="time">30min ago</span></span>-->
 <!--                                        <span class="message">There are many variations of passages</span>-->
@@ -64,7 +64,7 @@
 <!--                        <li>-->
 <!--                            <a href="javascript:void(0);">-->
 <!--                                <div class="media">-->
-<!--                                    <img class="media-object" src="../../assets/images/xs/avatar3.jpg" alt="">-->
+<!--                                    <img class="media-object" src="../assets/images/xs/avatar3.jpg" alt="">-->
 <!--                                    <div class="media-body">-->
 <!--                                        <span class="name">Sophia <span class="time">31min ago</span></span>-->
 <!--                                        <span class="message">There are many variations of passages of Lorem Ipsum</span>-->
@@ -75,7 +75,7 @@
 <!--                        <li>-->
 <!--                            <a href="javascript:void(0);">-->
 <!--                                <div class="media">-->
-<!--                                    <img class="media-object" src="../../assets/images/xs/avatar4.jpg" alt="">-->
+<!--                                    <img class="media-object" src="../assets/images/xs/avatar4.jpg" alt="">-->
 <!--                                    <div class="media-body">-->
 <!--                                        <span class="name">Isabella <span class="time">35min ago</span></span>-->
 <!--                                        <span class="message">There are many variations of passages</span>-->
@@ -86,7 +86,7 @@
 <!--                        <li>-->
 <!--                            <a href="javascript:void(0);">-->
 <!--                                <div class="media">-->
-<!--                                    <img class="media-object" src="../../assets/images/xs/avatar5.jpg" alt="">-->
+<!--                                    <img class="media-object" src="../assets/images/xs/avatar5.jpg" alt="">-->
 <!--                                    <div class="media-body">-->
 <!--                                        <span class="name">Alexander <span class="time">35min ago</span></span>-->
 <!--                                        <span class="message">Contrary to popular belief, Lorem Ipsum random</span>-->
@@ -97,7 +97,7 @@
 <!--                        <li>-->
 <!--                            <a href="javascript:void(0);">-->
 <!--                                <div class="media">-->
-<!--                                    <img class="media-object" src="../../assets/images/xs/avatar6.jpg" alt="">-->
+<!--                                    <img class="media-object" src="../assets/images/xs/avatar6.jpg" alt="">-->
 <!--                                    <div class="media-body">-->
 <!--                                        <span class="name">Grayson <span class="time">1hr ago</span></span>-->
 <!--                                        <span class="message">There are many variations of passages</span>-->
@@ -132,13 +132,13 @@
 <!--                                    <ul class="list-unstyled team-info">-->
 <!--                                        <li class="m-r-15"><small class="text-muted">Team</small></li>-->
 <!--                                        <li>-->
-<!--                                            <img src="../../assets/images/xs/avatar2.jpg" alt="Avatar">-->
+<!--                                            <img src="../assets/images/xs/avatar2.jpg" alt="Avatar">-->
 <!--                                        </li>-->
 <!--                                        <li>-->
-<!--                                            <img src="../../assets/images/xs/avatar3.jpg" alt="Avatar">-->
+<!--                                            <img src="../assets/images/xs/avatar3.jpg" alt="Avatar">-->
 <!--                                        </li>-->
 <!--                                        <li>-->
-<!--                                            <img src="../../assets/images/xs/avatar4.jpg" alt="Avatar">-->
+<!--                                            <img src="../assets/images/xs/avatar4.jpg" alt="Avatar">-->
 <!--                                        </li>                            -->
 <!--                                    </ul>-->
 <!--                                </div>-->
@@ -156,19 +156,19 @@
 <!--                                    <ul class="list-unstyled team-info">-->
 <!--                                        <li class="m-r-15"><small class="text-muted">Team</small></li>-->
 <!--                                        <li>-->
-<!--                                            <img src="../../assets/images/xs/avatar10.jpg" alt="Avatar">-->
+<!--                                            <img src="../assets/images/xs/avatar10.jpg" alt="Avatar">-->
 <!--                                        </li>-->
 <!--                                        <li>-->
-<!--                                            <img src="../../assets/images/xs/avatar9.jpg" alt="Avatar">-->
+<!--                                            <img src="../assets/images/xs/avatar9.jpg" alt="Avatar">-->
 <!--                                        </li>-->
 <!--                                        <li>-->
-<!--                                            <img src="../../assets/images/xs/avatar8.jpg" alt="Avatar">-->
+<!--                                            <img src="../assets/images/xs/avatar8.jpg" alt="Avatar">-->
 <!--                                        </li>-->
 <!--                                        <li>-->
-<!--                                            <img src="../../assets/images/xs/avatar7.jpg" alt="Avatar">-->
+<!--                                            <img src="../assets/images/xs/avatar7.jpg" alt="Avatar">-->
 <!--                                        </li>-->
 <!--                                        <li>-->
-<!--                                            <img src="../../assets/images/xs/avatar6.jpg" alt="Avatar">-->
+<!--                                            <img src="../assets/images/xs/avatar6.jpg" alt="Avatar">-->
 <!--                                        </li>-->
 <!--                                    </ul>-->
 <!--                                </div>-->
@@ -186,13 +186,13 @@
 <!--                                    <ul class="list-unstyled team-info">-->
 <!--                                        <li class="m-r-15"><small class="text-muted">Team</small></li>-->
 <!--                                        <li>-->
-<!--                                            <img src="../../assets/images/xs/avatar5.jpg" alt="Avatar">-->
+<!--                                            <img src="../assets/images/xs/avatar5.jpg" alt="Avatar">-->
 <!--                                        </li>-->
 <!--                                        <li>-->
-<!--                                            <img src="../../assets/images/xs/avatar2.jpg" alt="Avatar">-->
+<!--                                            <img src="../assets/images/xs/avatar2.jpg" alt="Avatar">-->
 <!--                                        </li>-->
 <!--                                        <li>-->
-<!--                                            <img src="../../assets/images/xs/avatar7.jpg" alt="Avatar">-->
+<!--                                            <img src="../assets/images/xs/avatar7.jpg" alt="Avatar">-->
 <!--                                        </li>                            -->
 <!--                                    </ul>-->
 <!--                                </div>-->
@@ -224,7 +224,7 @@
 ?>
 
 <section class="content profile-page">
-    <form method="post" action="<?php echo site_url('students/update_students/'.$admissionnumber);?>" enctype="multipart/form-data">
+    <form method="post" action="<?php echo site_url('student-editprofile/'.$admissionnumber);?>" enctype="multipart/form-data">
     <div class="block-header">
         <div class="row">
             <div class="col-lg-7 col-md-6 col-sm-12">
@@ -268,21 +268,6 @@
             echo '<div class="alert alert-danger">
                             <strong>Oh snap!</strong> Change a few things up and try submitting again.<br>
                             ' . $errorstring . '
-                        </div>';
-        }
-        if (isset($done)) {
-            echo '<div class="alert alert-success" role="alert">
-                            <div class="container">
-                                <div class="alert-icon">
-                                    <i class="zmdi zmdi-thumb-up"></i>
-                                </div>
-                                <strong>Success!</strong> Student Info Uploaded Successfully.
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">
-                                        <i class="zmdi zmdi-close"></i>
-                                    </span>
-                                </button>
-                            </div>
                         </div>';
         }
         ?> 
@@ -337,12 +322,12 @@
                                                             "female"=>"Female",
                                                             "other"=>"Other");
                                         foreach ($_genderArr as $key => $value) {
-                                                if (strcmp($key, $student_gender) == 0) {
-                                                    echo '<option value="' . $key . '" selected>' . $value . '</option>';
-                                                } else {
-                                                    echo '<option value="' . $key . '">' . $value . '</option>';
-                                                }
-                                            } 
+                                            if (strcmp($key, $student_gender) == 0) {
+                                                echo '<option value="' . $key . '" selected>' . $value . '</option>';
+                                            } else {
+                                                echo '<option value="' . $key . '">' . $value . '</option>';
+                                            }
+                                        }
                                     ?>
                                 </select>
                             </div>
@@ -355,12 +340,12 @@
                                                             "ST"=>"ST",
                                                             "sc"=>"SC");
                                         foreach ($_genderArr as $key => $value) {
-                                                if (strcmp($key, $student_caste) == 0) {
-                                                    echo '<option value="' . $key . '" selected>' . $value . '</option>';
-                                                } else {
-                                                    echo '<option value="' . $key . '">' . $value . '</option>';
-                                                }
+                                            if (strcmp($key, $student_caste) == 0) {
+                                                echo '<option value="' . $key . '" selected>' . $value . '</option>';
+                                            } else {
+                                                echo '<option value="' . $key . '">' . $value . '</option>';
                                             }
+                                        }
                                         ?>
                                 </select>
                             </div>
@@ -374,12 +359,12 @@
                                                             "mp"=>"Madhya Pradesh",
                                                             );
                                         foreach ($_genderArr as $key => $value) {
-                                                if (strcmp($key, $state) == 0) {
-                                                    echo '<option value="' . $key . '" selected>' . $value . '</option>';
-                                                } else {
-                                                    echo '<option value="' . $key . '">' . $value . '</option>';
-                                                }
+                                            if (strcmp($key, $state) == 0) {
+                                                echo '<option value="' . $key . '" selected>' . $value . '</option>';
+                                            } else {
+                                                echo '<option value="' . $key . '">' . $value . '</option>';
                                             }
+                                        }
                                     ?>
                                 </select>
                             </div>
@@ -407,11 +392,11 @@
                                     "abneg"=>"AB-" );
                                         foreach ($_genderArr as $key => $value) {
                                             if (strcmp($key, $student_bg) == 0) {
-                                                    echo '<option value="' . $key . '" selected>' . $value . '</option>';
-                                                } else {
-                                                    echo '<option value="' . $key . '">' . $value . '</option>';
-                                                }
+                                                echo '<option value="' . $key . '" selected>' . $value . '</option>';
+                                            } else {
+                                                echo '<option value="' . $key . '">' . $value . '</option>';
                                             }
+                                        }
                                     ?>
                                 </select>
                             </div>
@@ -458,7 +443,7 @@
                         <div class="row clearfix">
                             <div class="col-lg-12 col-md-12 col-sm-12">
                                 Upload Student Photo :
-                <input id="files" type="file" name="field_photo" accept="image/*"><br><br>
+                <input id="files" type="file" name="field_photo" accept="image/*" required><br><br>
                 <img id="image" />
                             </div>
                         </div>
@@ -570,8 +555,8 @@
                                 <select class="form-control show-tick" name="field_class_id">
                                     <?php
                                     foreach ($classes->result() as $row) {
-                                        if (strcmp($row->class, $class1) == 0) {
-                                                echo "<option value=$row->id selected>$row->class</option>";
+                                        if (strcmp($row->class, $classSelected) == 0) {
+                                            echo "<option value=$row->id selected>$row->class</option>";
                                         } else {
                                             echo "<option value=$row->id>$row->class</option>";
                                         }
@@ -585,8 +570,8 @@
                                     <?php
 
                                     foreach ($years->result() as $row) {
-                                        if (strcmp($row->year, $year1) == 0) {
-                                                echo "<option value=$row->id selected>$row->year</option>";
+                                        if (strcmp($row->year, $yearSelected) == 0) {
+                                            echo "<option value=$row->id selected>$row->year</option>";
                                         } else {
                                             echo "<option value=$row->id>$row->year</option>";
                                         }
@@ -602,7 +587,7 @@
                                     <?php
 
                                     foreach ($sections->result() as $row) {
-                                        if (strcmp($row->section, $section1) == 0) {
+                                        if (strcmp($row->section, $sectionSelected) == 0) {
                                             echo "<option value=$row->id selected>$row->section</option>";
                                         } else {
                                             echo "<option value=$row->id>$row->section</option>";
@@ -611,6 +596,7 @@
                                     ?>
                                 </select>
                             </div>
+                            <input type="hidden" name="old_batch_id" value="<?php echo $old_batch_id;?>">
                         </div>
                     </div>
                 </div>
@@ -623,18 +609,18 @@
 </form>
 </section>
 <!-- Jquery Core Js --> 
-<script src="../../assets/bundles/libscripts.bundle.js"></script> <!-- Bootstrap JS and jQuery v3.2.1 -->
-<script src="../../assets/bundles/vendorscripts.bundle.js"></script> <!-- slimscroll, waves Scripts Plugin Js -->  
+<script src="../assets/bundles/libscripts.bundle.js"></script> <!-- Bootstrap JS and jQuery v3.2.1 -->
+<script src="../assets/bundles/vendorscripts.bundle.js"></script> <!-- slimscroll, waves Scripts Plugin Js -->  
 
-<script src="../../assets/plugins/autosize/autosize.js"></script> <!-- Autosize Plugin Js --> 
-<script src="../../assets/plugins/momentjs/moment.js"></script> <!-- Moment Plugin Js --> 
-<!-- <script src="../../assets/plugins/dropzone/dropzone.js"></script> Dropzone Plugin Js -->
-<script src="../../assets/plugins/valid/valid.js"></script> <!-- valid Plugin Js -->
+<script src="../assets/plugins/autosize/autosize.js"></script> <!-- Autosize Plugin Js --> 
+<script src="../assets/plugins/momentjs/moment.js"></script> <!-- Moment Plugin Js --> 
+<!-- <script src="../assets/plugins/dropzone/dropzone.js"></script> Dropzone Plugin Js -->
+<script src="../assets/plugins/valid/valid.js"></script> <!-- valid Plugin Js -->
 <!-- Bootstrap Material Datetime Picker Plugin Js --> 
-<script src="../../assets/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+<script src="../assets/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
 
-<script src="../../assets/bundles/mainscripts.bundle.js"></script><!-- Custom Js -->
-<script src="../../assets/js/pages/forms/basic-form-elements.js"></script>
+<script src="../assets/bundles/mainscripts.bundle.js"></script><!-- Custom Js -->
+<script src="../assets/js/pages/forms/basic-form-elements.js"></script>
 <script type="text/javascript">
     document.getElementById("files").onchange = function () {
     var reader = new FileReader();
@@ -647,6 +633,11 @@
     // read the image file as a data URL.
     reader.readAsDataURL(this.files[0]);
 };
+$("#psw").focus(function(){
+    this.type = "text";
+}).blur(function(){
+    this.type = "password";
+})
 </script>
 </body>
 </html>
