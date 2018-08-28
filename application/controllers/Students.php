@@ -209,7 +209,7 @@ class Students extends MY_Controller
         $data['classes'] = $this->_student->get_all_classes();
         $data['years'] =$this->_student->get_all_years();
         $data['sections'] =$this->_student->get_all_sections();
-        $this->load->view('students/students-add', $data);
+        $this->load->view('students-add', $data);
     }
     
     private function checkNumbersinString($string)
