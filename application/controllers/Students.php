@@ -396,7 +396,6 @@ class Students extends MY_Controller
                 $data['current_address'] = $field_curradd;
                 $data['stud_email'] = $field_stud_email;
                 $data['stud_phone'] = $field_stud_ph;
-                $data['photo']=$result->photo;
                 $data['father_name']=$field_father_name;
                 $data['mother_name']=$field_mother_name;
                 $data['father_no']=$field_father_number;
@@ -412,18 +411,19 @@ class Students extends MY_Controller
                 $data['perma_address_pin']=$field_permpin;
                 $data['father_office_no']=$field_father_onumber;
                 $data['mother_office_no']=$field_mother_onumber;
-                $data['stud_password']=$result->password;
+                $data['stud_password']=$password;
                 $data['current_address_pin']=$field_currpin;
                 $data['admissionnumber'] = $id;
 
                 $data['old_batch_id'] = $this->input->post('old_batch_id');
+                $batch_content = $this->_studentupdate->get_batch($data['old_batch_id'])->row();
                 $data['yearSelected'] = $batch_content->year;
                 $data['classSelected'] = $batch_content->class;
                 $data['sectionSelected'] = $batch_content->section;
 
-                $data['classes'] = $field_class_id;
-                $data['years'] =$field_year_id;
-                $data['sections'] =$field_section_id;
+                $data['classes'] = $this->_student->get_all_classes();
+                $data['years'] =$this->_student->get_all_years();
+                $data['sections'] =$this->_student->get_all_sections();
                 $this->load->view('students-update', $data);
             } else {
                 $insertArray = array(
